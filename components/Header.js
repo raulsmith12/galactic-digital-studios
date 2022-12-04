@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-dark navbar-expand-lg bg-dark sticky-top border-bottom border-primary">
+        <nav className="navbar navbar-dark navbar-expand-lg bg-primary sticky-top border-bottom border-black">
             <div className="container">
                 <Link href="/" className="navbar-brand">
                     Galactic Digital Studios
@@ -17,6 +17,9 @@ const Header = () => {
                         </li>
                         <li className="nav-item px-1">
                             <Link href="/about" className="nav-link">About</Link>
+                        </li>
+                        <li className="nav-item px-1">
+                            <Link href="/faqs" className="nav-link">FAQs</Link>
                         </li>
                         <li className="nav-item px-1">
                             <Link href="/team" className="nav-link">Team</Link>
