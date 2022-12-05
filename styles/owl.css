@@ -24,3 +24,12 @@ body {
 .text-shadow-2 {
     text-shadow: 0 0 3px #483475;
 }
+
+.bg-jumbo {
+    background: url('https://galacticblue.net/galactic-digital-studios/img/banner-1.jpg');
+    background-size: 100% 100%;
+}
+
+.display-7 {
+    font-size: 1.6rem;
+}
