@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-dark navbar-expand-lg bg-primary sticky-top border-bottom border-black">
+        <nav className="navbar navbar-dark navbar-expand-lg bg-primary sticky-top border-bottom border-secondary">
             <div className="container">
                 <Link href="/" className="navbar-brand">
                     <img src="https://galacticblue.net/galactic-digital-studios/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />

@@ -16,3 +16,11 @@ body {
 .nav-item {
     font-size: 1.7rem;
 }
+
+.text-shadow-1 {
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.text-shadow-2 {
+    text-shadow: 0 0 3px #483475;
+}

@@ -1,5 +1,15 @@
-export default function Home() {
+import HomeSlider from '../components/HomeSlider';
+import HomeSections from '../components/HomeSections';
+import HomeContactForm from '../components/HomeContactForm';
+
+const Home = () => {
   return (
-    <h1 className="display-1">Hello</h1>
+    <div className="container-fluid px-0">
+      <HomeSlider />
+      <HomeSections />
+      <HomeContactForm />
+    </div>
   )
 }
+
+export default Home;

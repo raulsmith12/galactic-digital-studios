@@ -13,10 +13,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="container-fluid px-0">
       <div className="row">
-        <div className="col">
+        <div className="col pe-0">
           <main className="main">
             <Header />
             <Component {...pageProps} />
+            <div className="row mb-3 pb-3">&nbsp;</div>
             <Footer />
           </main>
         </div>
