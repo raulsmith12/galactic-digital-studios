@@ -1,8 +1,17 @@
+import InsidePageHeader from "../../components/InsidePageHeader";
+
 const Examples = () => {
     return (
-        <h1>
-            Examples
-        </h1>
+        <div className="container-fluid pe-0">
+            <div className="row">
+                <InsidePageHeader title="Examples" />
+            </div>
+            <div className="row">
+                <div className="col">
+                    <p className="display-7 mx-5 px-5"></p>
+                </div>
+            </div>
+        </div>
     )
 }
 

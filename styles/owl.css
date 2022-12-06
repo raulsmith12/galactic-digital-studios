@@ -3,13 +3,14 @@
 
 body {
     font-family: 'Bahnschrift', 'Roboto', sans-serif;
+    width: 99%;
 }
 
-.bg-primary {
+.bg-primary, .btn-primary {
     background-color: #483475 !important;
 }
 
-.bg-secondary {
+.bg-secondary, .btn-secondary {
     background-color: #141852 !important;
 }
 
