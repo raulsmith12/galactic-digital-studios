@@ -34,3 +34,7 @@ body {
 .display-7 {
     font-size: 1.6rem;
 }
+
+.effect-2 {
+    overflow: hidden;
+}

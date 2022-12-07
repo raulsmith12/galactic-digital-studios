@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/owl.css';
 import { useEffect } from 'react';
+import Transition from '../components/Transition';
 
 function MyApp({ Component, pageProps }) {
 
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
         <div className="col pe-0">
           <main className="main">
             <Header />
-            <Component {...pageProps} />
+            <Transition>
+              <Component {...pageProps} />
+            </Transition>
             <div className="row mb-3 pb-3">&nbsp;</div>
             <Footer />
           </main>
