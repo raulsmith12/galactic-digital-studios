@@ -2,7 +2,7 @@ import InsidePageHeader from "../../components/InsidePageHeader";
 
 const About = () => {
     return (
-        <div className="container-fluid pe-0">
+        <div className="container-fluid">
             <div className="row">
                 <InsidePageHeader title="About Galactic Digital Studios" />
             </div>

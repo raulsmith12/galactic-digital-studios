@@ -13,18 +13,22 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="container-fluid px-0">
-      <div className="row">
-        <div className="col pe-0">
-          <main className="main">
-            <Header />
+      <main className="main">
+        <Header />
+        <div className="row mx-0">
+          <div className="col px-0">
             <Transition>
               <Component {...pageProps} />
             </Transition>
-            <div className="row mb-3 pb-3">&nbsp;</div>
-            <Footer />
-          </main>
+          </div>
         </div>
-      </div>
+        <div className="row mb-3 pb-3 mx-0">
+          <div className="col px-0">
+            &nbsp;
+          </div>
+        </div>
+        <Footer />
+      </main>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import InsidePageHeader from "../../components/InsidePageHeader";
 
 const Privacy = () => {
     return (
-        <div className="container-fluid pe-0">
+        <div className="container-fluid">
             <div className="row">
                 <InsidePageHeader title="Privacy Policy" />
             </div>

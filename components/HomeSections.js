@@ -1,6 +1,6 @@
 const HomeSections = () => {
     return (
-        <div className="row">
+        <div className="row mx-0">
             <div className="col px-0">
                 <div className="container">
                     <div className="row">
