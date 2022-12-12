@@ -49,7 +49,7 @@ const ContactForm = () => {
                             <input type="phone" className="form-control" id="customerPhone" name="customerPhone" required value={customerPhone} onChange={e => setCustomerPhone(e.target.value)} />
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="messageText" className="form-label">Description</label>
+                            <label htmlFor="messageText" className="form-label">Message</label>
                             <textarea className="form-control" id="messageText" name="messageText" required value={message} onChange={e => setMessage(e.target.value)} rows="3" />
                         </div>
                         <ReCAPTCHA

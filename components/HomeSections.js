@@ -12,7 +12,7 @@ const HomeSections = () => {
                     <hr />
                     <div className="row">
                         <div className="col">
-                            <h4 className="display-6 text-center text-shadow-2">Galactic Digital Studios Can Handle Your Most Pressing Business Marketing Needs, Including:</h4>
+                            <h4 className="display-6 text-center text-shadow-2">Galactic Digital Studios Can Handle Your Most Pressing Business Resources and Development Needs, Including:</h4>
                         </div>
                     </div>
                     <div className="row justify-content-center">
