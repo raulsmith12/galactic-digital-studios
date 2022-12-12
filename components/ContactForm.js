@@ -35,7 +35,7 @@ const ContactForm = () => {
         <form onSubmit={e => handleFormSubmit(e)}>
             <div className="container">
                 <div className="row">
-                    <div className="col-8">
+                    <div className="col">
                         <div className="mb-3">
                             <label htmlFor="customerName" className="form-label">Name</label>
                             <input type="text" className="form-control" id="customerName" name="customerName" required value={customerName} onChange={e => setCustomerName(e.target.value)} />

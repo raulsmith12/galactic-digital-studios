@@ -34,17 +34,19 @@ const Services = () => {
                     </div>
                 ))}
             </div>
-            {serviceList.map(i => (
-                <div className="row my-2" key={i.id}>
-                    <div className="col">
-                        <div className="collapse multi-collapse" id={`collapse${i.id}`}>
-                            <div className="card card-body shadow p-3 mb-5 rounded bg-secondary text-white">
-                                <p>{i.description}</p>
+            <div id="collapseGroup">
+                {serviceList.map(i => (
+                    <div className="row my-2" key={i.id}>
+                        <div className="col">
+                            <div className="collapse multi-collapse service-collapse" id={`collapse${i.id}`} data-bs-parent="#collapseGroup">
+                                <div className="card card-body shadow p-3 mb-5 rounded bg-secondary text-white">
+                                    <h5>{i.description}</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }
