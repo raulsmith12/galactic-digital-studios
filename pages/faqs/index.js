@@ -3,7 +3,7 @@ import InsidePageHeader from '../../components/InsidePageHeader';
 
 const Faqs = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pb-5">
             <div className="row">
                 <InsidePageHeader title="Frequently Asked Questions" />
             </div>

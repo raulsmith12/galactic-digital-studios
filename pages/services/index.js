@@ -18,7 +18,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pb-5">
             <div className="row">
                 <InsidePageHeader title="Services" />
             </div>

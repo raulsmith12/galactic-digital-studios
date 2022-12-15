@@ -5,7 +5,7 @@ import Websites from "../../components/Websites";
 
 const Examples = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pb-5">
             <div className="row">
                 <InsidePageHeader title="Examples" />
             </div>

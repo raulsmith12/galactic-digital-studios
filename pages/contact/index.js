@@ -4,7 +4,7 @@ import { FaEnvelopeOpenText, FaPhoneAlt, FaMapMarkerAlt, FaFlagUsa, FaFacebookF,
 
 const Contact = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pb-5">
             <div className="row">
                 <InsidePageHeader title="Contact Galactic Digital Studios" />
             </div>
