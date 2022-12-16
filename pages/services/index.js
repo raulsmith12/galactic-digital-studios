@@ -1,6 +1,7 @@
 import InsidePageHeader from "../../components/InsidePageHeader";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Services = () => {
     const [serviceList, setServiceList] = useState([]);
@@ -28,24 +29,30 @@ const Services = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                {serviceList.map(i => (
-                    <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2" key={i.id}>
-                        <button type="button" className="btn btn-primary btn-lg btn-block" data-bs-toggle="collapse" data-bs-target={`#collapse${i.id}`} aria-expanded="false" aria-controls={`#collapse${i.id}`}>{i.service}</button>
-                    </div>
-                ))}
-            </div>
-            <div id="collapseGroup">
-                {serviceList.map(i => (
-                    <div className="row my-2" key={i.id}>
-                        <div className="col">
-                            <div className="collapse multi-collapse service-collapse" id={`collapse${i.id}`} data-bs-parent="#collapseGroup">
-                                <div className="card card-body shadow p-3 mb-5 rounded bg-secondary text-white">
-                                    <h5>{i.description}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/web" className="btn btn-primary btn-lg btn-block">Website Development</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/logo" className="btn btn-primary btn-lg btn-block">Logo Design</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/brochure" className="btn btn-primary btn-lg btn-block">Brochure Design</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/businessCard" className="btn btn-primary btn-lg btn-block">Business Card Design</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/graphic" className="btn btn-primary btn-lg btn-block">Various Graphic Design</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/mobileApp" className="btn btn-primary btn-lg btn-block">Mobile App Development</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/database" className="btn btn-primary btn-lg btn-block">Database Management</Link>
+                </div>
+                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                    <Link href="/services/cms" className="btn btn-primary btn-lg btn-block">Content Management</Link>
+                </div>
             </div>
         </div>
     )

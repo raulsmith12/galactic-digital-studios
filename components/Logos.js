@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Logos = () => {
@@ -21,7 +22,9 @@ const Logos = () => {
             <div className="row justify-content-center">
                 {logos.map(i => (
                     <div className="col-md-2 col-sm-4" key={i.id}>
-                        <img src={i.thumb_url} width="100%" alt={i.name} />
+                        <Link href={"/examples/logos/" + i.id}>
+                            <img src={i.thumb_url} width="100%" alt={i.name} />
+                        </Link>
                     </div>
                 ))}
             </div>

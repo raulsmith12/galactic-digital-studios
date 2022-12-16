@@ -7,7 +7,7 @@ import { GoogleKey } from './GoogleKey';
 
 const API_PATH = 'https://galacticblue.net/galactic-digital-studios/api/contact/service-request-form.php';
 
-const RequestForm = () => {
+const RequestForm = ({ selectedService }) => {
     const [customerName, setCustomerName] = useState('');
     const [customerEmail, setCustomerEmail] = useState('');
     const [customerPhone, setCustomerPhone] = useState('');
@@ -57,8 +57,8 @@ const RequestForm = () => {
                     <div className="col-6">
                         <div className="mb-3">
                             <label htmlFor="customerService" className="form-label">Service Requested</label>
-                            <select className="form-select" id="customerService" onChange={e => setCustomerService(e.target.value)} defaultValue="">
-                                <option selected>Please select a service</option>
+                            <select className="form-select" id="customerService" value={selectedService ? selectedService : ""} onChange={e => setCustomerService(e.target.value)} defaultValue="">
+                                <option value="">Please select a service</option>
                                 <option value="website">Website/Database/CMS</option>
                                 <option value="logo">Logo Design</option>
                                 <option value="graphic">Graphic Design</option>

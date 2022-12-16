@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Websites = () => {
@@ -21,7 +22,9 @@ const Websites = () => {
             <div className="row justify-content-center">
                 {websites.map(i => (
                     <div className="col-md-2 col-sm-4" key={i.id}>
-                        <img src={i.thumb_url} width="100%" alt={i.name} />
+                        <Link href={"/examples/websites/" + i.id}>
+                            <img src={i.thumb_url} width="100%" alt={i.name} />
+                        </Link>
                     </div>
                 ))}
             </div>

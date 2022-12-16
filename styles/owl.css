@@ -5,12 +5,24 @@ body {
     font-family: 'Bahnschrift', 'Roboto', sans-serif;
 }
 
-.bg-primary, .btn-primary {
+.bg-primary, .btn-primary, .btn-outline-primary:hover, .btn-secondary:hover {
     background-color: #483475 !important;
+    color: #ffffff !important;
 }
 
-.bg-secondary, .btn-secondary {
+.bg-secondary, .btn-secondary, .btn-outline-secondary:hover, .btn-primary:hover {
     background-color: #141852 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-primary {
+    color: #483475 !important;
+    border-color: #483475 !important;
+}
+
+.btn-outline-secondary {
+    color: #141852 !important;
+    border-color: #141852 !important;
 }
 
 .nav-item {
