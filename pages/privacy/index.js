@@ -30,7 +30,7 @@ const Privacy = () => {
                     <h4 className="my-3">Security</h4>
                     <p>We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.</p>
                     <p>While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
-                    <p>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at 385.275.8665 or <a href="mailto:contact@galacticdigitalsolutions.com">via email.</a></p>
+                    <p>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at 385.275.8665 or <a href="mailto:contact@galacticdigitalstudios.com">via email.</a></p>
                 </div>
             </div>
         </div>

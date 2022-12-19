@@ -13,7 +13,7 @@ const Graphic = () => {
     useEffect(() => {
         async function fetchData() {
             const graphicSet = await axios(
-                `https://galacticdigitalsolutions.com/backend/public/api/graphics/${id}`
+                `https://galacticdigitalstudios.com/backend/public/api/graphics/${id}`
             );
 
             setGraphic(graphicSet.data.data);

@@ -13,7 +13,7 @@ const Logo = () => {
     useEffect(() => {
         async function fetchData() {
             const logoSet = await axios(
-                `https://galacticdigitalsolutions.com/backend/public/api/logos/${id}`
+                `https://galacticdigitalstudios.com/backend/public/api/logos/${id}`
             );
 
             setLogo(logoSet.data.data);

@@ -9,7 +9,7 @@ const Services = () => {
     useEffect(() => {
         async function fetchData() {
             const servicePage = await axios(
-                'https://galacticdigitalsolutions.com/backend/public/api/services'
+                'https://galacticdigitalstudios.com/backend/public/api/services'
             );
 
             setServiceList(servicePage.data.data);

@@ -8,7 +8,7 @@ const Team = () => {
     useEffect(() => {
         async function fetchData() {
             const teamPage = await axios(
-                'https://galacticdigitalsolutions.com/backend/public/api/team'
+                'https://galacticdigitalstudios.com/backend/public/api/team'
             );
 
             setTeamContent(teamPage.data.data);

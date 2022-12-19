@@ -7,7 +7,7 @@ const Header = () => {
                 <nav className="navbar navbar-dark navbar-expand-lg bg-primary sticky-top border-bottom border-secondary">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
-                            <img src="https://galacticdigitalsolutions.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />
+                            <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

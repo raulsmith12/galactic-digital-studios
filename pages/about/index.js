@@ -8,7 +8,7 @@ const About = () => {
             </div>
             <div className="row">
                 <div className="col-md-2 offset-md-1">
-                    <img src="https://galacticdigitalsolutions.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width="100%" alt="Laptop with saying on it" />
+                    <img src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width="100%" alt="Laptop with saying on it" />
                 </div>
                 <div className="col-md-9 col-sm-12">
                     <p className="display-7 mx-5 px-5">Started in 2015 as Galactic Web Solutions, Galactic has now grown into more than just a website development firm. Today, Galactic Digital Studios lives up to the new name, handling many different aspects of online digital marketing and branding.<br /><br />

@@ -21,11 +21,11 @@ const HomeContactForm = () => {
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaEnvelopeOpenText />&nbsp;&nbsp;&nbsp;
-                                raul@galacticdigitalstudios.com
+                                raul.smith@galacticdigitalstudios.com
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaEnvelopeOpenText />&nbsp;&nbsp;&nbsp;
-                                orion@galacticdigitalstudios.com
+                                orion.hoag@galacticdigitalstudios.com
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaPhoneAlt />&nbsp;&nbsp;&nbsp;

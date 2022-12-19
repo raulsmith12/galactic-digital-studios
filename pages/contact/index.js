@@ -31,7 +31,7 @@ const Contact = () => {
                                 <h5>Raul Smith</h5>
                                 <p>
                                     <FaEnvelopeOpenText />&nbsp;
-                                    Email: raul@galacticdigitalstudios.com
+                                    Email: raul.smith@galacticdigitalstudios.com
                                 </p>
                                 <p>
                                     <FaPhoneAlt />&nbsp;
@@ -44,7 +44,7 @@ const Contact = () => {
                                 <h5>Orion Hoag</h5>
                                 <p>
                                     <FaEnvelopeOpenText />&nbsp;
-                                    Email: orion@galacticdigitalstudios.com
+                                    Email: orion.hoag@galacticdigitalstudios.com
                                 </p>
                             </div>
                         </div>

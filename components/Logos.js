@@ -8,7 +8,7 @@ const Logos = () => {
     useEffect(() => {
         async function fetchData() {
             const logoList = await axios(
-                'https://galacticdigitalsolutions.com/backend/public/api/logos'
+                'https://galacticdigitalstudios.com/backend/public/api/logos'
             );
 
             setLogos(logoList.data.data);

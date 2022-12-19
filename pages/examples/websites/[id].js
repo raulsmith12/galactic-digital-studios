@@ -13,7 +13,7 @@ const Website = () => {
     useEffect(() => {
         async function fetchData() {
             const websiteSet = await axios(
-                `https://galacticdigitalsolutions.com/backend/public/api/websites/${id}`
+                `https://galacticdigitalstudios.com/backend/public/api/websites/${id}`
             );
 
             setWebsite(websiteSet.data.data);
@@ -43,7 +43,7 @@ const Website = () => {
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <h3>{website.description}</h3>
-                    <Link href={website.site_url} target="_blank" className="h5">Visit the site!</Link>
+                    <a href={website.site_url} target="_blank" className="h5">Visit the site!</a>
                 </div>
             </div>
         </div>

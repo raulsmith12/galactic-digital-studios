@@ -5,7 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import { GoogleKey } from './GoogleKey';
 
-const API_PATH = 'https://galacticdigitalsolutions.com/api/contact/contact.php';
+const API_PATH = 'https://galacticdigitalstudios.com/api/contact/contact.php';
 
 const ContactForm = () => {
     const [customerName, setCustomerName] = useState('');
