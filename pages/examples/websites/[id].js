@@ -13,7 +13,7 @@ const Website = () => {
     useEffect(() => {
         async function fetchData() {
             const websiteSet = await axios(
-                `https://galacticblue.net/galactic-digital-studios/backend/public/api/websites/${id}`
+                `https://galacticdigitalsolutions.com/backend/public/api/websites/${id}`
             );
 
             setWebsite(websiteSet.data.data);

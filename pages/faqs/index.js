@@ -36,7 +36,7 @@ const Faqs = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <img src="https://galacticblue.net/galactic-digital-studios/img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" width="85%" alt="Laptop with monitor behind it" />
+                    <img src="https://galacticdigitalsolutions.com/img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" width="85%" alt="Laptop with monitor behind it" />
                 </div>
             </div>
         </div>

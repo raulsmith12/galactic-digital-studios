@@ -8,7 +8,7 @@ const Graphics = () => {
     useEffect(() => {
         async function fetchData() {
             const graphicList = await axios(
-                'https://galacticblue.net/galactic-digital-studios/backend/public/api/graphics'
+                'https://galacticdigitalsolutions.com/backend/public/api/graphics'
             );
 
             setGraphics(graphicList.data.data);

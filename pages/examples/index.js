@@ -13,7 +13,7 @@ const Examples = () => {
                 <div className="col">
                     <div className="mx-3 px-3">
                         <h3>
-                            <img src="https://galacticblue.net/galactic-digital-studios/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
+                            <img src="https://galacticdigitalsolutions.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
                             Logos
                         </h3>
                         <Logos />
@@ -21,7 +21,7 @@ const Examples = () => {
                     <hr />
                     <div className="mx-3 px-3">
                         <h3>
-                            <img src="https://galacticblue.net/galactic-digital-studios/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
+                            <img src="https://galacticdigitalsolutions.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
                             Graphics
                         </h3>
                         <Graphics />
@@ -29,7 +29,7 @@ const Examples = () => {
                     <hr />
                     <div className="mx-3 px-3">
                         <h3>
-                            <img src="https://galacticblue.net/galactic-digital-studios/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
+                            <img src="https://galacticdigitalsolutions.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
                             Websites
                         </h3>
                         <Websites />

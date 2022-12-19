@@ -9,7 +9,7 @@ const Services = () => {
     useEffect(() => {
         async function fetchData() {
             const servicePage = await axios(
-                'https://galacticblue.net/galactic-digital-studios/backend/public/api/services'
+                'https://galacticdigitalsolutions.com/backend/public/api/services'
             );
 
             setServiceList(servicePage.data.data);
@@ -44,9 +44,9 @@ const Services = () => {
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
                     <Link href="/services/graphic" className="btn btn-primary btn-lg btn-block">Various Graphic Design</Link>
                 </div>
-                <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
+                {/* <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
                     <Link href="/services/mobileApp" className="btn btn-primary btn-lg btn-block">Mobile App Development</Link>
-                </div>
+                </div> */}
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
                     <Link href="/services/database" className="btn btn-primary btn-lg btn-block">Database Management</Link>
                 </div>
