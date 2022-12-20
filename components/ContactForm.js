@@ -56,7 +56,7 @@ const ContactForm = () => {
                             sitekey={GoogleKey}
                             ref={captchaRef}
                         />
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-alpha">Submit</button>
                     </div>
                 </div>
                 <div>

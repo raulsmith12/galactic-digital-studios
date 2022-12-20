@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="row px-0 py-2 bg-secondary fixed-bottom border-top border-black">
+        <div className="row px-0 py-2 bg-beta fixed-bottom border-top border-black">
             <div className="col-10 offset-1">
                 <p className="text-white text-center">
                     <Link href="/" className="text-white">Home</Link>&nbsp;&nbsp;

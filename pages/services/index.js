@@ -30,28 +30,28 @@ const Services = () => {
             </div>
             <div className="row justify-content-center">
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/web" className="btn btn-primary btn-lg btn-block">Website Development</Link>
+                    <Link href="/services/web" className="btn btn-alpha btn-lg btn-block">Website Development</Link>
                 </div>
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/logo" className="btn btn-primary btn-lg btn-block">Logo Design</Link>
+                    <Link href="/services/logo" className="btn btn-alpha btn-lg btn-block">Logo Design</Link>
                 </div>
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/brochure" className="btn btn-primary btn-lg btn-block">Brochure Design</Link>
+                    <Link href="/services/brochure" className="btn btn-alpha btn-lg btn-block">Brochure Design</Link>
                 </div>
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/businessCard" className="btn btn-primary btn-lg btn-block">Business Card Design</Link>
+                    <Link href="/services/businessCard" className="btn btn-alpha btn-lg btn-block">Business Card Design</Link>
                 </div>
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/graphic" className="btn btn-primary btn-lg btn-block">Various Graphic Design</Link>
+                    <Link href="/services/graphic" className="btn btn-alpha btn-lg btn-block">Various Graphic Design</Link>
                 </div>
                 {/* <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/mobileApp" className="btn btn-primary btn-lg btn-block">Mobile App Development</Link>
+                    <Link href="/services/mobileApp" className="btn btn-alpha btn-lg btn-block">Mobile App Development</Link>
                 </div> */}
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/database" className="btn btn-primary btn-lg btn-block">Database Management</Link>
+                    <Link href="/services/database" className="btn btn-alpha btn-lg btn-block">Database Management</Link>
                 </div>
                 <div className="col-md-4 col-sm-12 d-grid gap-2 mb-2">
-                    <Link href="/services/cms" className="btn btn-primary btn-lg btn-block">Content Management</Link>
+                    <Link href="/services/cms" className="btn btn-alpha btn-lg btn-block">Content Management</Link>
                 </div>
             </div>
         </div>

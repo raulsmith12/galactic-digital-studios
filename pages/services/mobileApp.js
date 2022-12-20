@@ -14,7 +14,7 @@ const Web = () => {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col d-block gap-2 pb-3">
-                                <Link href="/services" className="btn btn-outline-primary btn-lg btn-block">
+                                <Link href="/services" className="btn btn-outline-alpha btn-lg btn-block">
                                     <FaAngleDoubleLeft />&nbsp;&nbsp;
                                     Back to Services
                                 </Link>

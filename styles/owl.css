@@ -2,25 +2,25 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    font-family: 'Bahnschrift', 'Roboto', sans-serif;
+    font-family: 'Bahnschrift', 'Roboto', sans-serif !important;
 }
 
-.bg-primary, .btn-primary, .btn-outline-primary:hover, .btn-secondary:hover {
+.bg-alpha, .btn-alpha, .btn-outline-alpha:hover, .btn-beta:hover {
     background-color: #483475 !important;
     color: #ffffff !important;
 }
 
-.bg-secondary, .btn-secondary, .btn-outline-secondary:hover, .btn-primary:hover {
+.bg-beta, .btn-beta, .btn-outline-beta:hover, .btn-alpha:hover {
     background-color: #141852 !important;
     color: #ffffff !important;
 }
 
-.btn-outline-primary {
+.btn-outline-alpha {
     color: #483475 !important;
     border-color: #483475 !important;
 }
 
-.btn-outline-secondary {
+.btn-outline-beta {
     color: #141852 !important;
     border-color: #141852 !important;
 }

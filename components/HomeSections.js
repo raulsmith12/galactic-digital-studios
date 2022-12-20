@@ -18,7 +18,7 @@ const HomeSections = () => {
                     <div className="row justify-content-center">
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Website Design and Development
                                 </h5>
                                 <div className="card-body">
@@ -28,7 +28,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Search Engine Optimization
                                 </h5>
                                 <div className="card-body">
@@ -38,7 +38,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Database Management
                                 </h5>
                                 <div className="card-body">
@@ -48,7 +48,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Content Management
                                 </h5>
                                 <div className="card-body">
@@ -58,7 +58,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Logo Design
                                 </h5>
                                 <div className="card-body">
@@ -68,7 +68,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     Graphic Design Services
                                 </h5>
                                 <div className="card-body">
@@ -78,7 +78,7 @@ const HomeSections = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 mb-2">
                             <div className="card">
-                                <h5 className="card-header bg-secondary text-white">
+                                <h5 className="card-header bg-beta text-white">
                                     COMING SOON
                                 </h5>
                                 <div className="card-body">

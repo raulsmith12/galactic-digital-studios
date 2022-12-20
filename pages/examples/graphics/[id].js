@@ -32,7 +32,7 @@ const Graphic = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col d-block gap-2 pb-2">
-                                <Link href="/examples" className="btn btn-outline-primary btn-lg btn-block">
+                                <Link href="/examples" className="btn btn-outline-alpha btn-lg btn-block">
                                     <FaAngleDoubleLeft />&nbsp;&nbsp;
                                     Back to Examples
                                 </Link>

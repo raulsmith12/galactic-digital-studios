@@ -1,10 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../styles/owl.css';
 import { useEffect } from 'react';
 import Transition from '../components/Transition';
 import Head from 'next/head';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/owl.css';
 
 function MyApp({ Component, pageProps }) {
 
