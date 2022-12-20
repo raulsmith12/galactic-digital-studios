@@ -35,7 +35,7 @@ const Contact = () => {
                                 </p>
                                 <p>
                                     <FaPhoneAlt />&nbsp;
-                                    Phone: 385.275.8665
+                                    Phone: 801.917.4262
                                 </p>
                                 <p>
                                     <FaGithub />&nbsp;

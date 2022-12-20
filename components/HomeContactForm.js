@@ -29,15 +29,15 @@ const HomeContactForm = () => {
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaPhoneAlt />&nbsp;&nbsp;&nbsp;
-                                385.275.8665
+                                801.917.4262
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaFacebookF />&nbsp;&nbsp;&nbsp;
-                                facebook.com/notyetknown
+                                facebook.com/galacticdigitalstudios
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaTwitter />&nbsp;&nbsp;&nbsp;
-                                @notyetknown 
+                                @galactic_stud10 
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaGithub />&nbsp;&nbsp;&nbsp;
