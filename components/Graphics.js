@@ -11,7 +11,7 @@ const Graphics = () => {
                 'https://galacticdigitalstudios.com/backend/public/api/graphics'
             );
 
-            setGraphics(graphicList.data.data);
+            setGraphics(graphicList.data.data.reverse());
         }
 
         fetchData();

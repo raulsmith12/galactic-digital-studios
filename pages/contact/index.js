@@ -23,10 +23,10 @@ const Contact = () => {
                                     Located in Salt Lake City, Utah but servicing clients throughout the continental United States&nbsp;<FaFlagUsa />
                                 </p>
                                 <p>
-                                    <FaFacebookF />
+                                    <FaFacebookF />&nbsp;facebook.com/galacticdigitalstudios
                                 </p>
                                 <p>
-                                    <FaTwitter />
+                                    <FaTwitter />&nbsp;@galactic_stud10
                                 </p>
                                 <h5>Raul Smith</h5>
                                 <p>

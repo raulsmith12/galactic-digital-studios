@@ -11,7 +11,7 @@ const Logos = () => {
                 'https://galacticdigitalstudios.com/backend/public/api/logos'
             );
 
-            setLogos(logoList.data.data);
+            setLogos(logoList.data.data.reverse());
         }
 
         fetchData();

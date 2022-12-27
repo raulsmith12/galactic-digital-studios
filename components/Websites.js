@@ -11,7 +11,7 @@ const Websites = () => {
                 'https://galacticdigitalstudios.com/backend/public/api/websites'
             );
 
-            setWebsites(websiteList.data.data);
+            setWebsites(websiteList.data.data.reverse());
         }
 
         fetchData();
