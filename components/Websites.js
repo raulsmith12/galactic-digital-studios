@@ -21,7 +21,7 @@ const Websites = () => {
         <div className="container-fluid">
             <div className="row justify-content-center">
                 {websites.map(i => (
-                    <div className="col-md-2 col-sm-4" key={i.id}>
+                    <div className="col-md-2 col-sm-4 mb-2" key={i.id}>
                         <Link href={"/examples/websites/" + i.id}>
                             <img src={i.thumb_url} width="100%" alt={i.name} />
                         </Link>
