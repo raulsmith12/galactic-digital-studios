@@ -5,7 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import { GoogleKey } from './GoogleKey';
 
-const API_PATH = 'https://galacticdigitalstudios.com/api/contact/contact.php';
+const API_PATH = 'https://galacticdigitalstudios.com/backend/public/api/contact';
 
 const ContactForm = () => {
     const [customerName, setCustomerName] = useState('');
@@ -22,7 +22,12 @@ const ContactForm = () => {
             method: 'post',
             url: `${API_PATH}`,
             headers: { 'content-type': 'application/json' },
-            data: { customerName, customerEmail, customerPhone, message }
+            data: {
+                'name': customerName,
+                'email': customerEmail,
+                'phone_no': customerPhone,
+                'message': message
+            }
         })
         .then(result => {
             setMailSent(result.data.sent),
