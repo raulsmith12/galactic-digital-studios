@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import Script from 'next/script';
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -23,30 +25,52 @@ const Website = () => {
     }, []);
 
     return (
-        <div className="container-fluid pb-5">
-            <div className="row">
-                <InsidePageHeader title={website.name} />
-            </div>
-            <div className="row">
-                <div className="col-md-8 col-sm-12">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col d-block gap-2 pb-2">
-                                <Link href="/examples" className="btn btn-outline-alpha btn-lg btn-block">
-                                    <FaAngleDoubleLeft />&nbsp;&nbsp;
-                                    Back to Examples
-                                </Link>
+        <>
+            <Head>
+                <title>{website.name} - Galactic Digital Studios</title>
+                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
+                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+                <link rel="icon" href="favicon.ico" />
+            </Head>
+            <Script
+                id='google-analytics'
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-B8904LJMQQ', {
+                        page_path: window.location.pathname,
+                    });
+                    `,
+                }}
+            />
+            <div className="container-fluid pb-5">
+                <div className="row">
+                    <InsidePageHeader title={website.name} />
+                </div>
+                <div className="row">
+                    <div className="col-md-8 col-sm-12">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col d-block gap-2 pb-2">
+                                    <Link href="/examples" className="btn btn-outline-alpha btn-lg btn-block">
+                                        <FaAngleDoubleLeft />&nbsp;&nbsp;
+                                        Back to Examples
+                                    </Link>
+                                </div>
                             </div>
                         </div>
+                        <img src={website.image_url} width="100%" alt={website.name} />
                     </div>
-                    <img src={website.image_url} width="100%" alt={website.name} />
-                </div>
-                <div className="col-md-4 col-sm-12">
-                    <h3>{website.description}</h3>
-                    <a href={website.site_url} target="_blank" className="h5">Visit the site!</a>
+                    <div className="col-md-4 col-sm-12">
+                        <h3>{website.description}</h3>
+                        <a href={website.site_url} target="_blank" className="h5">Visit the site!</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
