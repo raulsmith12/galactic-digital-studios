@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
+    "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tinymce/tinymce-react": "^4.2.0",
@@ -16,6 +17,7 @@
     "file-loader": "^6.2.0",
     "framer-motion": "^7.6.12",
     "next": "13.0.5",
+    "next-sitemap": "^3.1.52",
     "nextjs-google-analytics": "^2.2.2",
     "react": "18.2.0",
     "react-cookie-banner": "^4.1.0",

@@ -5,7 +5,7 @@ const HomeSections = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <h4 className="display-6 text-center text-shadow-2">We are Now Galactic Digital Studios</h4>
+                            <h1 className="display-6 text-center text-shadow-2">We are Now Galactic Digital Studios</h1>
                             <h5 className="text-center">No longer just satisfied with giving solely Web Solutions, and no longer feeling Blue, Galactic Digital Studios is in the business of making sure <strong><em>your</em></strong> business has what it needs to succeed.</h5>
                         </div>
                     </div>
@@ -73,20 +73,6 @@ const HomeSections = () => {
                                 </h5>
                                 <div className="card-body">
                                     Need a business card but are unsure of who to go through? Need a design for your business card, banner, or announcement? Never fear. Galactic Digital Studios will help guide you through the process of designing that flashy business card. We also work with local print shops whether your business is in the Utah area or somewhere else.
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-sm-6 mb-2">
-                            <div className="card">
-                                <h5 className="card-header bg-beta text-white">
-                                    COMING SOON
-                                </h5>
-                                <div className="card-body">
-                                    <ul>
-                                        <li>Mobile App Development</li>
-                                        <li>Desktop App Development</li>
-                                        <li>Game Development</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
