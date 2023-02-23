@@ -27,9 +27,9 @@ const Website = () => {
     return (
         <>
             <Head>
-                <title>{website.name} - Galactic Digital Studios</title>
-                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+                <title>{website.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
+                <meta name="description" content="Galactic Digital Studios is capable of many great services, but our bread and butter for seven years has been and continues to be our web development services. Backend, frontend, WordPress, custom CMS, database management, we are able to do it all." />
+                <meta name="keywords" content="website design, website development, web development, web design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script

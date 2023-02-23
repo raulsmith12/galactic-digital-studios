@@ -9,9 +9,9 @@ const Web = () => {
     return (
         <>
             <Head>
-                <title>Brochure Services - Galactic Digital Studios</title>
-                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+                <title>Brochure Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
+                <meta name="description" content="Whether you are looking to design a flyer that is advertising an upcoming event, a printed menu for your restaurant, or even a pamphlet chock full of information, Galactic Digital Studios is able to help you create your amazing brochure." />
+                <meta name="keywords" content="brochure design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script

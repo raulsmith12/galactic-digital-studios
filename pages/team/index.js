@@ -22,8 +22,8 @@ const Team = () => {
     return (
         <>
             <Head>
-                <title>Meet the Galactic Digital Studios Team</title>
-                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
+                <title>Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services</title>
+                <meta name="description" content="The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is." />
                 <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>

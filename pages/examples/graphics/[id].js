@@ -27,9 +27,9 @@ const Graphic = () => {
     return (
         <>
             <Head>
-                <title>{graphic.name} - Galactic Digital Studios</title>
-                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+                <title>{graphic.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
+                <meta name="description" content="This example of graphic design is but one of many ways the team at Galactic Digital Studios can help you with all of your graphic design needs. Contact us today!" />
+                <meta name="keywords" content="graphic design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script

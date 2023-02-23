@@ -9,9 +9,9 @@ const Web = () => {
     return (
         <>
             <Head>
-                <title>Mobile App Services - Galactic Digital Studios</title>
-                <meta name="description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+                <title>Mobile App Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
+                <meta name="description" content="The year is 2023. Websites are no longer the only tool in an online business's toolchest. Mobile apps are becoming more and more commonplace. This sounds like science fiction, but it's very much real-life. And Galactic Digital Studios has a team of mobile app developers that can help." />
+                <meta name="keywords" content="mobile app design, mobile app development, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script
