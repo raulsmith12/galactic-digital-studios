@@ -11,6 +11,7 @@ const Privacy = () => {
                 <meta name="keywords" content="privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
+            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
             <Script
                 id='google-analytics'
                 strategy="afterInteractive"

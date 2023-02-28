@@ -14,6 +14,7 @@ const Web = () => {
                 <meta name="keywords" content="graphic design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
+            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
             <Script
                 id='google-analytics'
                 strategy="afterInteractive"
