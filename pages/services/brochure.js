@@ -12,6 +12,18 @@ const Web = () => {
                 <title>Brochure Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
                 <meta name="description" content="Whether you are looking to design a flyer that is advertising an upcoming event, a printed menu for your restaurant, or even a pamphlet chock full of information, Galactic Digital Studios is able to help you create your amazing brochure." />
                 <meta name="keywords" content="brochure design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:title" content="Brochure Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="og:description" content="Whether you are looking to design a flyer that is advertising an upcoming event, a printed menu for your restaurant, or even a pamphlet chock full of information, Galactic Digital Studios is able to help you create your amazing brochure." />
+                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:title" content="Brochure Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="twitter:description" content="Whether you are looking to design a flyer that is advertising an upcoming event, a printed menu for your restaurant, or even a pamphlet chock full of information, Galactic Digital Studios is able to help you create your amazing brochure." />
+                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

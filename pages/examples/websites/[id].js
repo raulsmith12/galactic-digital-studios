@@ -30,6 +30,18 @@ const Website = () => {
                 <title>{website.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
                 <meta name="description" content="Galactic Digital Studios is capable of many great services, but our bread and butter for seven years has been and continues to be our web development services. Backend, frontend, WordPress, custom CMS, database management, we are able to do it all." />
                 <meta name="keywords" content="website design, website development, web development, web design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:title" content="Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="og:description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
+                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:title" content="Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="twitter:description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
+                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

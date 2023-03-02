@@ -11,6 +11,18 @@ const Contact = () => {
                 <title>Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
                 <meta name="description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
                 <meta name="keywords" content="contact us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:title" content="Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="og:description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
+                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:title" content="Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="twitter:description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
+                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

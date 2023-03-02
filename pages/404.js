@@ -5,9 +5,21 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>404 - Not Found</title>
+        <title>404 - Not Found - Galactic Digital Studios</title>
         <meta name="description" content="The page you are looking for cannot be found. Please try typing that in again." />
         <meta name="keywords" content="404, page not found" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+        <meta property="og:title" content="404 - Not Found - Galactic Digital Studios" />
+        <meta property="og:description" content="The page you are looking for cannot be found. Please try typing that in again." />
+        <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+        <meta property="twitter:title" content="404 - Not Found - Galactic Digital Studios" />
+        <meta property="twitter:description" content="The page you are looking for cannot be found. Please try typing that in again." />
+        <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
         <link rel="icon" href="favicon.ico" />
       </Head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

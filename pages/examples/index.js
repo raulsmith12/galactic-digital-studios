@@ -12,6 +12,18 @@ const Examples = () => {
                 <title>Examples - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
                 <meta name="description" content="These are but a few examples of what Galactic Digital Studios can bring to the table for your business. Need a new logo? We've got you. Need graphic work done? We can do that too. A new website? Yep, we've got that too." />
                 <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:title" content="Examples - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="og:description" content="These are but a few examples of what Galactic Digital Studios can bring to the table for your business. Need a new logo? We've got you. Need graphic work done? We can do that too. A new website? Yep, we've got that too." />
+                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:title" content="Examples - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="twitter:description" content="These are but a few examples of what Galactic Digital Studios can bring to the table for your business. Need a new logo? We've got you. Need graphic work done? We can do that too. A new website? Yep, we've got that too." />
+                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

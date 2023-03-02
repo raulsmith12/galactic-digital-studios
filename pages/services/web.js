@@ -12,6 +12,18 @@ const Web = () => {
                 <title>Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
                 <meta name="description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
                 <meta name="keywords" content="website design, website development, web development, web design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:title" content="Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="og:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
+                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:title" content="Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
+                <meta property="twitter:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
+                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
