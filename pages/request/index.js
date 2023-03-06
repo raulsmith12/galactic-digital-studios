@@ -12,13 +12,13 @@ const Request = () => {
                 <meta name="keywords" content="request service, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/request" />
                 <meta property="og:title" content="Request Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="og:description" content="We get that after the pandemic that face-to-face interaction isn't always accessible or easy. That's why Galactic Digital Studios is able to take service requests by phone, email, or contact form." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/request" />
                 <meta property="twitter:title" content="Request Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="twitter:description" content="We get that after the pandemic that face-to-face interaction isn't always accessible or easy. That's why Galactic Digital Studios is able to take service requests by phone, email, or contact form." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

@@ -11,13 +11,13 @@ const About = () => {
                 <meta name="keywords" content="about us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/about" />
                 <meta property="og:title" content="About Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="og:description" content="Started in 2015, Galactic Digital Studios has evolved past simply a web solutions company and has now become a trusted graphic and logo design company on top of web development, mobile app development, and content management service." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/about" />
                 <meta property="twitter:title" content="About Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="twitter:description" content="Started in 2015, Galactic Digital Studios has evolved past simply a web solutions company and has now become a trusted graphic and logo design company on top of web development, mobile app development, and content management service." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

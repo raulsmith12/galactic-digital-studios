@@ -28,20 +28,20 @@ const Logo = () => {
         <>
             <Head>
                 <title>{logo.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="Whether you are a mom-and-pop shop just starting out or you are just looking for a fresh coat of paint, a proper logo - while not the entire brand - is a great way for possible consumers to identify your brand." />
+                <meta name="description" content={`Galactic Digital Studios is capable of designing logos for businesses and clients big or small. As an example, here is a site for one of our esteemed clients, ${logo.name}. ${logo.description}`}  />
                 <meta name="keywords" content="logo design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
-                <meta property="og:title" content="Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+                <meta property="og:url" content={`https://galacticdigitalstudios.com/examples/logos/${id}`} />
+                <meta property="og:title" content={`${logo.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services`} />
+                <meta property="og:description" content={`Galactic Digital Studios is capable of designing logos for businesses and clients big or small. As an example, here is a site for one of our esteemed clients, ${logo.name}. ${logo.description}`} />
+                <meta property="og:image" content={logo.image_url} />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
-                <meta property="twitter:title" content="Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="Galactic Digital Studios is your one-stop shop for website development, app development, search engine optimization, content management, database management, graphic and logo design, and much more!" />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
+                <meta property="twitter:url" content={`https://galacticdigitalstudios.com/examples/logos/${id}`} />
+                <meta property="twitter:title" content={`${logo.name} - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services`} />
+                <meta property="twitter:description" content={`Galactic Digital Studios is capable of designing logos for businesses and clients big or small. As an example, here is a site for one of our esteemed clients, ${logo.name}. ${logo.description}`} />
+                <meta property="twitter:image" content={logo.image_url} />
                 <link rel="icon" href="favicon.ico" />
             </Head>
             <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>

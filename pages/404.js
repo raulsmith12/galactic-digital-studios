@@ -10,13 +10,13 @@ const Home = () => {
         <meta name="keywords" content="404, page not found" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+        <meta property="og:url" content="https://galacticdigitalstudios.com/404" />
         <meta property="og:title" content="404 - Not Found - Galactic Digital Studios" />
         <meta property="og:description" content="The page you are looking for cannot be found. Please try typing that in again." />
         <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+        <meta property="twitter:url" content="https://galacticdigitalstudios.com/404" />
         <meta property="twitter:title" content="404 - Not Found - Galactic Digital Studios" />
         <meta property="twitter:description" content="The page you are looking for cannot be found. Please try typing that in again." />
         <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

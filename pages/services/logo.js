@@ -14,13 +14,13 @@ const Web = () => {
                 <meta name="keywords" content="logo design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/logo" />
                 <meta property="og:title" content="Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="og:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/logo" />
                 <meta property="twitter:title" content="Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="twitter:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

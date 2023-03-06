@@ -14,13 +14,13 @@ const Web = () => {
                 <meta name="keywords" content="database management, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/database" />
                 <meta property="og:title" content="Database Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="og:description" content="Databases are an integral part of any dynamic website. From products and shipping to content and user information, databases are everywhere online. Galactic Digital Studios will handle all of your database management needs." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/database" />
                 <meta property="twitter:title" content="Database Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="twitter:description" content="Databases are an integral part of any dynamic website. From products and shipping to content and user information, databases are everywhere online. Galactic Digital Studios will handle all of your database management needs." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

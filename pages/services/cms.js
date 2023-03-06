@@ -14,13 +14,13 @@ const Web = () => {
                 <meta name="keywords" content="content management, CMS, WordPress, Drupal, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/cms" />
                 <meta property="og:title" content="Content Management System Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="og:description" content="For a truly great dynamic website to work, you need a solid content management system. From WordPress to Drupal to Joomla to even creating our own barebones custom content management system, Galactic Digital Studios has you covered." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/cms" />
                 <meta property="twitter:title" content="Content Management System Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
                 <meta property="twitter:description" content="For a truly great dynamic website to work, you need a solid content management system. From WordPress to Drupal to Joomla to even creating our own barebones custom content management system, Galactic Digital Studios has you covered." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
