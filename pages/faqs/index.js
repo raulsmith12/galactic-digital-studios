@@ -39,13 +39,13 @@ const Faqs = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Frequently Asked Questions" />
                 </div>
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
-                        <div className="mx-5 px-5">
+                        <div className="mx-1">
                             <p className="display-7">We get asked a lot of questions, particularly as our team and services continue to grow. Here is a list of the questions we hear the most often:</p>
                             <ol>
                                 <li>
@@ -71,7 +71,7 @@ const Faqs = () => {
                             </ol>
                         </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-12 text-center">
                         <img src="https://galacticdigitalstudios.com/img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" width="85%" alt="Laptop with monitor behind it" />
                     </div>
                 </div>

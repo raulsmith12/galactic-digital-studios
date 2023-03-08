@@ -38,12 +38,12 @@ const Privacy = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Privacy Policy" />
                 </div>
                 <div className="row">
-                    <div className="col mx-5 px-5">
+                    <div className="col mx-1">
                         <p>This privacy notice discloses the privacy practices for Galactic Digital Studios, our partner websites and any businesses we are associated with. This privacy notice applies solely to information collected by this website. It will notify you of the following:</p>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.</li>

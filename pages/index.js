@@ -40,7 +40,7 @@ const Home = () => {
           `,
         }}
       />
-      <div className="container-fluid px-0 pb-4">
+      <div className="container-fluid px-0 pb-5 mb-1">
         <div className="row">
           <div className="col px-0">
             <HomeSlider />

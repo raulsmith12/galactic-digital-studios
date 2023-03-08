@@ -41,12 +41,12 @@ const Web = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Graphic Design" />
                 </div>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-3 col-sm-12">
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col d-block gap-2 pb-3">
@@ -63,7 +63,7 @@ const Web = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-md-9 col-sm-12">
                         <p>There are many graphic design services that are not individually outlined on this website that Galactic Digital Studios is prepared to work with your business on, including:</p>
                         <ul>
                             <li>Lamp Post Banners</li>

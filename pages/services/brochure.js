@@ -41,12 +41,12 @@ const Web = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Brochure Design" />
                 </div>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-3 col-sm-12">
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col d-block gap-2 pb-3">
@@ -63,7 +63,7 @@ const Web = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-md-9 col-sm-12">
                         <p>Are you looking to build a new menu for your restaurant? Maybe print out some programs for that important event that&rsquo;s coming up? Have a wedding you need to announce to the world? Galactic Digital Studios can do it all! Our team of graphic design experts can help with these and more. We also work with whatever print shop that is near you to make sure that you get the best professional experience you can possibly get.</p>
                         <h6>Be it a brochure, program, menu, or anything else you may need, why not hire Galactic Digital Studios for all your brochure design needs? Fill out the form below and let us know how we can assist with your business?</h6>
                         <RequestForm selectedService="graphic" />

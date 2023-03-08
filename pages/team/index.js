@@ -54,17 +54,17 @@ const Team = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Meet the Team" />
                 </div>
                 <div className="row">
-                    <div className="col mx-5 px-5">
+                    <div className="col mx-1">
                         <p className="display-7">Our team of highly skilled designers and developers is here to help you with any of your digital marketing and branding needs, bringing a wealth of experience and expertise to the table. To help with putting faces to names, here is the Galactic Digital Studios team:</p>
                     </div>
                 </div>
                 {teamContent.map(i => (
-                    <div className="row px-5 mx-5 my-2" key={i.id}>
+                    <div className="row mx-1 my-2" key={i.id}>
                         <div className="col-md-2 col-sm-4">
                             <img src={i.image_url} width="100%" alt={i.name} />
                         </div>

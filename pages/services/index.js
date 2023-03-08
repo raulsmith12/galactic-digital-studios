@@ -55,12 +55,12 @@ const Services = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Services" />
                 </div>
                 <div className="row">
-                    <div className="col mx-5 px-5">
+                    <div className="col mx-1">
                         <p className="display-7">Galactic Digital Studios prides itself on being a one-stop-shop of sorts for all your digital and online marketing needs. Here is a list of all the services that Galactic provides:</p>
                     </div>
                 </div>

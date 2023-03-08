@@ -40,7 +40,7 @@ const Contact = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Contact Galactic Digital Studios" />
                 </div>
@@ -48,10 +48,10 @@ const Contact = () => {
                     <div className="col">
                         <div className="container">
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-md-6 col-sm-12">
                                     <ContactForm />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-md-6 col-sm-12">
                                     <p>Use the contact form on this page to contact our team of designers and developers, or you can contact the team members directly using the information below:</p>
                                     <h5>Galactic Digital Studios</h5>
                                     <p>

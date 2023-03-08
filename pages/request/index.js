@@ -39,13 +39,13 @@ const Request = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title="Request Services" />
                 </div>
                 <div className="row">
                     <div className="col">
-                        <p className="display-7 mx-5 px-5">Using the form below, let us know what service of ours you are requesting today:</p>
+                        <p className="display-7 mx-1">Using the form below, let us know what service of ours you are requesting today:</p>
                         <RequestForm />
                     </div>
                 </div>
