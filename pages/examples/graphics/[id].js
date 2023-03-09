@@ -59,7 +59,7 @@ const Graphic = () => {
                     `,
                 }}
             />
-            <div className="container-fluid pb-5">
+            <div className="container-fluid pb-5 mb-5">
                 <div className="row">
                     <InsidePageHeader title={graphic.name} />
                 </div>
