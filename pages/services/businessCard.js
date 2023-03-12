@@ -58,7 +58,7 @@ const Web = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width="100%" alt="Laptop with saying on it" />
+                                    <img src="https://galacticdigitalstudios.com/img/business-card-design-l.jpg" width="100%" alt="Wooden business card design on wooden display stand" />
                                 </div>
                             </div>
                         </div>

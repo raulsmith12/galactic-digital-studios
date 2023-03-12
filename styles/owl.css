@@ -51,3 +51,20 @@ body {
 .effect-2 {
     overflow: hidden;
 }
+
+.hidden {
+    display: none;
+}
+
+.text-black {
+    color: black;
+}
+
+@media screen and (min-width: 992px) {
+    .dropdown-submenu {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background-color: white;
+    }
+}
