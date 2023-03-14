@@ -53,19 +53,16 @@ const Header = () => {
                                             <ServiceMenu service="logo" stateMenu={stateMenu} serviceName="logo-design" />
                                         </li>
                                         <li className="dropdown-item position-relative" onClick={() => showStateMenu('business-card')} onMouseOver={() => showStateMenu('business-card')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Business Card Design +</a>
-                                            <ServiceMenu service="business-card" stateMenu={stateMenu} serviceName="business-card-design" />
+                                            <Link className="nav-link text-black" href="/services/businessCard">Business Card Design</Link>
                                         </li>
                                         <li className="dropdown-item position-relative" onClick={() => showStateMenu('brochure')} onMouseOver={() => showStateMenu('brochure')} onMouseOut={() => showStateMenu('')}>
                                             <Link className="nav-link text-black" href="/services/brochure">Brochure Design</Link>
                                         </li>
                                         <li className="dropdown-item position-relative" onClick={() => showStateMenu('database')} onMouseOver={() => showStateMenu('database')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Database Management +</a>
-                                            <ServiceMenu service="database" stateMenu={stateMenu} serviceName="database-management" />
+                                            <Link className="nav-link text-black" href="/services/database">Database Management</Link>
                                         </li>
                                         <li className="dropdown-item position-relative" onClick={() => showStateMenu('cms')} onMouseOver={() => showStateMenu('cms')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Content Management +</a>
-                                            <ServiceMenu service="cms" stateMenu={stateMenu} serviceName="content-management" />
+                                            <Link className="nav-link text-black" href="/services/cms">Content Management</Link>
                                         </li>
                                     </ul>
                                 </li>
