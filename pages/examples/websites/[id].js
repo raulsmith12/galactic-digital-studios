@@ -22,7 +22,7 @@ const Website = () => {
         };
 
         fetchData();
-    }, []);
+    }, [website]);
 
     return (
         <>

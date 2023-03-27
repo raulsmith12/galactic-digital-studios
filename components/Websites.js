@@ -15,7 +15,7 @@ const Websites = () => {
         }
 
         fetchData();
-    }, []);
+    }, [websites]);
 
     return (
         <div className="container-fluid">

@@ -22,7 +22,7 @@ const Graphic = () => {
         };
 
         fetchData();
-    }, []);
+    }, [graphic]);
 
     return (
         <>

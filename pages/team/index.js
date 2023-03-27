@@ -17,7 +17,7 @@ const Team = () => {
         }
 
         fetchData();
-    }, []);
+    }, [teamContent]);
 
     return (
         <>

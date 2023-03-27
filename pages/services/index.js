@@ -6,20 +6,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Services = () => {
-    const [serviceList, setServiceList] = useState([]);
-
-    useEffect(() => {
-        async function fetchData() {
-            const servicePage = await axios(
-                'https://galacticdigitalstudios.com/backend/public/api/services'
-            );
-
-            setServiceList(servicePage.data.data);
-        }
-
-        fetchData();
-    }, []);
-
     return (
         <>
             <Head>

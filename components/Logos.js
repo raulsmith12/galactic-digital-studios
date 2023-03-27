@@ -15,7 +15,7 @@ const Logos = () => {
         }
 
         fetchData();
-    }, []);
+    }, [logos]);
 
     return (
         <div className="container-fluid">

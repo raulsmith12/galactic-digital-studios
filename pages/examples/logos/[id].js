@@ -22,7 +22,7 @@ const Logo = () => {
         };
 
         fetchData();
-    }, []);
+    }, [logo]);
 
     return (
         <>
