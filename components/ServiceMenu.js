@@ -18,6 +18,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName }) => {
                             </li>
                         </ul>
                     </li>
+                    <li className="dropdown-item position-relative" onClick={() => showCityMenu('weber-county-utah')} onMouseOver={() => showCityMenu('weber-county-utah')} onMouseOut={() => showCityMenu('')}>
+                        <a className="nav-link text-black">Weber County +</a>
+                        <ul className={"dropdown-submenu " + (cityMenu === 'weber-county-utah' ? 'show' : 'hidden')}>
+                            <li className="dropdown-item">
+                                <Link className="nav-link text-black" href={`/services/ogden-utah-${serviceName}`}>Ogden</Link>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
