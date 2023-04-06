@@ -7,19 +7,19 @@ const Page = () => {
     return (
         <>
             <Head>
-                <title>Ogden Utah Logo Design - Galactic Digital Studios</title>
+                <title>Seattle Washington Logo Design - Galactic Digital Studios</title>
                 <meta name="description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta name="keywords" content="logo design, Ogden, Utah" />
+                <meta name="keywords" content="logo design, Seattle, Washington" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/ogden-utah-logo-design" />
-                <meta property="og:title" content="Ogden Utah Logo Design - Galactic Digital Studios" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/seattle-washington-logo-design" />
+                <meta property="og:title" content="Seattle Washington Logo Design - Galactic Digital Studios" />
                 <meta property="og:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/ogden-utah-logo-design" />
-                <meta property="twitter:title" content="Ogden Utah Logo Design - Galactic Digital Studios" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/seattle-washington-logo-design" />
+                <meta property="twitter:title" content="Seattle Washington Logo Design - Galactic Digital Studios" />
                 <meta property="twitter:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
@@ -41,11 +41,11 @@ const Page = () => {
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
-                    <InsidePageHeader title="Ogden Utah Logo Design" />
+                    <InsidePageHeader title="Seattle Washington Logo Design" />
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h2>Quality Logo Design For Junction City and the Northern Wasatch Front</h2>
+                        <h2>Quality Logo Design For The Pacific Northwest</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -59,16 +59,15 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="col-md-9 col-sm-12">
-                        <p className="h4">Trying to find a small business logo designer that gets your business and what you want to convey to your customers can be a challenge. Galactic Digital Studios is well versed in logo design for any business, no matter the size. Our courteous and professional team of designers will help guide you through the arduous process and design the best logo for your business.</p>
-                        <p className="h4">Not just that, but because Galactic Digital Studios understands that a logo is only one piece of the much larger brand identity puzzle, we&rsquo;ll even go over the ins-and-outs of coming up with a consistent and thorough brand style guide to match your logo, so that your online brand can stay consistent in all things that you do.</p>
-                        <p className="h4">Ogden, Utah is home to many inspirations for logo design. From the Ogden River bridge to Ogden High School to the Union Station and adjacent Historic 25th Street to the beautiful east bench, there are so many inspirations to draw from. In fact, it is often said that Ben Lomond Peak is the inspiration behind the Paramount Pictures logo.</p>
+                        <p className="h4">Great logo design is an art form, and despite what many say, it is only a piece of your online brand identity. The professionals at Galactic Digital Studios understand this and are eager to help with creating your digital brand identity; from the style guides to the marketing slogans to, yes, even the logo design, our team of experienced professionals will help guide you every step of the way so that your brand identity is not only great, but also consistent.</p>
+                        <p className="h4">Many local businesses in the Seattle, Washington area are looking to make a name for themselves and create an online brand that grabs people&rsquo;s attention. Whether it&rsquo;s a fresh seafood restaurant on Pine Street or a small herbal remedy shop along the pier at Pike Place Market or a coffee shop in Chinatown, small businesses are doing their best to compete with the big brands, and with each other.</p>
                     </div>
                 </div>
                 <div className="row pt-2">
                     <div className="col-md-9 col-sm-12">
-                        <p className="h4">With a town as rich in its history - from the pioneers to the meeting of the railroads at nearby Promontory Point to the Union Station to the underground tunnels where Al Capone himself was once rumored to frequent - Ogden is maybe the spot for inspiring logo design.</p>
-                        <p className="h4">And with Ogden continuing to grow into the town it has become and the town that it hopes to be, there is a lot of room for growth for many small businesses in the area. Your small business could be one great logo design away from making a name for itself in a big way. Let Galactic Digital Studios be the catalyst for your small business&rsquo;s success.</p>
-                        <h6 className="h4">Use the contact form below or contact us today to learn more about our logo design services.</h6>
+                        <p className="h4">A good way to stand out from the crowd - aside from not using the Space Needle in your logo - is to have a great logo design. The experienced team at Galactic Digital Studios will sit down with you and determine how to create a logo that both fits your brand and helps you to stand out from the crowd; because at the end of the day, the logo helps to sell your business just as much as anything else.</p>
+                        <p className="h4">And just like any other of our graphic or digital design services, you can rest assured that Galactic Digital Studios will work with you to have your logo ready for you in any and every format possible, so that your company can put that logo to good use with embroidering, screen printing, even printing decals and stickers. Your logo should be yours to do with as you see fit. Let Galactic Digital Studios help get you the best logo design for your business.</p>
+                        <h6 className="h4">Use the form below or contact Galactic Digital Studios today to schedule a consultation with any of our logo designers.</h6>
                     </div>
                     <div className="col-md-3 d-none d-md-block">
                         <div className="container-fluid">

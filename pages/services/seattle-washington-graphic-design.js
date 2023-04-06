@@ -7,19 +7,19 @@ const Page = () => {
     return (
         <>
             <Head>
-                <title>Ogden Utah Graphic Design - Galactic Digital Studios</title>
+                <title>Seattle Washington Graphic Design - Galactic Digital Studios</title>
                 <meta name="description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Ogden, Utah" />
+                <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Seattle, Washington" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/ogden-utah-graphic-design" />
-                <meta property="og:title" content="Ogden Utah Graphic Design - Galactic Digital Studios" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/seattle-washington-graphic-design" />
+                <meta property="og:title" content="Seattle Washington Graphic Design - Galactic Digital Studios" />
                 <meta property="og:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/ogden-utah-graphic-design" />
-                <meta property="twitter:title" content="Ogden Utah Graphic Design - Galactic Digital Studios" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/seattle-washington-graphic-design" />
+                <meta property="twitter:title" content="Seattle Washington Graphic Design - Galactic Digital Studios" />
                 <meta property="twitter:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
@@ -41,11 +41,11 @@ const Page = () => {
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
-                    <InsidePageHeader title="Ogden Utah Graphic Design" />
+                    <InsidePageHeader title="Seattle Washington Graphic Design" />
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h2>Graphic Design Including Banners, Bookmarks, and More for Weber County</h2>
+                        <h2>Graphic Design Including Banners, Bookmarks, and More for Seattle</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -53,22 +53,21 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col text-center">
-                                    <img src="https://galacticdigitalstudios.com/img/graphic-design-l.jpg" width="60%" alt="Laptop with trendy graphic design poster behind it" />
+                                    <img src="https://galacticdigitalstudios.com/img/graphic-design-l.jpg" width="50%" alt="Laptop with trendy graphic design poster behind it" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-9 col-sm-12">
-                        <p className="h4">If you&rsquo;ve been on the fence lately about hiring a professional graphic designer, Galactic Digital Studios may be just the firm for your needs. Our team has been working in the graphic design field for over ten years, with projects ranging from announcement flyers to social media banners to business cards. Whatever your needs, Galactic Digital Studios has you covered.</p>
-                        <p>&nbsp;</p>
-                        <p className="h4">Many refer to Ogden, Utah, as the little brother to Salt Lake, but in the hearts of Galactic Digital Studios&rsquo; team of graphic designers, it is a city rich in history and natural beauty. Where else can you find a street with as much history and scenic beauty as Historic 25th Street, turn your head to the north and find the mountainscape that inspired the Paramount logo, and turn your head to the east to find the beautiful snow-capped Rocky Mountains?</p>
+                        <p className="h4">Galactic Digital Studios is a qualified digital graphic design company equipped with the experience and skills to create great graphics for whatever the occasion may provide. We are capable of creating graphics for your business cards, social media announcements, t-shirts, banners, lamp posts, billboards, and more. Whatever your needs, Galactic Digital Studios has you covered.</p>
+                        <p className="h4">Seattle, Washington is home to many conventions and other social gatherings. Your business not only deserves to be seen and heard by the people in the area, but it needs it. With an experienced and attentive graphic design company like Galactic Digital Studios in your corner, you will be more fully prepared to face any social or business occasion.</p>
+                        <p className="h4">And while we may be new(ish) to the Seattle area, Galactic Digital Studios also understands the need to shop local first. The last thing you need is to deal with the big boy companies on a tight deadline and have your printed graphic design arrive a week later than anticipated. We work with local print shops, call around and do the shopping for you, and will get you the best price for your needs.</p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
-                        <p className="h4">With so much architectural and natural beauty to inspire any graphic designer, Ogden almost feels just right for a professional graphic design team to handle the small business needs of the area. In addition to finding any number of muses for the latest lamp post or bookmark project, Galactic Digital Studios is also in touch with many local print shops in the area. We firmly believe in keeping with the Ogden mantra of &ldquo;local first&rdquo;.</p>
-                        <p className="h4">And because we have a direct line with print shops in the area, Galactic Digital Studios can get you the best deal on that bookmark or screen-printed hoodie or that flyer. Our team of graphic design professionals remain standing by, ready and willing to help your company reach that next level.</p>
-                        <h6 className="h4">Contact our graphic design team using the contact form and/or info below.</h6>
+                        <p className="h4">Furthermore, we will hand the graphic design files to the print shop for you as well, giving them the head start so that your printed designs will be done faster. Whether you need a fresh batch of business cards to distribute at the local coffee shops, a new billboard to be posted along I-5, or a fresh banner for your booth to show off at an upcoming convention, Galactic Digital Studios will ensure that you are satisfied with the final product.</p>
+                        <h6 className="h4">Use the form below or contact us directly today and let Galactic Digital Studios be your graphic design experts.</h6>
                     </div>
                     <div className="col-md-3 d-none d-md-block">
                         <div className="container-fluid">
