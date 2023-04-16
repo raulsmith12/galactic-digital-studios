@@ -24,10 +24,6 @@ const HomeContactForm = () => {
                                 raul.smith@galacticdigitalstudios.com
                             </h6>
                             <h6 className="text-white mt-4">
-                                <FaEnvelopeOpenText />&nbsp;&nbsp;&nbsp;
-                                orion.hoag@galacticdigitalstudios.com
-                            </h6>
-                            <h6 className="text-white mt-4">
                                 <FaPhoneAlt />&nbsp;&nbsp;&nbsp;
                                 801.917.4262
                             </h6>
