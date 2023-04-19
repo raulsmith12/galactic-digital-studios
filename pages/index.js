@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
-import HomeSlider from '../components/HomeSlider';
+import InsidePageHeader from '../components/InsidePageHeader';
 import HomeSections from '../components/HomeSections';
 import HomeContactForm from '../components/HomeContactForm';
 
@@ -43,7 +43,7 @@ const Home = () => {
       <div className="container-fluid px-0 pb-5 mb-1">
         <div className="row">
           <div className="col px-0">
-            <HomeSlider />
+            <InsidePageHeader title="Welcome to Galactic Digital Studios" />
           </div>
         </div>
         <HomeSections />

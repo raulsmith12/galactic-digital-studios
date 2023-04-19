@@ -77,11 +77,6 @@ const Contact = () => {
                                         <FaGithub />&nbsp;
                                         Github: https://github.com/raulsmith12
                                     </p>
-                                    <h5>Orion Hoag</h5>
-                                    <p>
-                                        <FaEnvelopeOpenText />&nbsp;
-                                        Email: orion.hoag@galacticdigitalstudios.com
-                                    </p>
                                 </div>
                             </div>
                         </div>

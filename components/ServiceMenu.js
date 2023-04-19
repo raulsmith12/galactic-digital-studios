@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const ServiceMenu = ({ stateMenu, service, serviceName }) => {
+const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
     const [countyMenu, showCountyMenu] = useState('');
     const [cityMenu, showCityMenu] = useState('');
 
@@ -14,7 +14,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName }) => {
                         <a className="nav-link text-black">King County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'king-county-washington' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/seattle-washington-${serviceName}`}>Seattle</Link>
+                                <Link className="nav-link text-black" href={`/services/seattle-washington-${serviceName}`} onClick={hideNavbar}>Seattle</Link>
                             </li>
                         </ul>
                     </li>
@@ -27,7 +27,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName }) => {
                         <a className="nav-link text-black">Salt Lake County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'salt-lake-county-utah' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/salt-lake-city-utah-${serviceName}`}>Salt Lake City</Link>
+                                <Link className="nav-link text-black" href={`/services/salt-lake-city-utah-${serviceName}`} onClick={hideNavbar}>Salt Lake City</Link>
                             </li>
                         </ul>
                     </li>
@@ -35,7 +35,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName }) => {
                         <a className="nav-link text-black">Weber County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'weber-county-utah' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/ogden-utah-${serviceName}`}>Ogden</Link>
+                                <Link className="nav-link text-black" href={`/services/ogden-utah-${serviceName}`} onClick={hideNavbar}>Ogden</Link>
                             </li>
                         </ul>
                     </li>

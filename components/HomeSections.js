@@ -5,13 +5,6 @@ const HomeSections = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <h1 className="display-6 text-center text-shadow-2">We are Now Galactic Digital Studios</h1>
-                            <h5 className="text-center">No longer just satisfied with giving solely Web Solutions, and no longer feeling Blue, Galactic Digital Studios is in the business of making sure <strong><em>your</em></strong> business has what it needs to succeed.</h5>
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="row">
-                        <div className="col">
                             <h4 className="display-6 text-center text-shadow-2">Galactic Digital Studios Can Handle Your Most Pressing Business Resources and Development Needs, Including:</h4>
                         </div>
                     </div>
