@@ -75,7 +75,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/logo-design-r.jpg" width="100%" alt="Desk layout with logo design sketches" />
+                                    <img src="https://galacticdigitalstudios.com/img/ogden-utah-logo-design.jpg" width="100%" alt="Ogden Utah logo design" />
                                 </div>
                             </div>
                         </div>
