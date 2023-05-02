@@ -56,13 +56,10 @@ const Contact = () => {
                                     <h5>Galactic Digital Studios</h5>
                                     <p>
                                         <FaMapMarkerAlt />&nbsp;
-                                        Located in Salt Lake City, Utah but servicing clients throughout the continental United States&nbsp;<FaFlagUsa />
+                                        Servicing clients throughout the continental United States&nbsp;<FaFlagUsa />
                                     </p>
                                     <p>
                                         <FaFacebookF />&nbsp;facebook.com/galacticdigitalstudios
-                                    </p>
-                                    <p>
-                                        <FaTwitter />&nbsp;@galactic_stud10
                                     </p>
                                     <h5>Raul Smith</h5>
                                     <p>

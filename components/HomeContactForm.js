@@ -16,7 +16,7 @@ const HomeContactForm = () => {
                         <div className="col-md-4 col-sm-12">
                             <h6 className="text-white text-center mt-4">
                                 <FaMapMarkerAlt />&nbsp;
-                                Located in Salt Lake City, Utah<br />but serving businesses throughout the continental United States&nbsp;
+                                Serving businesses throughout the continental United States&nbsp;
                                 <FaFlagUsa />
                             </h6>
                             <h6 className="text-white mt-4">
@@ -30,10 +30,6 @@ const HomeContactForm = () => {
                             <h6 className="text-white mt-4">
                                 <FaFacebookF />&nbsp;&nbsp;&nbsp;
                                 facebook.com/galacticdigitalstudios
-                            </h6>
-                            <h6 className="text-white mt-4">
-                                <FaTwitter />&nbsp;&nbsp;&nbsp;
-                                @galactic_stud10 
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaGithub />&nbsp;&nbsp;&nbsp;
