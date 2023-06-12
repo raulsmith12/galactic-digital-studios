@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
+import ReactPlayer from 'react-player';
 import InsidePageHeader from '../components/InsidePageHeader';
 import HomeSections from '../components/HomeSections';
 import HomeContactForm from '../components/HomeContactForm';
@@ -43,7 +44,14 @@ const Home = () => {
       <div className="container-fluid px-0 pb-5 mb-1">
         <div className="row">
           <div className="col px-0">
-            <InsidePageHeader title="Welcome to Galactic Digital Studios" />
+            <ReactPlayer
+              url="https://galacticdigitalstudios.com/galactic-digital-studios-banner.mp4"
+              playing={true}
+              loop={true}
+              muted={true}
+              width="100%"
+              height="100%"
+            />
           </div>
         </div>
         <HomeSections />

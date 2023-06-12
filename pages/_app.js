@@ -5,6 +5,7 @@ import Transition from '../components/Transition';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/owl.css';
+import CookieConsent from "react-cookie-consent";
 
 function MyApp({ Component, pageProps }) {
 
@@ -29,10 +30,14 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
         <Footer />
-        <div className="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-          <p>Galactic Digital Studios uses cookies to better the web experience for everyone. We have a strict privacy policy that prohibits us from selling user information to third party advertisers. Please see our <Link href="/privacy">Privacy Policy</Link> for more information.</p>
-          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" />
-        </div>
+        <CookieConsent
+          location="bottom"
+          buttonText="Okay"
+          buttonStyle={{ backgroundColor: "#232323", color: "white" }}
+          style={{ background: "linear-gradient(180deg, rgba(222,223,223,1) 0%, rgba(155,154,155,1) 35%, rgba(0,0,0,1) 100%)", zIndex: 9999 }}
+        >
+          Galactic Digital Studios uses cookies to better the web experience for everyone. We have a strict privacy policy that prohibits us from selling user information to third party advertisers. Please see our privacy policy for more information.
+        </CookieConsent>
       </main>
     </div>
   )
