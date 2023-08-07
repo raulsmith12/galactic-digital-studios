@@ -83,7 +83,7 @@ const Page = () => {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <RequestForm selectedService="website" />
+                        <RequestForm selectedService="logo" />
                     </div>
                 </div>
             </div>
