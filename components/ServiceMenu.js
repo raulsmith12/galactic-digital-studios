@@ -14,7 +14,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Denver County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'denver-county-colorado' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/denver-colorado-${serviceName}`} onClick={hideNavbar}>Denver</Link>
+                                <Link className="nav-link text-black" href={`/services/colorado/denver-colorado-${serviceName}`} onClick={hideNavbar}>Denver</Link>
                             </li>
                         </ul>
                     </li>
@@ -27,7 +27,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Ada County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'ada-county-idaho' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/boise-idaho-${serviceName}`} onClick={hideNavbar}>Boise</Link>
+                                <Link className="nav-link text-black" href={`/services/idaho/boise-idaho-${serviceName}`} onClick={hideNavbar}>Boise</Link>
                             </li>
                         </ul>
                     </li>
@@ -40,7 +40,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Multnomah County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'multnomah-county-oregon' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/portland-oregon-${serviceName}`} onClick={hideNavbar}>Portland</Link>
+                                <Link className="nav-link text-black" href={`/services/oregon/portland-oregon-${serviceName}`} onClick={hideNavbar}>Portland</Link>
                             </li>
                         </ul>
                     </li>
@@ -48,7 +48,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Washington County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'washington-county-oregon' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/beaverton-oregon-${serviceName}`} onClick={hideNavbar}>Beaverton</Link>
+                                <Link className="nav-link text-black" href={`/services/oregon/beaverton-oregon-${serviceName}`} onClick={hideNavbar}>Beaverton</Link>
                             </li>
                         </ul>
                     </li>
@@ -61,7 +61,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Salt Lake County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'salt-lake-county-utah' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/salt-lake-city-utah-${serviceName}`} onClick={hideNavbar}>Salt Lake City</Link>
+                                <Link className="nav-link text-black" href={`/services/utah/salt-lake-city-utah-${serviceName}`} onClick={hideNavbar}>Salt Lake City</Link>
                             </li>
                         </ul>
                     </li>
@@ -69,7 +69,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Utah County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'utah-county-utah' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/lehi-utah-${serviceName}`} onClick={hideNavbar}>Lehi</Link>
+                                <Link className="nav-link text-black" href={`/services/utah/lehi-utah-${serviceName}`} onClick={hideNavbar}>Lehi</Link>
                             </li>
                         </ul>
                     </li>
@@ -77,7 +77,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Weber County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'weber-county-utah' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/ogden-utah-${serviceName}`} onClick={hideNavbar}>Ogden</Link>
+                                <Link className="nav-link text-black" href={`/services/utah/ogden-utah-${serviceName}`} onClick={hideNavbar}>Ogden</Link>
                             </li>
                         </ul>
                     </li>
@@ -90,7 +90,10 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">King County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'king-county-washington' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/seattle-washington-${serviceName}`} onClick={hideNavbar}>Seattle</Link>
+                                <Link className="nav-link text-black" href={`/services/washington/seattle-washington-${serviceName}`} onClick={hideNavbar}>Seattle</Link>
+                            </li>
+                            <li className="dropdown-item">
+                                <Link className="nav-link text-black" href={`/services/washington/bellevue-washington-${serviceName}`} onClick={hideNavbar}>Bellevue</Link>
                             </li>
                         </ul>
                     </li>
@@ -98,7 +101,7 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">Pierce County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'pierce-county-washington' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/tacoma-washington-${serviceName}`} onClick={hideNavbar}>Tacoma</Link>
+                                <Link className="nav-link text-black" href={`/services/washington/tacoma-washington-${serviceName}`} onClick={hideNavbar}>Tacoma</Link>
                             </li>
                         </ul>
                     </li>

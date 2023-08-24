@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Script from "next/script"
-import InsidePageHeader from "../../components/InsidePageHeader"
-import RequestForm from "../../components/RequestForm"
+import InsidePageHeader from "../../../components/InsidePageHeader"
+import RequestForm from "../../../components/RequestForm"
 
 const Page = () => {
     return (
