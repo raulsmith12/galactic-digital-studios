@@ -12,13 +12,13 @@ const Page = () => {
                 <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Ogden, Utah" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/ogden-utah-graphic-design" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/utah/ogden-utah-graphic-design" />
                 <meta property="og:title" content="Ogden Utah Graphic Design - Galactic Digital Studios" />
                 <meta property="og:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/ogden-utah-graphic-design" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/utah/ogden-utah-graphic-design" />
                 <meta property="twitter:title" content="Ogden Utah Graphic Design - Galactic Digital Studios" />
                 <meta property="twitter:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

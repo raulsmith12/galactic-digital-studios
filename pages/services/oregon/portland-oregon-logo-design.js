@@ -12,13 +12,13 @@ const Page = () => {
                 <meta name="keywords" content="logo design, Portland, Oregon" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/portland-oregon-logo-design" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/oregon/portland-oregon-logo-design" />
                 <meta property="og:title" content="Portland Oregon Logo Design - Galactic Digital Studios" />
                 <meta property="og:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/portland-oregon-logo-design" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/oregon/portland-oregon-logo-design" />
                 <meta property="twitter:title" content="Portland Oregon Logo Design - Galactic Digital Studios" />
                 <meta property="twitter:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />

@@ -90,16 +90,22 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
                         <a className="nav-link text-black">King County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'king-county-washington' ? 'show' : 'hidden')}>
                             <li className="dropdown-item">
-                                <Link className="nav-link text-black" href={`/services/washington/seattle-washington-${serviceName}`} onClick={hideNavbar}>Seattle</Link>
+                                <Link className="nav-link text-black" href={`/services/washington/auburn-washington-${serviceName}`} onClick={hideNavbar}>Auburn</Link>
                             </li>
                             <li className="dropdown-item">
                                 <Link className="nav-link text-black" href={`/services/washington/bellevue-washington-${serviceName}`} onClick={hideNavbar}>Bellevue</Link>
+                            </li>
+                            <li className="dropdown-item">
+                                <Link className="nav-link text-black" href={`/services/washington/seattle-washington-${serviceName}`} onClick={hideNavbar}>Seattle</Link>
                             </li>
                         </ul>
                     </li>
                     <li className="dropdown-item position-relative" onClick={() => showCityMenu('pierce-county-washington')} onMouseOver={() => showCityMenu('pierce-county-washington')} onMouseOut={() => showCityMenu('')}>
                         <a className="nav-link text-black">Pierce County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'pierce-county-washington' ? 'show' : 'hidden')}>
+                            <li className="dropdown-item">
+                                <Link className="nav-link text-black" href={`/services/washington/lakewood-washington-${serviceName}`} onClick={hideNavbar}>Lakewood</Link>
+                            </li>
                             <li className="dropdown-item">
                                 <Link className="nav-link text-black" href={`/services/washington/tacoma-washington-${serviceName}`} onClick={hideNavbar}>Tacoma</Link>
                             </li>

@@ -7,19 +7,19 @@ const Page = () => {
     return (
         <>
             <Head>
-                <title>Beaverton Oregon Graphic Design - Galactic Digital Studios</title>
+                <title>Boise Idaho Graphic Design - Galactic Digital Studios</title>
                 <meta name="description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Beaverton, Oregon" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/beaverton-oregon-graphic-design" />
-                <meta property="og:title" content="Beaverton Oregon Graphic Design - Galactic Digital Studios" />
+                <meta property="og:url" content="https://galacticdigitalstudios.com/services/idaho/boise-idaho-graphic-design" />
+                <meta property="og:title" content="Boise Idaho Graphic Design - Galactic Digital Studios" />
                 <meta property="og:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/beaverton-oregon-graphic-design" />
-                <meta property="twitter:title" content="Beaverton Oregon Graphic Design - Galactic Digital Studios" />
+                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/idaho/boise-idaho-graphic-design" />
+                <meta property="twitter:title" content="Boise Idaho Graphic Design - Galactic Digital Studios" />
                 <meta property="twitter:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 <link rel="icon" href="favicon.ico" />
@@ -41,7 +41,7 @@ const Page = () => {
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
-                    <InsidePageHeader title="Beaverton Oregon Graphic Design" />
+                    <InsidePageHeader title="Boise Idaho Graphic Design" />
                 </div>
                 <div className="row">
                     <div className="col">
