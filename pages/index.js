@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
+import Link from 'next/link';
 import ReactPlayer from 'react-player';
 import InsidePageHeader from '../components/InsidePageHeader';
 import HomeSections from '../components/HomeSections';
@@ -43,15 +44,13 @@ const Home = () => {
       />
       <div className="container-fluid px-0 pb-5 mb-1">
         <div className="row">
-          <div className="col px-0">
-            <ReactPlayer
-              url="https://galacticdigitalstudios.com/galactic-digital-studios-banner.mp4"
-              playing={true}
-              loop={true}
-              muted={true}
-              width="100%"
-              height="100%"
-            />
+          <div className="col py-5" style={{ backgroundImage: 'url("https://galacticdigitalstudios.com/img/banner-1.jpg")', backgroundSize: 'cover', minHeight: '25vH', backgroundRepeat: 'no-repeat', position: 'relative', overflow: 'hidden' }}>
+            <h1 className="home-title display-1 pb-3">Out of This World Service<br />Down to Earth Prices</h1>
+            <div className="text-center">
+              <Link href="https://galacticdigitalstudios.com/contact/" className="home-subtitle btn btn-alpha">
+                <span className="h2">Contact Us Today!</span>
+              </Link>
+            </div>
           </div>
         </div>
         <HomeSections />

@@ -68,3 +68,43 @@ body {
         background-color: white;
     }
 }
+
+.home-title {
+    color: white;
+    text-shadow: 0 0 12px black;
+    width: 100%;
+    text-align: center;
+    animation: fadeup 2s;
+}
+
+.home-subtitle {
+    margin: 0 auto;
+    box-shadow: 1px 1px 12px black;
+    animation: delayedfadeup 3s;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes delayedfadeup {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

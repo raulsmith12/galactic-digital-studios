@@ -86,6 +86,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, hideNavbar }) => {
             <li className="dropdown-item position-relative" onClick={() => showCountyMenu('washington')} onMouseOver={() => showCountyMenu('washington')} onMouseOut={() => showCountyMenu('')}>
                 <a className="nav-link text-black">Washington +</a>
                 <ul className={"dropdown-submenu " + (countyMenu === 'washington' ? 'show' : 'hidden')}>
+                    <li className="dropdown-item position-relative" onClick={() => showCityMenu('clark-county-washington')} onMouseOver={() => showCityMenu('clark-county-washington')} onMouseOut={() => showCityMenu('')}>
+                        <a className="nav-link text-black">Clark County +</a>
+                        <ul className={"dropdown-submenu " + (cityMenu === 'clark-county-washington' ? 'show' : 'hidden')}>
+                            <li className="dropdown-item">
+                                <Link className="nav-link text-black" href={`/services/washington/vancouver-washington-${serviceName}`} onClick={hideNavbar}>Vancouver</Link>
+                            </li>
+                        </ul>
+                    </li>
                     <li className="dropdown-item position-relative" onClick={() => showCityMenu('king-county-washington')} onMouseOver={() => showCityMenu('king-county-washington')} onMouseOut={() => showCityMenu('')}>
                         <a className="nav-link text-black">King County +</a>
                         <ul className={"dropdown-submenu " + (cityMenu === 'king-county-washington' ? 'show' : 'hidden')}>
