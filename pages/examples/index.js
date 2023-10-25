@@ -50,6 +50,14 @@ const Examples = () => {
                         <div className="mx-3 px-3">
                             <h3>
                                 <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
+                                Websites
+                            </h3>
+                            <Websites />
+                        </div>
+                        <hr />
+                        <div className="mx-3 px-3">
+                            <h3>
+                                <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
                                 Logos
                             </h3>
                             <Logos />
@@ -61,14 +69,6 @@ const Examples = () => {
                                 Graphics
                             </h3>
                             <Graphics />
-                        </div>
-                        <hr />
-                        <div className="mx-3 px-3">
-                            <h3>
-                                <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
-                                Websites
-                            </h3>
-                            <Websites />
                         </div>
                         <hr />
                         <div className="mx-3 px-3">
