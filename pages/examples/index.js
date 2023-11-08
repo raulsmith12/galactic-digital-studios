@@ -77,9 +77,6 @@ const Examples = () => {
                                     <div className="col-6">
                                         To view more examples from Raul Smith, please visit <a href="https://github.com/raulsmith12" target="_blank">his Github profile.</a>
                                     </div>
-                                    <div className="col-6">
-                                        Orion&rsquo;s Github is coming soon
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -60,13 +60,8 @@ body {
     color: black;
 }
 
-@media screen and (min-width: 992px) {
-    .dropdown-submenu {
-        position: absolute;
-        top: 0;
-        right: 100%;
-        background-color: white;
-    }
+.overflow-scroll {
+    overflow: scroll;
 }
 
 .home-title {

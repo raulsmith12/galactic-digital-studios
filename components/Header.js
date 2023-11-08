@@ -6,72 +6,80 @@ const Header = () => {
     const [servicesMenu, showServicesMenu] = useState(false);
     const [stateMenu, showStateMenu] = useState('');
 
-    function hideNavbar() {
-        const element = document.getElementById('navbarSupportedContent');
-        element.classList.remove('show');
+    function closeMenu() {
+        console.log('this is a test');
+        const closeButton = document.getElementById('button-close');
+        closeButton.click();
     }
 
     return (
         <div className="row mx-0">
             <div className="col px-0">
-                <nav className="navbar navbar-dark navbar-expand-lg bg-alpha sticky-top border-bottom border-secondary">
+                <nav className="navbar navbar-dark bg-alpha sticky-top border-bottom border-secondary overflow-scroll">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
                             <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />
                         </Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#gdsNavbar" aria-controls="gdsNavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-end">
-                                <li className="nav-item px-1">
-                                    <Link href="/" className="nav-link" onClick={hideNavbar}>Home</Link>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <Link href="/about" className="nav-link" onClick={hideNavbar}>About</Link>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <Link href="/faqs" className="nav-link" onClick={hideNavbar}>FAQs</Link>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <Link href="/team" className="nav-link" onClick={hideNavbar}>Team</Link>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <Link href="/examples" className="nav-link" onClick={hideNavbar}>Examples</Link>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <Link href="/contact" className="nav-link" onClick={hideNavbar}>Contact</Link>
-                                </li>
-                                <li className="nav-item px-1" onClick={() => showServicesMenu(true)} onMouseOver={() => showServicesMenu(true)} onMouseOut={() => showServicesMenu(false)}>
-                                    <a className="nav-link">Services</a>
-                                    <ul className={"dropdown-menu " + (servicesMenu ? 'show' : 'hidden')}>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('web')} onMouseOver={() => showStateMenu('web')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Web Development +</a>
-                                            <ServiceMenu service="web" stateMenu={stateMenu} serviceName="web-development" hideNavbar={hideNavbar} />
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('graphic')} onMouseOver={() => showStateMenu('graphic')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Graphic Design +</a>
-                                            <ServiceMenu service="graphic" stateMenu={stateMenu} serviceName="graphic-design" hideNavbar={hideNavbar} />
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('logo')} onMouseOver={() => showStateMenu('logo')} onMouseOut={() => showStateMenu('')}>
-                                            <a className="nav-link text-black">Logo Design +</a>
-                                            <ServiceMenu service="logo" stateMenu={stateMenu} serviceName="logo-design" hideNavbar={hideNavbar} />
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('business-card')} onMouseOver={() => showStateMenu('business-card')} onMouseOut={() => showStateMenu('')}>
-                                            <Link className="nav-link text-black" href="/services/businessCard" onClick={hideNavbar}>Business Card Design</Link>
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('brochure')} onMouseOver={() => showStateMenu('brochure')} onMouseOut={() => showStateMenu('')}>
-                                            <Link className="nav-link text-black" href="/services/brochure" onClick={hideNavbar}>Brochure Design</Link>
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('database')} onMouseOver={() => showStateMenu('database')} onMouseOut={() => showStateMenu('')}>
-                                            <Link className="nav-link text-black" href="/services/database" onClick={hideNavbar}>Database Management</Link>
-                                        </li>
-                                        <li className="dropdown-item position-relative" onClick={() => showStateMenu('cms')} onMouseOver={() => showStateMenu('cms')} onMouseOut={() => showStateMenu('')}>
-                                            <Link className="nav-link text-black" href="/services/cms" onClick={hideNavbar}>Content Management</Link>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div className="offcanvas offcanvas-end bg-alpha text-bg-dark" tabIndex="-1" id="gdsNavbar" aria-labelledby="gdsNavbarLabel">
+                            <div className="offcanvas-header">
+                                <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" id="gdsNavbarLabel" />
+                                <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#gdsNavbar" aria-label="Close" id="button-close"></button>
+                            </div>
+                            <div className="offcanvas-body">
+                                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 pb-5">
+                                    <li className="nav-item">
+                                        <Link href="/" className="nav-link" onClickCapture={() => closeMenu()}>Home</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link href="/about" className="nav-link" onClickCapture={() => closeMenu()}>About</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link href="/faqs" className="nav-link" onClickCapture={() => closeMenu()}>FAQs</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link href="/team" className="nav-link" onClickCapture={() => closeMenu()}>Team</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link href="/examples" className="nav-link" onClickCapture={() => closeMenu()}>Examples</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link href="/contact" className="nav-link" onClickCapture={() => closeMenu()}>Contact</Link>
+                                    </li>
+                                    <li className="nav-item" onClick={() => showServicesMenu(true)} style={{ cursor: "pointer" }}>
+                                        <a className="nav-link">Services</a>
+                                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (servicesMenu ? 'show' : 'hidden')}>
+                                            <li className="nav-item" onClick={() => showStateMenu('web')}>
+                                                <a className="nav-link">Web Development +</a>
+                                                <ServiceMenu service="web" stateMenu={stateMenu} serviceName="web-development" closeMenu={closeMenu} />
+                                            </li>
+                                            <li className="nav-item" onClick={() => showStateMenu('graphic')}>
+                                                <a className="nav-link">Graphic Design +</a>
+                                                <ServiceMenu service="graphic" stateMenu={stateMenu} serviceName="graphic-design" closeMenu={closeMenu} />
+                                            </li>
+                                            <li className="nav-item" onClick={() => showStateMenu('logo')}>
+                                                <a className="nav-link">Logo Design +</a>
+                                                <ServiceMenu service="logo" stateMenu={stateMenu} serviceName="logo-design" closeMenu={closeMenu} />
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/services/businessCard" className="nav-link" onClickCapture={() => closeMenu()}>Business Card Design</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/services/brochure" className="nav-link" onClickCapture={() => closeMenu()}>Brochure Design</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/services/database" className="nav-link" onClickCapture={() => closeMenu()}>Database Management</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/services/cms" className="nav-link" onClickCapture={() => closeMenu()}>Content Management</Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="pb-2">&nbsp;</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </nav>
