@@ -7,7 +7,6 @@ const Header = () => {
     const [stateMenu, showStateMenu] = useState('');
 
     function closeMenu() {
-        console.log('this is a test');
         const closeButton = document.getElementById('button-close');
         closeButton.click();
     }
