@@ -33,6 +33,19 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu }) => {
                     </li>
                 </ul>
             </li>
+            <li className="nav-item" onClick={() => showCountyMenu('nevada')}>
+                <a className="nav-link">Nevada +</a>
+                <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'nevada' ? 'show' : 'hidden')}>
+                    <li className="nav-item" onClick={() => showCityMenu('clark-county-nevada')}>
+                        <a className="nav-link">Clark County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'clark-county-nevada' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/nevada/las-vegas-nevada-${serviceName}`} className="nav-link" onClickCapture={() => closeMenu()}>Las Vegas</Link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
             <li className="nav-item" onClick={() => showCountyMenu('oregon')}>
                 <a className="nav-link">Oregon +</a>
                 <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'oregon' ? 'show' : 'hidden')}>
