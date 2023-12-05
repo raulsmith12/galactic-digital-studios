@@ -12,6 +12,7 @@ const Header = () => {
         const closeButton = document.getElementById('button-close');
         closeButton.click();
         showServicesMenu('');
+        showStateMenu('');
         showCountyMenu('');
         showCityMenu('');
     }
@@ -52,19 +53,19 @@ const Header = () => {
                                     <li className="nav-item">
                                         <Link href="/contact" className="nav-link" onClick={() => closeMenu()}>Contact</Link>
                                     </li>
-                                    <li className="nav-item" onClick={() => showServicesMenu(true)} style={{ cursor: "pointer" }}>
-                                        <a className="nav-link">Services</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" onClick={() => showServicesMenu(true)} style={{ cursor: "pointer" }}>Services</a>
                                         <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (servicesMenu ? 'show' : 'hidden')}>
-                                            <li className="nav-item" onClick={() => showStateMenu('web')}>
-                                                <a className="nav-link">Web Development +</a>
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={() => (showStateMenu('web'), showCountyMenu(''), showCityMenu(''))} style={{ cursor: "pointer" }}>Web Development +</a>
                                                 <ServiceMenu service="web" stateMenu={stateMenu} serviceName="web-development" closeMenu={closeMenu} showServicesMenu={showServicesMenu} countyMenu={countyMenu} cityMenu={cityMenu} showCountyMenu={showCountyMenu} showCityMenu={showCityMenu} />
                                             </li>
-                                            <li className="nav-item" onClick={() => showStateMenu('graphic')}>
-                                                <a className="nav-link">Graphic Design +</a>
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={() => (showStateMenu('graphic'), showCountyMenu(''), showCityMenu(''))} style={{ cursor: "pointer" }}>Graphic Design +</a>
                                                 <ServiceMenu service="graphic" stateMenu={stateMenu} serviceName="graphic-design" closeMenu={closeMenu} showServicesMenu={showServicesMenu} countyMenu={countyMenu} cityMenu={cityMenu} showCountyMenu={showCountyMenu} showCityMenu={showCityMenu} />
                                             </li>
-                                            <li className="nav-item" onClick={() => showStateMenu('logo')}>
-                                                <a className="nav-link">Logo Design +</a>
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={() => (showStateMenu('logo'), showCountyMenu(''), showCityMenu(''))} style={{ cursor: "pointer" }}>Logo Design +</a>
                                                 <ServiceMenu service="logo" stateMenu={stateMenu} serviceName="logo-design" closeMenu={closeMenu} showServicesMenu={showServicesMenu} countyMenu={countyMenu} cityMenu={cityMenu} showCountyMenu={showCountyMenu} showCityMenu={showCityMenu} />
                                             </li>
                                             <li className="nav-item">
