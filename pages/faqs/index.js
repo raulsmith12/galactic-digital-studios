@@ -66,7 +66,7 @@ const Faqs = () => {
                                 </li>
                                 <li>
                                     Where are you located?
-                                    <p><em>Currently we operate out of our respective homes in the Salt Lake City, Utah area, but are available to work with anybody anywhere in the continental United States.</em></p>
+                                    <p><em>Currently we operate out of our respective homes remotely and are available to work with anybody anywhere in the continental United States.</em></p>
                                 </li>
                             </ol>
                         </div>
