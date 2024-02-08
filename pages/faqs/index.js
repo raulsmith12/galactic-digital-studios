@@ -1,43 +1,15 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import Link from 'next/link';
-import InsidePageHeader from '../../components/InsidePageHeader';
+import Link from "next/link";
+import InsidePageHeader from "../../components/InsidePageHeader";
+import MetaHeader from '../../components/MetaHeader';
 
 const Faqs = () => {
     return (
         <>
-            <Head>
-                <title>Frequently Asked Questions - Galactic Digital Studios</title>
-                <meta name="description" content="While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently. Here is a page with our most frequently asked questions." />
-                <meta name="keywords" content="faqs, frequently asked questions, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/faqs" />
-                <meta property="og:title" content="Frequently Asked Questions - Galactic Digital Studios" />
-                <meta property="og:description" content="While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently. Here is a page with our most frequently asked questions." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/faqs" />
-                <meta property="twitter:title" content="Frequently Asked Questions - Galactic Digital Studios" />
-                <meta property="twitter:description" content="While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently. Here is a page with our most frequently asked questions." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Frequently Asked Questions - Galactic Digital Studios"
+                metadesc = "While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently. Here is a page with our most frequently asked questions."
+                metakeys = "faqs, frequently asked questions, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/faqs"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

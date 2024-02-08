@@ -1,51 +1,23 @@
-import Head from "next/head"
-import Script from "next/script"
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
+import MetaHeader from "../../../components/MetaHeader"
 
 const Page = () => {
     return (
         <>
-            <Head>
-                <title>Chicago Illinois Graphic Design - Galactic Digital Studios</title>
-                <meta name="description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Chicago, Illinois" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/illinois/chicago-illinois-graphic-design" />
-                <meta property="og:title" content="Chicago Illinois Graphic Design - Galactic Digital Studios" />
-                <meta property="og:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/illinois/chicago-illinois-graphic-design" />
-                <meta property="twitter:title" content="Chicago Illinois Graphic Design - Galactic Digital Studios" />
-                <meta property="twitter:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "St. Louis Missouri Graphic Design - Galactic Digital Studios"
+                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metakeys = "graphic design, flyer design, banner design, bookmark design, St. Louis, Missouri"
+                metaurl = "https://galacticdigitalstudios.com/services/missouri/st-louis-missouri-graphic-design"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
-                    <InsidePageHeader title="Chicago Illinois Graphic Design" />
+                    <InsidePageHeader title="St. Louis Missouri Graphic Design" />
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h2>Graphic Design Including Banners, Bookmarks, and More for Chicago</h2>
+                        <h2>Graphic Design Including Banners, Bookmarks, and More for St. Louis</h2>
                     </div>
                 </div>
                 <div className="row">

@@ -1,43 +1,15 @@
-import Head from "next/head"
-import Script from "next/script"
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
+import MetaHeader from "../../../components/MetaHeader"
 
 const Page = () => {
     return (
         <>
-            <Head>
-                <title>Aurora Colorado Graphic Design - Galactic Digital Studios</title>
-                <meta name="description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta name="keywords" content="graphic design, flyer design, banner design, bookmark design, Aurora, Colorado" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/colorado/aurora-colorado-graphic-design" />
-                <meta property="og:title" content="Aurora Colorado Graphic Design - Galactic Digital Studios" />
-                <meta property="og:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/colorado/aurora-colorado-graphic-design" />
-                <meta property="twitter:title" content="Aurora Colorado Graphic Design - Galactic Digital Studios" />
-                <meta property="twitter:description" content="Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Aurora Colorado Graphic Design - Galactic Digital Studios"
+                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metakeys = "graphic design, flyer design, banner design, bookmark design, Aurora, Colorado"
+                metaurl = "https://galacticdigitalstudios.com/services/colorado/aurora-colorado-graphic-design"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

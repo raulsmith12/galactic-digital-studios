@@ -1,43 +1,15 @@
-import Head from "next/head"
-import Script from "next/script"
 import InsidePageHeader from "../../../components/InsidePageHeader"
+import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
 
 const Page = () => {
     return (
         <>
-            <Head>
-                <title>Denver Colorado Web Development - Galactic Digital Studios</title>
-                <meta name="description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta name="keywords" content="website design, website development, web development, web design, Denver, Colorado" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/colorado/denver-colorado-web-development" />
-                <meta property="og:title" content="Denver Colorado Web Development - Galactic Digital Studios" />
-                <meta property="og:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/colorado/denver-colorado-web-development" />
-                <meta property="twitter:title" content="Denver Colorado Web Development - Galactic Digital Studios" />
-                <meta property="twitter:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Denver Colorado Web Development - Galactic Digital Studios"
+                metadesc = "Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all."
+                metakeys = "website design, website development, web development, web design, Denver, Colorado"
+                metaurl = "https://galacticdigitalstudios.com/services/colorado/denver-colorado-web-development"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

@@ -1,41 +1,13 @@
-import Head from 'next/head';
-import Script from 'next/script';
+import MetaHeader from "../components/MetaHeader";
 
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>404 - Not Found - Galactic Digital Studios</title>
-        <meta name="description" content="The page you are looking for cannot be found. Please try typing that in again." />
-        <meta name="keywords" content="404, page not found" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://galacticdigitalstudios.com/404" />
-        <meta property="og:title" content="404 - Not Found - Galactic Digital Studios" />
-        <meta property="og:description" content="The page you are looking for cannot be found. Please try typing that in again." />
-        <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://galacticdigitalstudios.com/404" />
-        <meta property="twitter:title" content="404 - Not Found - Galactic Digital Studios" />
-        <meta property="twitter:description" content="The page you are looking for cannot be found. Please try typing that in again." />
-        <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-        <link rel="icon" href="favicon.ico" />
-      </Head>
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-      <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B8904LJMQQ', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
+      <MetaHeader
+        metatitle = "404 - Not Found - Galactic Digital Studios"
+        metadesc = "The page you are looking for cannot be found. Please try typing that in again."
+        metakeys = "Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+        metaurl = "https://galacticdigitalstudios.com/404"
       />
       <div className="container-fluid px-0 pb-4 mb-4">
         <div className="row">

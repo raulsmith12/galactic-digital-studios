@@ -1,6 +1,5 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import InsidePageHeader from "../../components/InsidePageHeader";
+import MetaHeader from "../../components/MetaHeader";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -21,38 +20,11 @@ const Team = () => {
 
     return (
         <>
-            <Head>
-                <title>Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is." />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/team" />
-                <meta property="og:title" content="Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/team" />
-                <meta property="twitter:title" content="Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is."
+                metakeys = "website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/team"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

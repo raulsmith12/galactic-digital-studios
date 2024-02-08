@@ -1,45 +1,17 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import Link from "next/link";
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
+import MetaHeader from "../../components/MetaHeader";
 
-const Web = () => {
+const Mobile = () => {
     return (
         <>
-            <Head>
-                <title>Mobile App Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="The year is 2023. Websites are no longer the only tool in an online business's toolchest. Mobile apps are becoming more and more commonplace. This sounds like science fiction, but it's very much real-life. And Galactic Digital Studios has a team of mobile app developers that can help." />
-                <meta name="keywords" content="mobile app design, mobile app development, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/" />
-                <meta property="og:title" content="Mobile App Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="The year is 2023. Websites are no longer the only tool in an online business's toolchest. Mobile apps are becoming more and more commonplace. This sounds like science fiction, but it's very much real-life. And Galactic Digital Studios has a team of mobile app developers that can help." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/" />
-                <meta property="twitter:title" content="Mobile App Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="The year is 2023. Websites are no longer the only tool in an online business's toolchest. Mobile apps are becoming more and more commonplace. This sounds like science fiction, but it's very much real-life. And Galactic Digital Studios has a team of mobile app developers that can help." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Mobile App Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "The year is 2023. Websites are no longer the only tool in an online business's toolchest. Mobile apps are becoming more and more commonplace. This sounds like science fiction, but it's very much real-life. And Galactic Digital Studios has a team of mobile app developers that can help."
+                metakeys = "mobile app design, mobile app development, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/services/mobileApp"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
@@ -74,4 +46,4 @@ const Web = () => {
     )
 }
 
-export default Web;
+export default Mobile;

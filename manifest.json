@@ -1,0 +1,27 @@
+{
+    "name": "Galactic Digital Studios",
+    "short_name": "Galactic Digital Studios",
+    "theme_color": "#121212",
+    "background_color": "#dfdfdf",
+    "display": "fullscreen",
+    "orientation": "any",
+    "scope": "/",
+    "start_url": "https://galacticdigitalstudios.com/",
+    "icons": [
+        {
+            "src": "/gds-logo-favicon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/gds-logo-favicon-256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/gds-logo-favicon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

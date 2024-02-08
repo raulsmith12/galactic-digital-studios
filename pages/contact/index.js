@@ -1,44 +1,16 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import ContactForm from "../../components/ContactForm";
 import InsidePageHeader from "../../components/InsidePageHeader";
 import { FaEnvelopeOpenText, FaPhoneAlt, FaMapMarkerAlt, FaFlagUsa, FaFacebookF, FaTwitter, FaGithub } from 'react-icons/fa';
+import MetaHeader from '../../components/MetaHeader';
 
 const Contact = () => {
     return (
         <>
-            <Head>
-                <title>Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
-                <meta name="keywords" content="contact us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/contact" />
-                <meta property="og:title" content="Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/contact" />
-                <meta property="twitter:title" content="Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page."
+                metakeys = "contact us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/contact"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

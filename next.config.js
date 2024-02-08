@@ -1,21 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disableDevLogs: true,
+});
 
-module.exports = nextConfig,
-  {
-    module: {
-      rules: [
-        {
-          test: /\.(png|jpe?g|gif)$/i,
-          use: [
-            {
-              loader: "file-loader",
-            },
-          ],
-        },
-      ],
-    },
-  }
-  
+module.exports = withPWA({
+  reactStrictMode: true,
+})

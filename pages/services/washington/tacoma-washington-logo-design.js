@@ -1,43 +1,15 @@
-import Head from "next/head"
-import Script from "next/script"
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
+import MetaHeader from "../../../components/MetaHeader";
 
 const Page = () => {
     return (
         <>
-            <Head>
-                <title>Tacoma Washington Logo Design - Galactic Digital Studios</title>
-                <meta name="description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta name="keywords" content="logo design, Tacoma, Washington" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/washington/tacoma-washington-logo-design" />
-                <meta property="og:title" content="Tacoma Washington Logo Design - Galactic Digital Studios" />
-                <meta property="og:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/washington/tacoma-washington-logo-design" />
-                <meta property="twitter:title" content="Tacoma Washington Logo Design - Galactic Digital Studios" />
-                <meta property="twitter:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Tacoma Washington Logo Design - Galactic Digital Studios"
+                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metakeys = "logo design, Tacoma, Washington"
+                metaurl = "https://galacticdigitalstudios.com/services/washington/tacoma-washington-logo-design"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

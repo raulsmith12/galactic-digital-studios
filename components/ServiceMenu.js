@@ -98,6 +98,19 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
                 </ul>
             </li>
             <li className="nav-item">
+                <a className="nav-link" onClick={() => (showCountyMenu('north-carolina'), showCityMenu(''))} style={{ cursor: "pointer" }}>North Carolina +</a>
+                <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'north-carolina' ? 'show' : 'hidden')}>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('mecklenburg-county-north-carolina')} style={{ cursor: "pointer" }}>Mecklenburg County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'mecklenburg-county-north-carolina' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/northCarolina/charlotte-north-carolina-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Charlotte</Link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li className="nav-item">
                 <a className="nav-link" onClick={() => (showCountyMenu('oregon'), showCityMenu(''))} style={{ cursor: "pointer" }}>Oregon +</a>
                 <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'oregon' ? 'show' : 'hidden')}>
                     <li className="nav-item">

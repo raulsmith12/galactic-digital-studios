@@ -1,45 +1,17 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import Link from "next/link";
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
+import MetaHeader from "../../components/MetaHeader";
 
-const Web = () => {
+const Logo = () => {
     return (
         <>
-            <Head>
-                <title>Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta name="keywords" content="logo design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/logo" />
-                <meta property="og:title" content="Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/logo" />
-                <meta property="twitter:title" content="Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Logo Design Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metakeys = "logo design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/services/logo"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
@@ -74,4 +46,4 @@ const Web = () => {
     )
 }
 
-export default Web;
+export default Logo;

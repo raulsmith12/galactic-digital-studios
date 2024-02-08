@@ -1,45 +1,17 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import Link from "next/link";
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
+import MetaHeader from "../../components/MetaHeader";
 
 const Web = () => {
     return (
         <>
-            <Head>
-                <title>Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta name="keywords" content="website design, website development, web development, web design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services/web" />
-                <meta property="og:title" content="Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services/web" />
-                <meta property="twitter:title" content="Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Website Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all."
+                metakeys = "website design, website development, web development, web design, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/services/web"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

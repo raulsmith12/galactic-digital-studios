@@ -1,45 +1,15 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import InsidePageHeader from "../../components/InsidePageHeader";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import MetaHeader from "../../components/MetaHeader";
 
 const Services = () => {
     return (
         <>
-            <Head>
-                <title>Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="Galactic Digital Studios provides many services to businesses, ranging from simple 3 page websites to fully dynamic sites, fully-designed graphics and logos, mobile apps, database management, and more!" />
-                <meta name="keywords" content="website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/services" />
-                <meta property="og:title" content="Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="Galactic Digital Studios provides many services to businesses, ranging from simple 3 page websites to fully dynamic sites, fully-designed graphics and logos, mobile apps, database management, and more!" />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/services" />
-                <meta property="twitter:title" content="Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="Galactic Digital Studios provides many services to businesses, ranging from simple 3 page websites to fully dynamic sites, fully-designed graphics and logos, mobile apps, database management, and more!" />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Services - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "Galactic Digital Studios provides many services to businesses, ranging from simple 3 page websites to fully dynamic sites, fully-designed graphics and logos, mobile apps, database management, and more!"
+                metakeys = "website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/services"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">

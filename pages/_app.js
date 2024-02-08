@@ -2,7 +2,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useEffect } from 'react';
 import Transition from '../components/Transition';
-import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/owl.css';
 import CookieConsent from "react-cookie-consent";

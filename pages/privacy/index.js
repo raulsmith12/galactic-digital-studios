@@ -1,42 +1,14 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import InsidePageHeader from "../../components/InsidePageHeader";
+import MetaHeader from '../../components/MetaHeader';
 
 const Privacy = () => {
     return (
         <>
-            <Head>
-                <title>Privacy Policy - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services</title>
-                <meta name="description" content="Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies." />
-                <meta name="keywords" content="privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://galacticdigitalstudios.com/privacy" />
-                <meta property="og:title" content="Privacy Policy - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="og:description" content="Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies." />
-                <meta property="og:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://galacticdigitalstudios.com/privacy" />
-                <meta property="twitter:title" content="Privacy Policy - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services" />
-                <meta property="twitter:description" content="Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies." />
-                <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
-                <link rel="icon" href="favicon.ico" />
-            </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-B8904LJMQQ"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-B8904LJMQQ', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
+            <MetaHeader
+                metatitle = "Privacy Policy - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
+                metadesc = "Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies."
+                metakeys = "privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metaurl = "https://galacticdigitalstudios.com/privacy"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row">
