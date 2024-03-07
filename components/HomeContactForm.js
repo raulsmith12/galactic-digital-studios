@@ -25,7 +25,7 @@ const HomeContactForm = () => {
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaPhoneAlt />&nbsp;&nbsp;&nbsp;
-                                801.917.4262
+                                801.410.0738
                             </h6>
                             <h6 className="text-white mt-4">
                                 <FaFacebookF />&nbsp;&nbsp;&nbsp;

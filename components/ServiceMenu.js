@@ -4,6 +4,19 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
     return (
         <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (stateMenu === service ? 'show' : 'hidden')}>
             <li className="nav-item">
+                <a className="nav-link" onClick={() => (showCountyMenu('arizona'), showCityMenu(''))} style={{ cursor: "pointer" }}>Arizona +</a>
+                <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'arizona' ? 'show' : 'hidden')}>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('maricopa-county-arizona')} style={{ cursor: "pointer" }}>Maricopa County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'maricopa-county-arizona' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/arizona/phoenix-arizona-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Phoenix</Link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li className="nav-item">
                 <a className="nav-link" onClick={() => (showCountyMenu('colorado'), showCityMenu(''))} style={{ cursor: "pointer" }}>Colorado +</a>
                 <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'colorado' ? 'show' : 'hidden')}>
                     <li className="nav-item">
@@ -61,6 +74,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
             <li className="nav-item">
                 <a className="nav-link" onClick={() => (showCountyMenu('missouri'), showCityMenu(''))} style={{ cursor: "pointer" }}>Missouri +</a>
                 <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (countyMenu === 'missouri' ? 'show' : 'hidden')}>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('jackson-county-missouri')} style={{ cursor: "pointer" }}>Jackson County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'jackson-county-missouri' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/missouri/kansas-city-missouri-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Kansas City</Link>
+                            </li>
+                        </ul>
+                    </li>
                     <li className="nav-item">
                         <a className="nav-link" onClick={() => showCityMenu('st-louis-county-missouri')} style={{ cursor: "pointer" }}>St. Louis County +</a>
                         <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'st-louis-county-missouri' ? 'show' : 'hidden')}>
