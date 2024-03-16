@@ -116,6 +116,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
                             </li>
                         </ul>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('santa-fe-county-new-mexico')} style={{ cursor: "pointer" }}>Santa Fe County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'santa-fe-county-new-mexico' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/newMexico/santa-fe-new-mexico-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Santa Fe</Link>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li className="nav-item">
