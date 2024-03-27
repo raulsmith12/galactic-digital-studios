@@ -6,6 +6,7 @@ const MetaHeader = ({ metatitle, metadesc, metaurl, metakeys }) => {
         <>
             <Head>
                 <title>{metatitle}</title>
+                <meta charSet="utf-8" />
                 <meta name="title" content={metatitle} />
                 <meta name="description" content={metadesc} />
                 <meta name="keywords" content={metakeys} />
@@ -23,6 +24,7 @@ const MetaHeader = ({ metatitle, metadesc, metaurl, metakeys }) => {
                 <meta property="twitter:description" content={metadesc} />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 
+                <link rel="canonical" href="https://galacticdigitalstudios.com" />
                 <link rel="icon" href="favicon.ico" />
                 <link rel="manifest" href="manifest.json" />
             </Head>
