@@ -11,7 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tinymce/tinymce-react": "^4.2.0",
+    "@tinymce/tinymce-react": "^5.0.1",
+    "@tsparticles/react": "^3.0.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.2.3",
     "file-loader": "^6.2.0",
@@ -28,6 +29,8 @@
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.7.1",
     "react-player": "^2.12.0",
+    "react-star-sky": "^1.0.3",
+    "react-starfield": "^1.0.3",
     "sweetalert": "^2.1.2"
   }
 }

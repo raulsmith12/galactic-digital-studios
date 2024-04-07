@@ -3,7 +3,7 @@ import { FaEnvelopeOpenText, FaPhoneAlt, FaMapMarkerAlt, FaFlagUsa, FaFacebookF,
 
 const HomeContactForm = () => {
     return (
-        <div className="row mx-0 pb-4 bg-beta border-bottom border-light">
+        <div className="row mx-0 pb-4 bg-nebula border-bottom border-light">
             <div className="col px-0">
                 <div className="container pt-2">
                     <h4 className="text-white text-center">

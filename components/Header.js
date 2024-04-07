@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <div className="row mx-0">
             <div className="col px-0">
-                <nav className="navbar navbar-dark bg-alpha sticky-top border-bottom border-secondary overflow-scroll">
+                <nav className="navbar navbar-dark bg-alpha sticky-top border-bottom border-secondary overflow-scroll main-menu">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
                             <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />

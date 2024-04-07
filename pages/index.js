@@ -14,10 +14,14 @@ const Home = () => {
       />
       <div className="container-fluid px-0 pb-5 mb-1">
         <div className="row">
-          <div className="col py-5" style={{ backgroundImage: 'url("https://galacticdigitalstudios.com/img/banner-1.jpg")', backgroundSize: 'cover', minHeight: '25vH', backgroundRepeat: 'no-repeat', position: 'relative', overflow: 'hidden' }}>
+          <div className="col py-5 bg-dark bg-animation overflow-hidden">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
             <h1 className="home-title display-1 pb-3">Out of This World Service<br />Down to Earth Prices</h1>
             <div className="text-center">
-              <Link href="https://galacticdigitalstudios.com/contact/" className="home-subtitle btn btn-alpha">
+              <Link href="https://galacticdigitalstudios.com/contact/" className="home-subtitle btn btn-white">
                 <span className="h2">Contact Us Today!</span>
               </Link>
             </div>
