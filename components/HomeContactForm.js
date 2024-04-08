@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import { FaEnvelopeOpenText, FaPhoneAlt, FaMapMarkerAlt, FaFlagUsa, FaFacebookF, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaEnvelopeOpenText, FaPhoneAlt, FaMapMarkerAlt, FaFlagUsa, FaFacebookF, FaGithub } from 'react-icons/fa';
 
 const HomeContactForm = () => {
     return (
