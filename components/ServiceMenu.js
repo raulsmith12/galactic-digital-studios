@@ -225,6 +225,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
                             </li>
                         </ul>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('thurston-county-washington')} style={{ cursor: "pointer" }}>Thurston County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'thurston-county-washington' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/washington/olympia-washington-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Olympia</Link>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
