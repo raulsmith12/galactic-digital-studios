@@ -172,6 +172,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
                         </ul>
                     </li>
                     <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('summit-county-utah')} style={{ cursor: "pointer" }}>Summit County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'summit-county-utah' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/utah/park-city-utah-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>Park City</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link" onClick={() => showCityMenu('utah-county-utah')} style={{ cursor: "pointer" }}>Utah County +</a>
                         <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'utah-county-utah' ? 'show' : 'hidden')}>
                             <li className="nav-item">

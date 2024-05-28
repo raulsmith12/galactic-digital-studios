@@ -24,7 +24,7 @@ const MetaHeader = ({ metatitle, metadesc, metaurl, metakeys }) => {
                 <meta property="twitter:description" content={metadesc} />
                 <meta property="twitter:image" content="https://galacticdigitalstudios.com/img/gds-logo-short-transparent.png" />
                 
-                <link rel="canonical" href="https://galacticdigitalstudios.com" />
+                <link rel="canonical" href={metaurl} />
                 <link rel="icon" href="favicon.ico" />
                 <link rel="manifest" href="manifest.json" />
             </Head>

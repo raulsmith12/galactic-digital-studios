@@ -30,7 +30,7 @@ const Graphic = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/graphic-design-l.jpg" width="100%" alt="Laptop with trendy graphic design poster behind it" />
+                                    <img src="https://galacticdigitalstudios.com/img/graphic-design-l.webp" width="100%" alt="Laptop with trendy graphic design poster behind it" />
                                 </div>
                             </div>
                         </div>

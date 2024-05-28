@@ -43,7 +43,7 @@ const Team = () => {
                         <div className="col-md-10 col-sm-8">
                             <h4 className="display-4">{i.name}</h4>
                             <h6 className="display-6">{i.title}</h6>
-                            <p className="h5">{i.description}</p>
+                            <p className="h6">{i.description}</p>
                         </div>
                     </div>
                 ))}

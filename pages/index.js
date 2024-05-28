@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HomeSections from '../components/HomeSections';
 import HomeContactForm from '../components/HomeContactForm';
 import MetaHeader from '../components/MetaHeader';
+import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         metakeys = "Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
         metaurl = "https://galacticdigitalstudios.com"
       />
-      <div className="container-fluid px-0 pb-5 mb-1">
+      <div className="container-fluid px-0">
         <div className="row">
           <div className="col py-5 bg-dark bg-animation overflow-hidden">
             <div id="stars"></div>
@@ -27,8 +28,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <HomeSections />
-        <HomeContactForm />
+        <LazyLoad>
+          <HomeSections />
+        </LazyLoad>
+        <LazyLoad>
+          <HomeContactForm />
+        </LazyLoad>
       </div>
     </>
   )

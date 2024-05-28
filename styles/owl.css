@@ -1,8 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/bahnschrift');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    font-family: 'Bahnschrift', 'Roboto', sans-serif !important;
+    font-family: 'Bahnschrift', sans-serif !important;
 }
 
 .bg-alpha, .btn-alpha, .btn-outline-alpha:hover, .btn-beta:hover {
@@ -90,7 +89,7 @@ body {
     text-shadow: 0 0 12px black;
     width: 100%;
     text-align: center;
-    animation: fadeup 2s;
+    animation: fadeup 5ms;
     position: relative;
     z-index: 99;
 }
@@ -98,7 +97,7 @@ body {
 .home-subtitle {
     margin: 0 auto;
     box-shadow: 1px 1px 12px black;
-    animation: delayedfadeup 3s;
+    animation: delayedfadeup 7ms;
     position: relative;
     z-index: 99;
 }
