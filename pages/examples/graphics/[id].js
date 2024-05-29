@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import InsidePageHeader from "../../../components/InsidePageHeader";
 import MetaHeader from "../../../components/MetaHeader";
+import Image from "next/image";
 
 const Graphic = () => {
     const router = useRouter();
@@ -47,7 +48,7 @@ const Graphic = () => {
                                 </div>
                             </div>
                         </div>
-                        <img src={graphic.image_url} width="100%" alt={graphic.name} />
+                        <Image alt={graphic.name} src={graphic.image_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
                     </div>
                     <div className="col-md-4 col-sm-12">
                         <h3>{graphic.description}</h3>

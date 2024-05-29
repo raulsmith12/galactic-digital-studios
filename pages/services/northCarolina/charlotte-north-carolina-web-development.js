@@ -1,3 +1,4 @@
+import Image from "next/image";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
@@ -25,7 +26,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/web-development-l.webp" width="100%" alt="Two monitors with web development code on them" />
+                                    <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>
@@ -53,7 +54,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/charlotte-north-carolina-web-development.webp" width="100%" alt="Charlotte North Carolina web development" />
+                                    <Image src="https://galacticdigitalstudios.com/img/charlotte-north-carolina-web-development.webp" alt="Charlotte North Carolina web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

@@ -10,4 +10,9 @@ module.exports = withPWA({
   output: 'export',
   reactStrictMode: true,
   trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  images: {
+    loader: 'custom',
+    loaderFile: './my-loader.js',
+  },
 })

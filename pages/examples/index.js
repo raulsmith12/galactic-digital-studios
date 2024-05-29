@@ -3,6 +3,7 @@ import Graphics from "../../components/Graphics";
 import Logos from "../../components/Logos";
 import Websites from "../../components/Websites";
 import MetaHeader from '../../components/MetaHeader';
+import { FaStarAndCrescent } from "react-icons/fa";
 
 const Examples = () => {
     return (
@@ -21,24 +22,21 @@ const Examples = () => {
                     <div className="col">
                         <div className="mx-3 px-3">
                             <h3>
-                                <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
-                                Websites
+                                <FaStarAndCrescent className="g-star" /> &nbsp; Websites
                             </h3>
                             <Websites />
                         </div>
                         <hr />
                         <div className="mx-3 px-3">
                             <h3>
-                                <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
-                                Logos
+                                <FaStarAndCrescent className="g-star" /> &nbsp; Logos
                             </h3>
                             <Logos />
                         </div>
                         <hr />
                         <div className="mx-3 px-3">
                             <h3>
-                                <img src="https://galacticdigitalstudios.com/img/gds-logo-favicon.png" height="35" alt="Galactic Digital Studios short icon" />
-                                Graphics
+                                <FaStarAndCrescent className="g-star" /> &nbsp; Graphics
                             </h3>
                             <Graphics />
                         </div>

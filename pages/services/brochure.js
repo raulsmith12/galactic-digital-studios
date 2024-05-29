@@ -3,6 +3,7 @@ import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
 import MetaHeader from "../../components/MetaHeader";
+import Image from "next/image";
 
 const Brochure = () => {
     return (
@@ -30,7 +31,7 @@ const Brochure = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/brochure-design.jpg" width="100%" alt="Magazine demonstrating brochure design" />
+                                    <Image alt="Magazine demonstrating brochure design" src="https://galacticdigitalstudios.com/img/brochure-design.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

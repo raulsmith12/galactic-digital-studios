@@ -1,5 +1,6 @@
 import InsidePageHeader from "../../components/InsidePageHeader";
 import MetaHeader from '../../components/MetaHeader';
+import Image from "next/image";
 
 const About = () => {
     return (
@@ -15,8 +16,8 @@ const About = () => {
                     <InsidePageHeader title="About Galactic Digital Studios" />
                 </div>
                 <div className="row">
-                    <div className="col-md-2 offset-md-1">
-                        <img src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width="100%" alt="Laptop with saying on it" />
+                    <div className="col-md-2 offset-md-1 position-relative">
+                        <Image alt="Laptop with saying on it" src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                     </div>
                     <div className="col-md-9 col-sm-12">
                         <p className="h6 mx-1">Started in 2015 as Galactic Web Solutions, Galactic has now grown into more than just a website development firm. Today, Galactic Digital Studios lives up to the new name, handling many different aspects of online digital marketing and branding.<br /><br />

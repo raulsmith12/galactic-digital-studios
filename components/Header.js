@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ServiceMenu from "./ServiceMenu";
+import Image from "next/image";
 
 const Header = () => {
     const [servicesMenu, showServicesMenu] = useState(false);
@@ -23,14 +24,14 @@ const Header = () => {
                 <nav className="navbar navbar-dark bg-alpha sticky-top border-bottom border-secondary main-menu">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
-                            <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" />
+                            <Image alt="Galactic Digital Studios" src="https://galacticdigitalstudios.com/img/gds-logo-white.png" width={0} height={75} style={{ width: "auto" }} />
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#gdsNavbar" aria-controls="gdsNavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="offcanvas offcanvas-end bg-alpha text-bg-dark" tabIndex="-1" id="gdsNavbar" aria-labelledby="gdsNavbarLabel">
                             <div className="offcanvas-header">
-                                <img src="https://galacticdigitalstudios.com/img/gds-logo-white.png" height="75" alt="Galactic Digital Studios" id="gdsNavbarLabel" />
+                                <Image alt="Galactic Digital Studios" src="https://galacticdigitalstudios.com/img/gds-logo-white.png" width={0} height={75} style={{ width: "auto" }} id="gdsNavbarLabel" />
                                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#gdsNavbar" aria-label="Close" id="button-close"></button>
                             </div>
                             <div className="offcanvas-body">

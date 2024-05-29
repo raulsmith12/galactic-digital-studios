@@ -23,7 +23,7 @@ const Websites = () => {
                 {websites.map(i => (
                     <div className="col-md-2 col-sm-4 mb-2" key={i.id}>
                         <Link href={"/examples/websites/" + i.id}>
-                            <img src={i.thumb_url} width="100%" alt={i.name} />
+                            <Image alt={i.name} src={i.thumb_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
                         </Link>
                     </div>
                 ))}

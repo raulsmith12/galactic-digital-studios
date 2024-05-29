@@ -3,6 +3,7 @@ import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
 import MetaHeader from "../../components/MetaHeader";
+import Image from "next/image";
 
 const Database = () => {
     return (
@@ -30,7 +31,7 @@ const Database = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/database-management-l.jpg" width="100%" alt="Man writing database management roadmap on glass window" />
+                                    <Image alt="Man writing database management roadmap on glass window" src="https://galacticdigitalstudios.com/img/database-management-l.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
 import MetaHeader from "../../components/MetaHeader";
+import Image from "next/image";
 
 const Graphic = () => {
     return (
@@ -30,7 +31,7 @@ const Graphic = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/graphic-design-l.webp" width="100%" alt="Laptop with trendy graphic design poster behind it" />
+                                    <Image alt="Laptop with trendy graphic design poster behind it" src="https://galacticdigitalstudios.com/img/graphic-design-l.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

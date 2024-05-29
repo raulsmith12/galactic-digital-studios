@@ -2,6 +2,7 @@ import InsidePageHeader from "../../components/InsidePageHeader";
 import MetaHeader from "../../components/MetaHeader";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Team = () => {
     const [teamContent, setTeamContent] = useState([]);
@@ -38,7 +39,7 @@ const Team = () => {
                 {teamContent.map(i => (
                     <div className="row mx-1 my-2" key={i.id}>
                         <div className="col-md-2 col-sm-4">
-                            <img src={i.image_url} width="100%" alt={i.name} />
+                            <Image alt={i.name} src={i.image_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="col-md-10 col-sm-8">
                             <h4 className="display-4">{i.name}</h4>

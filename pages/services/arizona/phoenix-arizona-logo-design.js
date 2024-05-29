@@ -1,6 +1,7 @@
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
+import Image from "next/image"
 
 const Page = () => {
     return (
@@ -25,7 +26,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col pt-5">
-                                    <img src="https://galacticdigitalstudios.com/img/logo-design-l.webp" width="100%" alt="Monitor with laptop with logo design on both" className="mt-5" />
+                                    <Image alt="Monitor with laptop with logo design on both" src="https://galacticdigitalstudios.com/img/logo-design-l.webp" className="mt-5" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>
@@ -51,7 +52,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/phoenix-arizona-logo-design.webp" width="100%" alt="Phoenix Arizona logo design" />
+                                    <Image alt="Phoenix Arizona logo design" src="https://galacticdigitalstudios.com/img/phoenix-arizona-logo-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

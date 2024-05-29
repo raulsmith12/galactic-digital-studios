@@ -1,6 +1,7 @@
 import Link from "next/link";
 import InsidePageHeader from "../../components/InsidePageHeader";
 import MetaHeader from '../../components/MetaHeader';
+import Image from "next/image";
 
 const Faqs = () => {
     return (
@@ -44,7 +45,7 @@ const Faqs = () => {
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-12 text-center">
-                        <img src="https://galacticdigitalstudios.com/img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" width="85%" alt="Laptop with monitor behind it" />
+                        <Image alt="Laptop with monitor behind it" src="https://galacticdigitalstudios.com/img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" width={0} height={0} style={{ width: "85%", height: "auto" }} />
                     </div>
                 </div>
             </div>

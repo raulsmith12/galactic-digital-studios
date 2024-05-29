@@ -2,6 +2,7 @@ import InsidePageHeader from "../../../components/InsidePageHeader";
 import RequestForm from "../../../components/RequestForm";
 import MetaHeader from "../../../components/MetaHeader";
 import LazyLoad from 'react-lazy-load';
+import Image from "next/image";
 
 const Page = () => {
     return (
@@ -27,7 +28,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" style={{ width: '100%', height: 'auto' }} />
+                                    <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>
@@ -53,7 +54,7 @@ const Page = () => {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/tacoma-washington-web-development.webp" alt="Tacoma Washington web development" style={{ width: '100%', height: 'auto' }} />
+                                    <Image src="https://galacticdigitalstudios.com/img/tacoma-washington-web-development.webp" alt="Tacoma Washington web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

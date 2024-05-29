@@ -3,6 +3,7 @@ import { FaAngleDoubleLeft } from 'react-icons/fa';
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
 import MetaHeader from "../../components/MetaHeader";
+import Image from "next/image";
 
 const CMS = () => {
     return (
@@ -30,7 +31,7 @@ const CMS = () => {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img src="https://galacticdigitalstudios.com/img/content-management-l.jpg" width="100%" alt="Laptop displaying content management dashboard" />
+                                    <Image alt="Laptop displaying content management dashboard" src="https://galacticdigitalstudios.com/img/content-management-l.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
                                 </div>
                             </div>
                         </div>

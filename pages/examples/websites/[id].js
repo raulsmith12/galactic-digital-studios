@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import InsidePageHeader from "../../../components/InsidePageHeader";
 import MetaHeader from '../../../components/MetaHeader';
+import Image from "next/image";
 
 const Website = () => {
     const router = useRouter();
@@ -47,7 +48,7 @@ const Website = () => {
                                 </div>
                             </div>
                         </div>
-                        <img src={website.image_url} width="100%" alt={website.name} />
+                        <Image alt={website.name} src={website.image_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
                     </div>
                     <div className="col-md-4 col-sm-12">
                         <h3>{website.description}</h3>
