@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import InsidePageHeader from "../../components/InsidePageHeader";
 import MetaHeader from '../../components/MetaHeader';
 import Image from "next/image";
@@ -16,14 +17,16 @@ const About = () => {
                     <InsidePageHeader title="About Galactic Digital Studios" />
                 </div>
                 <div className="row">
-                    <div className="col-md-2 offset-md-1 position-relative">
-                        <Image alt="Laptop with saying on it" src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
-                    </div>
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6 mx-1">Started in 2015 as Galactic Web Solutions, Galactic has now grown into more than just a website development firm. Today, Galactic Digital Studios lives up to the new name, handling many different aspects of online digital marketing and branding.<br /><br />
+                    <div className="col-sm-12 col-md-10 order-md-last">
+                        <p className="h5 mx-1">Started in 2015 as Galactic Web Solutions, Galactic has now grown into more than just a website development firm. Today, Galactic Digital Studios lives up to the new name, handling many different aspects of online digital marketing and branding.<br /><br />
                         If you need a new logo, new graphic marketing, or even a new business card, Galactic Digital Studios has a team of designers ready to assist you. If you&rsquo;re in the market for assistance with search engine optimization, Galactic Digital Studios can help with that as well. And yes, we are still very much in the website development business, handling everything from dynamic, fully-functioning frontend sites, to behind-the-curtain backend work that would make Oz take up and notice, to database management to help keep your day-to-day running smoothly as ever.<br /><br />
                         Whatever your online digital branding or design/development needs, Galactic Digital Studios has you covered.</p>
                     </div>
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <div className="col-sm-12 col-md-2 order-md-first">
+                            <Image alt="Laptop with saying on it" src="https://galacticdigitalstudios.com/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                        </div>
+                    </Suspense>
                 </div>
             </div>
         </>

@@ -2,9 +2,20 @@ import Link from 'next/link';
 import HomeSections from '../components/HomeSections';
 import HomeContactForm from '../components/HomeContactForm';
 import MetaHeader from '../components/MetaHeader';
-import LazyLoad from 'react-lazy-load';
+import { Suspense, useEffect, useState } from 'react';
 
 const Home = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const desktopDevice = window.innerWidth;
+    if (desktopDevice > 767) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  }, [])
+
   return (
     <>
       <MetaHeader
@@ -16,10 +27,14 @@ const Home = () => {
       <div className="container-fluid px-0">
         <div className="row">
           <div className="col py-5 bg-dark bg-animation overflow-hidden">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-            <div id="stars4"></div>
+            {isDesktop && (
+              <>
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="stars4"></div>
+              </>
+            )}
             <h1 className="home-title display-1 pb-3">Out of This World Service<br />Down to Earth Prices</h1>
             <div className="text-center">
               <Link href="https://galacticdigitalstudios.com/contact/" className="home-subtitle btn btn-white">
@@ -28,12 +43,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <LazyLoad>
+        <Suspense fallback={<p>Loading section...</p>}>
           <HomeSections />
-        </LazyLoad>
-        <LazyLoad>
-          <HomeContactForm />
-        </LazyLoad>
+        </Suspense>
+        {isDesktop && (
+          <Suspense fallback={<p>Loading contact form...</p>}>
+            <HomeContactForm />
+          </Suspense>
+        )}
       </div>
     </>
   )

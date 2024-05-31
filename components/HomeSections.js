@@ -2,7 +2,7 @@ import { FaStarAndCrescent } from "react-icons/fa";
 
 const HomeSections = () => {
     return (
-        <div className="row mx-0">
+        <div className="row mx-0 pb-5 mb-5">
             <div className="col px-0">
                 <div className="container">
                     <div className="row">
