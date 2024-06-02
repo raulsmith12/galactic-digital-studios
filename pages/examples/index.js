@@ -4,6 +4,7 @@ import Logos from "../../components/Logos";
 import Websites from "../../components/Websites";
 import MetaHeader from '../../components/MetaHeader';
 import { FaStarAndCrescent } from "react-icons/fa";
+import { Suspense } from "react";
 
 const Examples = () => {
     return (
@@ -19,37 +20,45 @@ const Examples = () => {
                     <InsidePageHeader title="Examples" />
                 </div>
                 <div className="row mb-5 pb-5">
-                    <div className="col">
-                        <div className="mx-3 px-3">
-                            <h3>
-                                <FaStarAndCrescent className="g-star" /> &nbsp; Websites
-                            </h3>
-                            <Websites />
-                        </div>
+                    <div className="col-12">
+                        <Suspense fallback={<p>Loading Websites...</p>}>
+                            <div className="mx-3 px-3">
+                                <h3>
+                                    <FaStarAndCrescent className="g-star" /> &nbsp; Websites
+                                </h3>
+                                    <Websites />
+                            </div>
+                            <hr />
+                        </Suspense>
+                        <Suspense fallback={<p>Loading Logos...</p>}>
+                            <div className="mx-3 px-3">
+                                <h3>
+                                    <FaStarAndCrescent className="g-star" /> &nbsp; Logos
+                                </h3>
+                                <Logos />
+                            </div>
+                            <hr />
+                        </Suspense>
+                        <Suspense fallback={<p>Loading Graphics...</p>}>
+                            <div className="mx-3 px-3">
+                                <h3>
+                                    <FaStarAndCrescent className="g-star" /> &nbsp; Graphics
+                                </h3>
+                                <Graphics />
+                            </div>
+                        </Suspense>
                         <hr />
-                        <div className="mx-3 px-3">
-                            <h3>
-                                <FaStarAndCrescent className="g-star" /> &nbsp; Logos
-                            </h3>
-                            <Logos />
-                        </div>
-                        <hr />
-                        <div className="mx-3 px-3">
-                            <h3>
-                                <FaStarAndCrescent className="g-star" /> &nbsp; Graphics
-                            </h3>
-                            <Graphics />
-                        </div>
-                        <hr />
-                        <div className="mx-3 px-3">
-                            <div className="container-fluid">
-                                <div className="row text-center">
-                                    <div className="col-6">
-                                        To view more examples from Raul Smith, please visit <a href="https://github.com/raulsmith12" target="_blank">his Github profile.</a>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <div className="mx-3 px-3">
+                                <div className="container-fluid">
+                                    <div className="row text-center">
+                                        <div className="col-6">
+                                            To view more examples from Raul Smith, please visit <a href="https://github.com/raulsmith12" target="_blank">his Github profile.</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Suspense>
                     </div>
                 </div>
             </div>
