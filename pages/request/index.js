@@ -1,6 +1,7 @@
 import InsidePageHeader from "../../components/InsidePageHeader";
 import RequestForm from "../../components/RequestForm";
 import MetaHeader from '../../components/MetaHeader';
+import { Suspense } from "react";
 
 const Request = () => {
     return (
@@ -17,8 +18,10 @@ const Request = () => {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <p className="display-7 mx-1">Using the form below, let us know what service of ours you are requesting today:</p>
-                        <RequestForm />
+                        <p className="display-7 mx-1 my-5">Using the form below, let us know what service of ours you are requesting today:</p>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <RequestForm />
+                        </Suspense>
                     </div>
                 </div>
             </div>

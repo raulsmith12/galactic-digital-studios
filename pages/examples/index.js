@@ -4,9 +4,20 @@ import Logos from "../../components/Logos";
 import Websites from "../../components/Websites";
 import MetaHeader from '../../components/MetaHeader';
 import { FaStarAndCrescent } from "react-icons/fa";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const Examples = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -19,6 +30,14 @@ const Examples = () => {
                 <div className="row">
                     <InsidePageHeader title="Examples" />
                 </div>
+                {isDesktop === false && (
+                    <div className="row">
+                        <div className="col-12"> 
+                            <h2 className="my-5">This page showcases some of our best work that we&rsquo;ve done for clients in the past. Please feel free to look around.</h2>
+                            <h3 className="my-5">If you have any questions please feel free to <a href="mailto:raul.smith@galacticdigitalstudios.com">email us</a>.</h3>
+                        </div>
+                    </div>
+                )}
                 <div className="row mb-5 pb-5">
                     <div className="col-12">
                         <Suspense fallback={<p>Loading Websites...</p>}>

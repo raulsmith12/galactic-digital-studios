@@ -21,33 +21,33 @@ const Contact = () => {
                     <div className="col">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-6 col-sm-12">
-                                    <ContactForm />
+                                <div className="col-md-6 col-sm-12 order-md-last">
+                                    <p>Use the contact form on this page to contact our team of designers and developers, or you can contact the team members directly using the information below:</p>
+                                    <h5>Galactic Digital Studios</h5>
+                                    <p>
+                                        <FaMapMarkerAlt />&nbsp;
+                                        Servicing clients throughout the continental United States&nbsp;<FaFlagUsa />
+                                    </p>
+                                    <p>
+                                        <FaFacebookF />&nbsp;facebook.com/galacticdigitalstudios
+                                    </p>
+                                    <h5>Raul Smith</h5>
+                                    <p>
+                                        <FaEnvelopeOpenText />&nbsp;
+                                        Email: raul.smith@galacticdigitalstudios.com
+                                    </p>
+                                    <p>
+                                        <FaPhoneAlt />&nbsp;
+                                        Phone: 801.410.0738
+                                    </p>
+                                    <p>
+                                        <FaGithub />&nbsp;
+                                        Github: https://github.com/raulsmith12
+                                    </p>
                                 </div>
-                                <Suspense fallback={<p>Loading...</p>}>
-                                    <div className="col-md-6 col-sm-12">
-                                        <p>Use the contact form on this page to contact our team of designers and developers, or you can contact the team members directly using the information below:</p>
-                                        <h5>Galactic Digital Studios</h5>
-                                        <p>
-                                            <FaMapMarkerAlt />&nbsp;
-                                            Servicing clients throughout the continental United States&nbsp;<FaFlagUsa />
-                                        </p>
-                                        <p>
-                                            <FaFacebookF />&nbsp;facebook.com/galacticdigitalstudios
-                                        </p>
-                                        <h5>Raul Smith</h5>
-                                        <p>
-                                            <FaEnvelopeOpenText />&nbsp;
-                                            Email: raul.smith@galacticdigitalstudios.com
-                                        </p>
-                                        <p>
-                                            <FaPhoneAlt />&nbsp;
-                                            Phone: 801.410.0738
-                                        </p>
-                                        <p>
-                                            <FaGithub />&nbsp;
-                                            Github: https://github.com/raulsmith12
-                                        </p>
+                                <Suspense fallback={<p>Loading Form...</p>}>
+                                    <div className="col-md-6 col-sm-12 order-md-first">
+                                        <ContactForm />
                                     </div>
                                 </Suspense>
                             </div>
