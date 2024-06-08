@@ -1,10 +1,21 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
 import Image from "next/image"
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -35,9 +46,11 @@ const Page = () => {
                     <div className="col-md-9 col-sm-12">
                         <p className="h6">Having an established and experienced small business web development specialist in your corner can make all the difference in the world when looking to establish your company on the digital marketplace. Galactic Digital Studios not only brings years of experience in development small business websites, but they also know how to establish small businesses in the digital marketplace.</p>
                         <p className="h6">And now Galactic Digital Studios is delivering web development services to small businesses in the Boise, Idaho area. While Boise, Idaho may be a small town by most standards, it is rapidly growing and teeming with small businesses - ranging from coffee shops to souvenir stands - ready to take that next step in establishing an online presence.</p>
-                        <p className="h6">Boise, Idaho is a vibrant city that offers numerous opportunities for businesses of any size. When dealing with small business web development in Boise, Idaho, there are several key advantages worth considering. Galactic Digital Studios understands and acknowledges these unique opportunities and benefits that can be derived from working with small businesses in such a unique and thriving town.</p>
-                        <p className="h6">One of the most important reasons to work with a small business web developer is the understanding of working in such a close-knit community like Boise, Idaho, that offers a strong sense of local support. Galactic Digital Studios has always believed in supporting local first, and in a town that fosters a tight community where small businesses are valued and actively supported like Boise, Idaho, that is very crucial. By working with smaller businesses, you contribute to the growth and vitality of the local economy, making a tangible impact on the community. Also, working with small businesses - particularly when hiring a web developer - allows for a more personalized experience, as they often have a deep understanding of the local market and its specific needs.</p>
-                        <p className="h6">Small businesses in Boise, Idaho also tend to offer a more flexible approach to rendering services. Unlike large corporations, they can quickly adapt to changing market conditions and customer preferences. This flexibility enables small businesses to be innovative and responsive, which can be advantageous for clients seeking customized solutions or swift problem-solving. With Galactic Digital Studios, you can expect telephone or email customer service - even outside normal business hours. We want to make sure that your web development process is not only something that you are proud of, but that you will continue to come back to.</p>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <p className="h6">Boise, Idaho is a vibrant city that offers numerous opportunities for businesses of any size. When dealing with small business web development in Boise, Idaho, there are several key advantages worth considering. Galactic Digital Studios understands and acknowledges these unique opportunities and benefits that can be derived from working with small businesses in such a unique and thriving town.</p>
+                            <p className="h6">One of the most important reasons to work with a small business web developer is the understanding of working in such a close-knit community like Boise, Idaho, that offers a strong sense of local support. Galactic Digital Studios has always believed in supporting local first, and in a town that fosters a tight community where small businesses are valued and actively supported like Boise, Idaho, that is very crucial. By working with smaller businesses, you contribute to the growth and vitality of the local economy, making a tangible impact on the community. Also, working with small businesses - particularly when hiring a web developer - allows for a more personalized experience, as they often have a deep understanding of the local market and its specific needs.</p>
+                            <p className="h6">Small businesses in Boise, Idaho also tend to offer a more flexible approach to rendering services. Unlike large corporations, they can quickly adapt to changing market conditions and customer preferences. This flexibility enables small businesses to be innovative and responsive, which can be advantageous for clients seeking customized solutions or swift problem-solving. With Galactic Digital Studios, you can expect telephone or email customer service - even outside normal business hours. We want to make sure that your web development process is not only something that you are proud of, but that you will continue to come back to.</p>
+                        </Suspense>
                     </div>
                 </div>
                 <Suspense fallback={<p>Loading...</p>}>
@@ -61,11 +74,13 @@ const Page = () => {
                     </div>
                 </Suspense>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col">
-                            <RequestForm selectedService="website" />
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Suspense>
             </div>
         </>

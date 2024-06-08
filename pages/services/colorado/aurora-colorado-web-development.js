@@ -1,10 +1,21 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
 import Image from "next/image"
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -75,11 +86,13 @@ const Page = () => {
                     </div>
                 </Suspense>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col">
-                            <RequestForm selectedService="website" />
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Suspense>
             </div>
         </>

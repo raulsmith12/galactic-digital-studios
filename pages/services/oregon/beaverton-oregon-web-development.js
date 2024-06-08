@@ -2,8 +2,20 @@ import Image from "next/image";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -12,7 +24,7 @@ const Page = () => {
                 metakeys = "website design, website development, web development, web design, Beaverton, Oregon"
                 metaurl = "https://galacticdigitalstudios.com/services/oregon/beaverton-oregon-web-development"
             />
-            <div className="container-fluid pb-5 mb-5">
+            <div className="container-fluid">
                 <div className="row">
                     <InsidePageHeader title="Beaverton Oregon Web Development" />
                 </div>
@@ -38,28 +50,34 @@ const Page = () => {
                         <p className="h6">An effective web development strategy focuses on creating a user-friendly interface (UI) and intuitive navigation. By incorporating responsive design, ensuring compatibility across multiple browsers and devices, and implementing interactive features, Galactic Digital Studios is helping Beaverton, Oregon small businesses engage their customers effectively. Engaging website elements such as chatbots, contact forms, product catalogs, and online booking systems can enhance customer experience, encourage interaction, and facilitate conversions. The team of web development professionals at Galactic Digital Studios understands the importance of user experience (UX) and implements strategies that can drive customer engagement.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">For small businesses in the Beaverton, Oregon area, an online presence serves as a virtual storefront that operates 24/7. Galactic Digital Studios understands professional web development can allow businesses to showcase their products and services in a visually appealing manner, providing detailed descriptions and high-quality images. By incorporating e-commerce functionality, businesses can even sell products online, expanding their customer base beyond physical limitations. A well-designed website enables small businesses to effectively communicate their unique selling propositions, special offers, and competitive advantages, thus increasing the likelihood of conversions.</p>
-                        <p className="h6">A professionally developed website from Galactic Digital Studios can serve as a powerful tool for Beaverton, Oregon small businesses to fuel their growth. Through strategic integration of digital marketing techniques, such as email marketing, social media integration, and content marketing, a website becomes a hub for lead generation and customer retention. Tracking and analyzing website data allows businesses to make data-driven decisions, identify areas for improvement, and refine their marketing strategies. Professional web development from Galactic Digital Studios can lay the foundation for scalability, enabling small businesses to adapt and expand their online presence as their operations grow.</p>
-                        <p className="h6">By investing in a well-designed and user-friendly website from the web development team from Galactic Digital Studios, Beaverton, Oregon small businesses can establish credibility, enhance visibility, engage customers, showcase products and services, and facilitate business growth. The professional web development team from Galactic Digital Studios can offer expertise in design, development, SEO, and digital marketing, helping small business in Beaverton, Oregon and surrounding communities establish a strong online presence and stay competitive in their local market. Embracing professional web development is not just an option but a necessity for Beaverton, Oregon small businesses to thrive in this digital age we live in.</p>
-                        <h6>Our team of web development professionals stands ready to help Beaverton, Oregon small businesses. Use the contact form found below or the info found on this website to contact one of our web development professionals and schedule a consultation today.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-web-development.webp" alt="Beaverton Oregon web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">For small businesses in the Beaverton, Oregon area, an online presence serves as a virtual storefront that operates 24/7. Galactic Digital Studios understands professional web development can allow businesses to showcase their products and services in a visually appealing manner, providing detailed descriptions and high-quality images. By incorporating e-commerce functionality, businesses can even sell products online, expanding their customer base beyond physical limitations. A well-designed website enables small businesses to effectively communicate their unique selling propositions, special offers, and competitive advantages, thus increasing the likelihood of conversions.</p>
+                            <p className="h6">A professionally developed website from Galactic Digital Studios can serve as a powerful tool for Beaverton, Oregon small businesses to fuel their growth. Through strategic integration of digital marketing techniques, such as email marketing, social media integration, and content marketing, a website becomes a hub for lead generation and customer retention. Tracking and analyzing website data allows businesses to make data-driven decisions, identify areas for improvement, and refine their marketing strategies. Professional web development from Galactic Digital Studios can lay the foundation for scalability, enabling small businesses to adapt and expand their online presence as their operations grow.</p>
+                            <p className="h6">By investing in a well-designed and user-friendly website from the web development team from Galactic Digital Studios, Beaverton, Oregon small businesses can establish credibility, enhance visibility, engage customers, showcase products and services, and facilitate business growth. The professional web development team from Galactic Digital Studios can offer expertise in design, development, SEO, and digital marketing, helping small business in Beaverton, Oregon and surrounding communities establish a strong online presence and stay competitive in their local market. Embracing professional web development is not just an option but a necessity for Beaverton, Oregon small businesses to thrive in this digital age we live in.</p>
+                            <h6>Our team of web development professionals stands ready to help Beaverton, Oregon small businesses. Use the contact form found below or the info found on this website to contact one of our web development professionals and schedule a consultation today.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-web-development.webp" alt="Beaverton Oregon web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="website" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

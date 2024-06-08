@@ -1,10 +1,21 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
 import Image from "next/image"
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -39,12 +50,12 @@ const Page = () => {
                         <p className="h6">Our commitment to tailor-made solutions means that your website won&lsquo;t be just another template; it will be a digital representation of your brand&lsquo;s personality and values. From intuitive user interfaces to robust backend systems, we have the expertise to bring your vision to life.</p>
                         <p className="h6">In the fast-paced world of web development, staying ahead of the curve is non-negotiable. Galactic Digital Studios prides itself on being at the forefront of technological advancements. Our developers are adept at leveraging the latest tools and frameworks to ensure that your website is not only aesthetically pleasing but also performs seamlessly across devices and platforms.</p>
                         <p className="h6">Whether it&lsquo;s responsive design, progressive web apps, or the integration of emerging technologies like AI and machine learning, we are well-equipped to infuse your website with the innovation it deserves. Galactic Digital Studios doesn&lsquo;t just build websites; we create digital experiences that leave a lasting impression.</p>
-                        <p className="h6">Embarking on the journey of web development with Galactic Digital Studios is a collaborative and transparent experience. We believe in keeping our clients informed and involved throughout the process. Here&lsquo;s a glimpse into our comprehensive web development process:</p>
                     </div>
                 </div>
                 <Suspense fallback={<p>Loading...</p>}>
                     <div className="row">
                         <div className="col-md-9 col-sm-12">
+                            <p className="h6">Embarking on the journey of web development with Galactic Digital Studios is a collaborative and transparent experience. We believe in keeping our clients informed and involved throughout the process. Here&lsquo;s a glimpse into our comprehensive web development process:</p>
                             <p className="h6">The journey begins with a thorough understanding of your business, goals, and target audience. Our team conducts in-depth consultations to gather insights that will shape the foundation of your digital presence.</p>
                             <p className="h6">Armed with the information gathered, we formulate a strategic plan that outlines the architecture, features, and design elements of your website. This blueprint serves as a roadmap for the development phase.</p>
                             <p className="h6">Our creative team takes the lead in crafting visually stunning designs that align with your brand identity. Simultaneously, our UX/UI experts ensure that the design is not only eye-catching but also intuitive and user-friendly.</p>
@@ -70,11 +81,13 @@ const Page = () => {
                     </div>
                 </Suspense>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col">
-                            <RequestForm selectedService="website" />
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Suspense>
             </div>
         </>

@@ -2,9 +2,20 @@ import Image from "next/image";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -35,9 +46,11 @@ const Page = () => {
                     <div className="col-md-9 col-sm-12">
                         <p className="h6">In the heart of the Land of Enchantment, where the vibrant culture of Albuquerque, New Mexico meets the limitless possibilities of the digital realm, Galactic Digital Studios emerges as the pioneering force in web development. We are not just a company; we are architects of the online experience, crafting digital landscapes that captivate, engage, and elevate your brand.</p>
                         <p className="h6">In the fast-paced world of the digital age, your online presence is the key to unlocking new opportunities and reaching a global audience. Galactic Digital Studios is your strategic partner in this journey, offering unparalleled web development services tailored to your unique needs. Whether you are a startup seeking a groundbreaking website or an established business aiming for a digital facelift, we have the expertise to turn your vision into a compelling reality.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe in pushing the boundaries of creativity while staying rooted in the principles of functionality and user experience. Our web development process is a harmonious blend of innovation and precision, ensuring that every line of code contributes to a seamless, visually stunning, and highly functional website.</p>
-                        <p className="h6">No two businesses are alike, and neither should their websites be. Our team of seasoned developers takes the time to understand your unique goals, challenges, and audience. From there, we craft a customized web development strategy that aligns with your brand identity and business objectives. Whether it&rsquo;s an e-commerce platform, a portfolio site, or a dynamic web application, we have the expertise to make it happen.</p>
-                        <p className="h6">In the ever-evolving landscape of web development, staying ahead of the curve is essential. Galactic Digital Studios is committed to employing the latest and most powerful technologies to ensure your website is not just functional but also future-proof. Our developers are well-versed in the intricacies of HTML5, CSS3, JavaScript, and other cutting-edge tools, allowing us to create websites that are not only visually stunning but also optimized for performance and responsiveness. We are also well-versed in database management and API infrastructure to help create fully dynamic content for your website.</p>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <p className="h6">At Galactic Digital Studios, we believe in pushing the boundaries of creativity while staying rooted in the principles of functionality and user experience. Our web development process is a harmonious blend of innovation and precision, ensuring that every line of code contributes to a seamless, visually stunning, and highly functional website.</p>
+                            <p className="h6">No two businesses are alike, and neither should their websites be. Our team of seasoned developers takes the time to understand your unique goals, challenges, and audience. From there, we craft a customized web development strategy that aligns with your brand identity and business objectives. Whether it&rsquo;s an e-commerce platform, a portfolio site, or a dynamic web application, we have the expertise to make it happen.</p>
+                            <p className="h6">In the ever-evolving landscape of web development, staying ahead of the curve is essential. Galactic Digital Studios is committed to employing the latest and most powerful technologies to ensure your website is not just functional but also future-proof. Our developers are well-versed in the intricacies of HTML5, CSS3, JavaScript, and other cutting-edge tools, allowing us to create websites that are not only visually stunning but also optimized for performance and responsiveness. We are also well-versed in database management and API infrastructure to help create fully dynamic content for your website.</p>
+                        </Suspense>
                     </div>
                 </div>
                 <Suspense fallback={<p>Loading...</p>}>
@@ -63,11 +76,13 @@ const Page = () => {
                     </div>
                 </Suspense>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col">
-                            <RequestForm selectedService="website" />
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Suspense>
             </div>
         </>

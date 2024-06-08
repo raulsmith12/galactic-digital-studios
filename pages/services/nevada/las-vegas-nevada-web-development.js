@@ -2,9 +2,20 @@ import Image from "next/image";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -34,11 +45,13 @@ const Page = () => {
                     </div>
                     <div className="col-md-9 col-sm-12">
                         <p className="h6">In the bustling city of Las Vegas, Nevada, where the lights never dim and opportunities are abundant, having a strong online presence is crucial for businesses aiming to thrive in the digital age. Galactic Digital Studios emerges as the beacon of innovation, offering unparalleled web development services tailored to meet the unique needs of businesses in Las Vegas, Nevada. With a commitment to excellence and a passion for cutting-edge technology, Galactic Digital Studios stands as the premier choice for businesses seeking to elevate their online presence.</p>
-                        <h3>Why Galactic Digital Studios?</h3>
-                        <h4>Expertise in Custom Web Development</h4>
-                        <p className="h6">Galactic Digital Studios takes pride in its team of seasoned web developers with a wealth of experience in crafting custom websites. Recognizing that every business is unique, our developers work closely with clients to understand their objectives and create bespoke web solutions that align with their brand identity.</p>
-                        <h4>Responsive Design for a Mobile-First Era</h4>
-                        <p className="h6">In a world where mobile devices dominate online interactions, having a responsive website is non-negotiable. Galactic Digital Studios specializes in designing websites that seamlessly adapt to various screen sizes, ensuring an optimal user experience on smartphones, tablets, and desktops alike. This not only enhances user satisfaction but also boosts your website&rsquo;s search engine rankings.</p>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <h3>Why Galactic Digital Studios?</h3>
+                            <h4>Expertise in Custom Web Development</h4>
+                            <p className="h6">Galactic Digital Studios takes pride in its team of seasoned web developers with a wealth of experience in crafting custom websites. Recognizing that every business is unique, our developers work closely with clients to understand their objectives and create bespoke web solutions that align with their brand identity.</p>
+                            <h4>Responsive Design for a Mobile-First Era</h4>
+                            <p className="h6">In a world where mobile devices dominate online interactions, having a responsive website is non-negotiable. Galactic Digital Studios specializes in designing websites that seamlessly adapt to various screen sizes, ensuring an optimal user experience on smartphones, tablets, and desktops alike. This not only enhances user satisfaction but also boosts your website&rsquo;s search engine rankings.</p>
+                        </Suspense>
                     </div>
                 </div>
                 <Suspense fallback={<p>Loading...</p>}>
@@ -71,11 +84,13 @@ const Page = () => {
                     </div>
                 </Suspense>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col">
-                            <RequestForm selectedService="website" />
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Suspense>
             </div>
         </>

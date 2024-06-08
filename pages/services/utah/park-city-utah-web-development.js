@@ -2,8 +2,20 @@ import Image from "next/image";
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,34 +53,40 @@ const Page = () => {
                         <p className="h6">Gain control over your content with our CMS solutions. We specialize in WordPress, Drupal, and custom solutions tailored to your needs, allowing you to easily update and manage your site.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">What good is a stunning website if it can&rsquo;t be found? Our SEO experts ensure your site ranks highly in search engine results, increasing visibility and driving more organic traffic to your site.</p>
-                        <p className="h6">Our relationship with you doesn&rsquo;t end with the launch of your website. We provide ongoing maintenance and support to ensure your site evolves with your business and the digital landscape.</p>
-                        <p className="h6">Park City is not only a destination for tourists but a vibrant community of local businesses and enterprises, each with its unique digital needs. From local artisans and retailers to service providers and large corporations, your digital presence needs to reflect both your brand and the essence of Park City.</p>
-                        <p className="h6">We understand the importance of local search engine optimization. Our strategies are designed to make your business stand out in Park City and beyond, ensuring that locals and visitors alike can easily find your services.</p>
-                        <p className="h6">With such a picturesque backdrop, your website&rsquo;s visual elements need to be compelling. We harness the beauty of Park City in our designs, making your website not only a selling platform but also a showcase of the locale.</p>
-                        <p className="h6">Engaging with the local community online can boost your visibility and enhance customer loyalty. We build features into your website that facilitate community interaction and engagement, from integrated social media feeds to blogs and forums.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe that our environment influences our creativity and output. Being situated nearby Park City inspires us daily, urging us to push the boundaries of web development and digital marketing. Our team is not only technically proficient but also deeply embedded in the local culture, allowing us to provide insights and solutions that are uniquely tailored to the region.</p>
-                        <p className="h6">Choosing Galactic Digital Studios means partnering with a team that&rsquo;s as invested in the success of your business as you are. While we may not be located in Park City, we do bring a local perspective enhanced by global technological trends, creating websites that are not just functional and beautiful but also optimized for your specific market segment.</p>
-                        <p className="h6">In a world where digital presence is intertwined with business success, having a partner who understands your unique needs and the nuances of your local environment is invaluable. At Galactic Digital Studios, we are committed to delivering exceptional web development services that help you achieve your digital goals while celebrating the essence of Park City.</p>
-                        <h6>Use the contact form below to contact us at Galactic Digital Studios, where your vision is met with our creativity and technological expertise to launch websites that not only meet the modern demands of digital consumers but do so with a style that&rsquo;s uniquely Park City. Let&rsquo;s create something extraordinary together.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/park-city-utah-web-development.webp" alt="Park City Utah web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">What good is a stunning website if it can&rsquo;t be found? Our SEO experts ensure your site ranks highly in search engine results, increasing visibility and driving more organic traffic to your site.</p>
+                            <p className="h6">Our relationship with you doesn&rsquo;t end with the launch of your website. We provide ongoing maintenance and support to ensure your site evolves with your business and the digital landscape.</p>
+                            <p className="h6">Park City is not only a destination for tourists but a vibrant community of local businesses and enterprises, each with its unique digital needs. From local artisans and retailers to service providers and large corporations, your digital presence needs to reflect both your brand and the essence of Park City.</p>
+                            <p className="h6">We understand the importance of local search engine optimization. Our strategies are designed to make your business stand out in Park City and beyond, ensuring that locals and visitors alike can easily find your services.</p>
+                            <p className="h6">With such a picturesque backdrop, your website&rsquo;s visual elements need to be compelling. We harness the beauty of Park City in our designs, making your website not only a selling platform but also a showcase of the locale.</p>
+                            <p className="h6">Engaging with the local community online can boost your visibility and enhance customer loyalty. We build features into your website that facilitate community interaction and engagement, from integrated social media feeds to blogs and forums.</p>
+                            <p className="h6">At Galactic Digital Studios, we believe that our environment influences our creativity and output. Being situated nearby Park City inspires us daily, urging us to push the boundaries of web development and digital marketing. Our team is not only technically proficient but also deeply embedded in the local culture, allowing us to provide insights and solutions that are uniquely tailored to the region.</p>
+                            <p className="h6">Choosing Galactic Digital Studios means partnering with a team that&rsquo;s as invested in the success of your business as you are. While we may not be located in Park City, we do bring a local perspective enhanced by global technological trends, creating websites that are not just functional and beautiful but also optimized for your specific market segment.</p>
+                            <p className="h6">In a world where digital presence is intertwined with business success, having a partner who understands your unique needs and the nuances of your local environment is invaluable. At Galactic Digital Studios, we are committed to delivering exceptional web development services that help you achieve your digital goals while celebrating the essence of Park City.</p>
+                            <h6>Use the contact form below to contact us at Galactic Digital Studios, where your vision is met with our creativity and technological expertise to launch websites that not only meet the modern demands of digital consumers but do so with a style that&rsquo;s uniquely Park City. Let&rsquo;s create something extraordinary together.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/park-city-utah-web-development.webp" alt="Park City Utah web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="website" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="website" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )
