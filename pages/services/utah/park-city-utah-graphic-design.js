@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -45,28 +57,34 @@ const Page = () => {
                         <p className="h6">Park City is not just a tourist destination; it&rsquo;s a lifestyle. From the alpine slopes to the film reels, it embodies a spirit of adventure and creativity. At Galactic Digital Studios, we channel this spirit into each of our projects, creating designs that are as functional as they are visually appealing.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Our work resonates with the energy of Park City&rsquo;s mainstays—from local festivals and events like the Sundance Film Festival to the daily hustle of small businesses and large enterprises. With each project, we aim to not only meet the unique needs and challenges of our clients but also to enhance the vibrant local community through impactful design.</p>
-                        <p className="h6">Every project at Galactic Digital Studios is treated with utmost importance, ensuring that your brand&rsquo;s vision and goals are aligned with the end result. Our commitment is to not only deliver visually appealing designs but also to provide strategic solutions that boost your business&rsquo;s success. With Galactic Digital Studios, you&rsquo;re not just getting a design service; you&rsquo;re getting a partner who is invested in your success.</p>
-                        <p className="h6">In Park City, where the mountains meet the stars, Galactic Digital Studios offers a blend of local charm and otherworldly creativity. We are not just designers; we are artists, thinkers, and innovators. We invite you to experience the power of great design. Let us help you transform your business and make a lasting impression in your industry. With Galactic Digital Studios, step into a world where your vision becomes reality, and your brand reaches new heights.</p>
-                        <h6>Use the contact form below and explore the endless possibilities with us by using the form below to contact our graphic design team. Let&rsquo;s create something extraordinary together in Park City, where every business has the potential to shine like the stars above the Rockies.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/park-city-utah-graphic-design.webp" alt="Park City Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Our work resonates with the energy of Park City&rsquo;s mainstays—from local festivals and events like the Sundance Film Festival to the daily hustle of small businesses and large enterprises. With each project, we aim to not only meet the unique needs and challenges of our clients but also to enhance the vibrant local community through impactful design.</p>
+                            <p className="h6">Every project at Galactic Digital Studios is treated with utmost importance, ensuring that your brand&rsquo;s vision and goals are aligned with the end result. Our commitment is to not only deliver visually appealing designs but also to provide strategic solutions that boost your business&rsquo;s success. With Galactic Digital Studios, you&rsquo;re not just getting a design service; you&rsquo;re getting a partner who is invested in your success.</p>
+                            <p className="h6">In Park City, where the mountains meet the stars, Galactic Digital Studios offers a blend of local charm and otherworldly creativity. We are not just designers; we are artists, thinkers, and innovators. We invite you to experience the power of great design. Let us help you transform your business and make a lasting impression in your industry. With Galactic Digital Studios, step into a world where your vision becomes reality, and your brand reaches new heights.</p>
+                            <h6>Use the contact form below and explore the endless possibilities with us by using the form below to contact our graphic design team. Let&rsquo;s create something extraordinary together in Park City, where every business has the potential to shine like the stars above the Rockies.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/park-city-utah-graphic-design.webp" alt="Park City Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

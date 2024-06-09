@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -45,46 +57,52 @@ const Page = () => {
                         <p className="h6">In the digital age, it&rsquo;s crucial to have designs that look stunning across all devices. Our designers excel in creating responsive designs that adapt seamlessly to various screen sizes, ensuring a consistent and enjoyable user experience.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <h4>Timely Delivery</h4>
-                        <p className="h6">As a small business ourselves, we understand that time is of the essence in the business world. Our commitment to timely delivery ensures that your projects are completed efficiently without compromising on quality.</p>
-                        <p className="h6">Explore our wide range of graphic design services designed to meet the diverse needs of businesses in Aurora:</p>
-                        <h4>Logo Design</h4>
-                        <p className="h6">A visually compelling logo is the cornerstone of any brand. Let our designers create a logo that encapsulates your brand&rsquo;s essence and sets you apart from the competition.</p>
-                        <h4>Branding and Identity</h4>
-                        <p className="h6">Build a strong and memorable brand identity with our comprehensive branding solutions. From color palettes to typography, we ensure consistency across all brand elements.</p>
-                        <h4>Web Graphics</h4>
-                        <p className="h6">Enhance your online presence with eye-catching web graphics. Our graphic design team specializes in creating graphics that not only look good but also contribute to a seamless user experience.</p>
-                        <h4>Print Design</h4>
-                        <p className="h6">Make a lasting impression with our print design services. From business cards to brochures, we ensure that your print materials reflect the professionalism and uniqueness of your brand.</p>
-                        <h4>Social Media Graphics</h4>
-                        <p className="h6">Elevate your social media presence with captivating graphics. Our designers create shareable and engaging visuals that align with your brand&rsquo;s voice and message.</p>
-                        <p className="h6">Our design process is built on collaboration, communication, and creativity. Here&rsquo;s a glimpse into how we bring your ideas to life:</p>
-                        <ul>
-                            <li className="h5">Consultation - We start with a comprehensive consultation to understand your brand, goals, and vision. Your input is invaluable in shaping the direction of the design process.</li>
-                            <li className="h5">Concept Development - Our designers brainstorm and develop initial concepts based on the information gathered. We work closely with you to refine these concepts until we achieve the perfect design.</li>
-                            <li className="h5">Execution - Once the concept is finalized, our team executes the design with precision and attention to detail. We leverage the latest design tools and technologies to ensure a polished final product.</li>
-                            <li className="h5">Feedback and Revisions - Your feedback is crucial to us. We welcome your input throughout the design process and make revisions as needed to ensure the final result exceeds your expectations.</li>
-                        </ul>
-                        <p className="h6">Galactic Digital Studios is your go-to destination for exceptional graphic design services in Aurora, Colorado. With a commitment to creativity, customization, and timely delivery, we strive to elevate your brand to new heights.</p>
-                        <h6>Use the contact form below or the contact information found on our website to contact us today and let Galactic Digital Studios help you embark on a graphic design journey that will set your brand apart in the digital cosmos.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Aurora Colorado graphic design" src="https://galacticdigitalstudios.com/img/aurora-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <h4>Timely Delivery</h4>
+                            <p className="h6">As a small business ourselves, we understand that time is of the essence in the business world. Our commitment to timely delivery ensures that your projects are completed efficiently without compromising on quality.</p>
+                            <p className="h6">Explore our wide range of graphic design services designed to meet the diverse needs of businesses in Aurora:</p>
+                            <h4>Logo Design</h4>
+                            <p className="h6">A visually compelling logo is the cornerstone of any brand. Let our designers create a logo that encapsulates your brand&rsquo;s essence and sets you apart from the competition.</p>
+                            <h4>Branding and Identity</h4>
+                            <p className="h6">Build a strong and memorable brand identity with our comprehensive branding solutions. From color palettes to typography, we ensure consistency across all brand elements.</p>
+                            <h4>Web Graphics</h4>
+                            <p className="h6">Enhance your online presence with eye-catching web graphics. Our graphic design team specializes in creating graphics that not only look good but also contribute to a seamless user experience.</p>
+                            <h4>Print Design</h4>
+                            <p className="h6">Make a lasting impression with our print design services. From business cards to brochures, we ensure that your print materials reflect the professionalism and uniqueness of your brand.</p>
+                            <h4>Social Media Graphics</h4>
+                            <p className="h6">Elevate your social media presence with captivating graphics. Our designers create shareable and engaging visuals that align with your brand&rsquo;s voice and message.</p>
+                            <p className="h6">Our design process is built on collaboration, communication, and creativity. Here&rsquo;s a glimpse into how we bring your ideas to life:</p>
+                            <ul>
+                                <li className="h5">Consultation - We start with a comprehensive consultation to understand your brand, goals, and vision. Your input is invaluable in shaping the direction of the design process.</li>
+                                <li className="h5">Concept Development - Our designers brainstorm and develop initial concepts based on the information gathered. We work closely with you to refine these concepts until we achieve the perfect design.</li>
+                                <li className="h5">Execution - Once the concept is finalized, our team executes the design with precision and attention to detail. We leverage the latest design tools and technologies to ensure a polished final product.</li>
+                                <li className="h5">Feedback and Revisions - Your feedback is crucial to us. We welcome your input throughout the design process and make revisions as needed to ensure the final result exceeds your expectations.</li>
+                            </ul>
+                            <p className="h6">Galactic Digital Studios is your go-to destination for exceptional graphic design services in Aurora, Colorado. With a commitment to creativity, customization, and timely delivery, we strive to elevate your brand to new heights.</p>
+                            <h6>Use the contact form below or the contact information found on our website to contact us today and let Galactic Digital Studios help you embark on a graphic design journey that will set your brand apart in the digital cosmos.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Aurora Colorado graphic design" src="https://galacticdigitalstudios.com/img/aurora-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

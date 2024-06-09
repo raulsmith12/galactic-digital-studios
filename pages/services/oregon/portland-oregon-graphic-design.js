@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,27 +53,33 @@ const Page = () => {
                         <p className="h6">Galactic Digital Studios handles business card design very well. It is said that Portland, Oregon, is only the second-best place in the United States for coffee. With so many national chains and local shops, the opportunity to have your business card on a coffee shop wall is great. But it&rsquo;s not as great if you don&rsquo;t have the right design, a design that fits the overall theme and color scheme of your brand. That&rsquo;s why Galactic Digital Studios will go over details about your brand identity with you before designing your business card.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Something else that you may not realize is graphic design-centric is stickers. Let&rsquo;s face it; you see laptops with stickers on them all over Portland, Oregon. Why shouldn&rsquo;t your business also get in on that fun? Galactic Digital Studios will help design a sticker that will let people know who you are and what you do. And it&rsquo;s not just laptops; these stickers can be used for water bottles, music venue walls, even small furniture. No matter the vessel, the stickers will help get the word out about your business.</p>
-                        <p className="h6">And every graphic design service that Galactic Digital Studios provides comes with an option to shop around at various print shops in the Portland, Oregon area before shopping at one of the big box online stores. We believe in shopping local first for a number of reasons, not the least of which being timeliness and getting a quality product.</p>
-                        <h6>Use the contact form below or the contact info found on this site to learn more about our graphic design services in the Portland, Oregon area and surrounding communities.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/portland-oregon-graphic-design.webp" alt="Portland Oregon graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Something else that you may not realize is graphic design-centric is stickers. Let&rsquo;s face it; you see laptops with stickers on them all over Portland, Oregon. Why shouldn&rsquo;t your business also get in on that fun? Galactic Digital Studios will help design a sticker that will let people know who you are and what you do. And it&rsquo;s not just laptops; these stickers can be used for water bottles, music venue walls, even small furniture. No matter the vessel, the stickers will help get the word out about your business.</p>
+                            <p className="h6">And every graphic design service that Galactic Digital Studios provides comes with an option to shop around at various print shops in the Portland, Oregon area before shopping at one of the big box online stores. We believe in shopping local first for a number of reasons, not the least of which being timeliness and getting a quality product.</p>
+                            <h6>Use the contact form below or the contact info found on this site to learn more about our graphic design services in the Portland, Oregon area and surrounding communities.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/portland-oregon-graphic-design.webp" alt="Portland Oregon graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

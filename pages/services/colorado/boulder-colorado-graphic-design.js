@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,32 +54,38 @@ const Page = () => {
                         <p className="h6">In the age of social media, eye-catching graphics are essential for capturing attention and conveying your message. Our team specializes in creating graphics optimized for various social media platforms. Whether it&rsquo;s Instagram, Facebook, Twitter, or LinkedIn, we ensure your brand stands out in the crowded digital space.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Sometimes, words alone aren&rsquo;t enough to convey complex information. Our graphic design professionals excel in creating illustrations and infographics that simplify and enhance the communication of your ideas. From product explanations to data visualization, we turn the complex into the comprehensible.</p>
-                        <p className="h6">Every project starts with a thorough understanding of your goals, target audience, and vision. We believe that a strong foundation is crucial for the success of any design project.</p>
-                        <p className="h6">Once we have a clear understanding of your objectives, our team brainstorms and conceptualizes ideas. We present you with initial concepts, gathering your feedback to refine and shape the direction of the design.</p>
-                        <p className="h6">This is where the magic happens. Our designers bring the chosen concept to life, incorporating your feedback at every stage. We prioritize both aesthetics and functionality, ensuring that the final product not only looks stunning but also serves its purpose effectively.</p>
-                        <p className="h6">We value your input throughout the process. Regular check-ins and feedback sessions ensure that the design aligns with your expectations and goals. We believe in transparency and collaboration to deliver a product that exceeds your expectations.</p>
-                        <p className="h6">Once the design is finalized and approved, we deliver the files in the formats you need. Whether it&rsquo;s for online use, print, or both, we provide comprehensive deliverables to ensure a seamless integration of the design into your marketing strategy.</p>
-                        <p className="h6">Whether you&rsquo;re a startup taking your first steps or an established business looking for a design refresh, Galactic Digital Studios is here to bring your vision to life. We take pride in being a part of the dynamic and creative community in Boulder, Colorado, and we look forward to collaborating with you on your next graphic design project.</p>
-                        <h6>Ready to elevate your brand? Contact us today to discuss your ideas, and let&rsquo;s embark on a journey of creativity, innovation, and visual excellence. At Galactic Digital Studios, the universe of graphic design is at your fingertips!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Boulder Colorado graphic design" src="https://galacticdigitalstudios.com/img/boulder-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Sometimes, words alone aren&rsquo;t enough to convey complex information. Our graphic design professionals excel in creating illustrations and infographics that simplify and enhance the communication of your ideas. From product explanations to data visualization, we turn the complex into the comprehensible.</p>
+                            <p className="h6">Every project starts with a thorough understanding of your goals, target audience, and vision. We believe that a strong foundation is crucial for the success of any design project.</p>
+                            <p className="h6">Once we have a clear understanding of your objectives, our team brainstorms and conceptualizes ideas. We present you with initial concepts, gathering your feedback to refine and shape the direction of the design.</p>
+                            <p className="h6">This is where the magic happens. Our designers bring the chosen concept to life, incorporating your feedback at every stage. We prioritize both aesthetics and functionality, ensuring that the final product not only looks stunning but also serves its purpose effectively.</p>
+                            <p className="h6">We value your input throughout the process. Regular check-ins and feedback sessions ensure that the design aligns with your expectations and goals. We believe in transparency and collaboration to deliver a product that exceeds your expectations.</p>
+                            <p className="h6">Once the design is finalized and approved, we deliver the files in the formats you need. Whether it&rsquo;s for online use, print, or both, we provide comprehensive deliverables to ensure a seamless integration of the design into your marketing strategy.</p>
+                            <p className="h6">Whether you&rsquo;re a startup taking your first steps or an established business looking for a design refresh, Galactic Digital Studios is here to bring your vision to life. We take pride in being a part of the dynamic and creative community in Boulder, Colorado, and we look forward to collaborating with you on your next graphic design project.</p>
+                            <h6>Ready to elevate your brand? Contact us today to discuss your ideas, and let&rsquo;s embark on a journey of creativity, innovation, and visual excellence. At Galactic Digital Studios, the universe of graphic design is at your fingertips!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Boulder Colorado graphic design" src="https://galacticdigitalstudios.com/img/boulder-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

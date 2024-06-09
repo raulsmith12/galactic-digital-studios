@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,29 +52,35 @@ const Page = () => {
                         <p className="h6">In the digital era, a user-friendly and visually appealing website is non-negotiable. Galactic Digital Studios goes beyond conventional web design, focusing on creating online experiences that captivate and convert. Our team combines creativity with functionality, ensuring that your website not only looks impressive but also provides a seamless user journey. From intuitive navigation to responsive design, we optimize every element to maximize your online presence.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Visual storytelling is a powerful tool for connecting with your audience on a deeper level. Galactic Digital Studios excels in bringing your narrative to life through captivating illustrations. Whether you need custom illustrations for your website, social media, or marketing materials, our graphic design professionals infuse creativity into every stroke, adding a unique dimension to your brand&nbsp;s story. After all, in a market as competitive as Las Vegas, Nevada, why shouldn&nbsp;t your brand stand out from the crowd?</p>
-                        <p className="h6">In the dynamic world of graphic design, staying current with trends is essential. Galactic Digital Studios prides itself on being at the forefront of design trends, ensuring that your brand remains relevant and ahead of the curve. Our designers are not just artists; they are trendsetters who infuse innovation into every project, keeping your brand at the cutting edge of design aesthetics.</p>
-                        <p className="h6">What sets Galactic Digital Studios apart is not just our creative prowess but also our commitment to client satisfaction. We approach every project with dedication, collaborating closely with our clients to understand their vision and goals. Our transparent and communicative process ensures that you are involved at every stage, from conceptualization to final execution.</p>
-                        <p className="h6">Your Las Vegas, Nevada-based business deserves a trusted and valuable graphic design team that will ensure your business gets noticed. Galactic Digital Studios emerges as a trailblazer in the realm of graphic design, offering comprehensive solutions to elevate your brand. Our team of skilled graphic designers combines artistic flair with strategic thinking, delivering designs that not only captivate but also drive results. From logos and marketing collateral to web design and illustrations, Galactic Digital Studios is your partner in shaping a visually compelling brand identity that resonates with your audience in the dynamic landscape of Las Vegas, Nevada. Elevate your brand with Galactic Digital Studios - where creativity meets innovation.</p>
-                        <h6>Use the contact form below or the contact info found on this website to contact one of our graphic design professionals and let Galactic Digital Studios be a shining light in the city of bright lights.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/las-vegas-nevada-graphic-design.webp" alt="Las Vegas Nevada Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Visual storytelling is a powerful tool for connecting with your audience on a deeper level. Galactic Digital Studios excels in bringing your narrative to life through captivating illustrations. Whether you need custom illustrations for your website, social media, or marketing materials, our graphic design professionals infuse creativity into every stroke, adding a unique dimension to your brand&nbsp;s story. After all, in a market as competitive as Las Vegas, Nevada, why shouldn&nbsp;t your brand stand out from the crowd?</p>
+                            <p className="h6">In the dynamic world of graphic design, staying current with trends is essential. Galactic Digital Studios prides itself on being at the forefront of design trends, ensuring that your brand remains relevant and ahead of the curve. Our designers are not just artists; they are trendsetters who infuse innovation into every project, keeping your brand at the cutting edge of design aesthetics.</p>
+                            <p className="h6">What sets Galactic Digital Studios apart is not just our creative prowess but also our commitment to client satisfaction. We approach every project with dedication, collaborating closely with our clients to understand their vision and goals. Our transparent and communicative process ensures that you are involved at every stage, from conceptualization to final execution.</p>
+                            <p className="h6">Your Las Vegas, Nevada-based business deserves a trusted and valuable graphic design team that will ensure your business gets noticed. Galactic Digital Studios emerges as a trailblazer in the realm of graphic design, offering comprehensive solutions to elevate your brand. Our team of skilled graphic designers combines artistic flair with strategic thinking, delivering designs that not only captivate but also drive results. From logos and marketing collateral to web design and illustrations, Galactic Digital Studios is your partner in shaping a visually compelling brand identity that resonates with your audience in the dynamic landscape of Las Vegas, Nevada. Elevate your brand with Galactic Digital Studios - where creativity meets innovation.</p>
+                            <h6>Use the contact form below or the contact info found on this website to contact one of our graphic design professionals and let Galactic Digital Studios be a shining light in the city of bright lights.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/las-vegas-nevada-graphic-design.webp" alt="Las Vegas Nevada Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

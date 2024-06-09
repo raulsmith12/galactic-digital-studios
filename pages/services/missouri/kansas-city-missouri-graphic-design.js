@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,6 +53,7 @@ const Page = () => {
                         <p className="h6">Your brand is more than just a logo; it&rsquo;s the essence of who you are as a company. We help you define and express your brand identity through compelling visual elements that leave a lasting impression.</p>
                     </div>
                 </div>
+                <Suspense fallback={<p>Loading...</p>}>
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
                         <p className="h6">Your logo is the cornerstone of your brand identity. Our expert graphic design professionals will work closely with you to create a logo that is not only visually striking but also encapsulates the essence of your brand.</p>
@@ -65,11 +78,16 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

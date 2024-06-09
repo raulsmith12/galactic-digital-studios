@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,26 +52,32 @@ const Page = () => {
                         <p className="h6">Also included in our graphic design services is something that we briefly touched on earlier, which is business card design. Seattle, Washington is considered by many to be the coffee capital of the United States. It is the birthplace of such staples as Starbucks and Seattle&rsquo;s Best. One staple in many small coffee shops is the display of business cards on a wall somewhere. Your business wants - no, needs - a business card that can stand out in any setting, but especially in a coffee shop business card board. Galactic Digital Studios is capable of designing a business card that will not only let potential customers know you mean business, but also will stand out from the crowd.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">An often-overlooked graphic design service that is starting to catch on with small businesses throughout Seattle, Washington and throughout the United States is sticker design. Our graphic design team will help design a sticker for your business that will give customers the pride and satisfaction of putting it on their water bottles or laptops. And in case the business card board doesn't work out, there&rsquo;s always putting stickers at local small music venues.</p>
-                        <h6>Galactic Digital Studios stands ready to assist your Seattle, Washington-based small business with their graphic design needs. Use the contact form below or the contact info found on this site to schedule a consultation with one of our graphic design professionals today.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/seattle-washington-graphic-design.webp" alt="Seattle Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">An often-overlooked graphic design service that is starting to catch on with small businesses throughout Seattle, Washington and throughout the United States is sticker design. Our graphic design team will help design a sticker for your business that will give customers the pride and satisfaction of putting it on their water bottles or laptops. And in case the business card board doesn't work out, there&rsquo;s always putting stickers at local small music venues.</p>
+                            <h6>Galactic Digital Studios stands ready to assist your Seattle, Washington-based small business with their graphic design needs. Use the contact form below or the contact info found on this site to schedule a consultation with one of our graphic design professionals today.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/seattle-washington-graphic-design.webp" alt="Seattle Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

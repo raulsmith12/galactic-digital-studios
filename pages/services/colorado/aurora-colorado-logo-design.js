@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,37 +52,43 @@ const Page = () => {
                         <p className="h6">We understand that every business is unique, and one size does not fit all. Our designers take the time to understand your specific needs and goals, ensuring that the final logo reflects your brand&rsquo;s distinct identity.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Our team thrives on creativity and innovation. We don&rsquo;t just follow design trends; we set them. Whether you&rsquo;re looking for a clean and minimalist logo or a bold and expressive one, our designers bring fresh perspectives to the table.</p>
-                        <p className="h6">Your input is invaluable in the design process. We believe in collaboration and keep you involved at every stage, from concept development to the final design. Your feedback is not just welcomed; it&rsquo;s crucial in shaping the direction of the project.</p>
-                        <p className="h6">We understand the importance of timelines in the business world. Our streamlined design process ensures that we deliver high-quality logos within the agreed-upon timeframe, allowing you to launch or rebrand your business on schedule.</p>
-                        <p className="h6">Quality logo design doesn&rsquo;t have to break the bank. At Galactic Digital Studios, our slogan is &ldquo;out of this world service at down to earth prices&rdquo; and we back this up by offering competitive and transparent pricing, making professional logo design accessible to businesses of all sizes.</p>
-                        <p className="h6">Embarking on the journey of creating your brand&rsquo;s visual identity is an exciting process at Galactic Digital Studios. Our logo design process is designed to be collaborative, transparent, and results-driven:</p>
-                        <p className="h6">We start by learning about your business - its history, values, target audience, and unique selling propositions. This phase sets the foundation for the design process.</p>
-                        <p className="h6">Our logo design professionals translate the insights gathered during the discovery phase into initial design concepts. These concepts are presented to you for feedback and discussion.</p>
-                        <p className="h6">Based on your feedback, we refine and fine-tune the selected concept, ensuring that it aligns perfectly with your vision and objectives.</p>
-                        <p className="h6">Once the design is approved, we finalize the logo, ensuring that it meets industry standards for scalability, versatility, and visual impact.</p>
-                        <p className="h6">The final logo files are delivered to you in various formats, making it easy for you to use them across different platforms - from digital to print.</p>
-                        <p className="h6">Take a glance at our diverse portfolio to see the range and quality of logos we&rsquo;ve crafted for businesses throughout the United States. Each logo tells a unique story, reflecting the individuality and aspirations of the businesses they represent.</p>
-                        <p className="h6">Are you ready to take your brand to new heights with a distinctive and impactful logo? Contact Galactic Digital Studios today to begin your logo design journey. Whether you&rsquo;re starting from scratch or looking to refresh your current logo, our team is here to bring your vision to life.</p>
-                        <h6>Invest in a logo that goes beyond aesthetics - invest in a logo that becomes synonymous with your brand&rsquo;s success. Galactic Digital Studios is your partner in creating logos that leave a lasting impression in Aurora, Colorado, and beyond. Use the contact form below or the contact information found on this site and let&rsquo;s embark on this creative journey together - where your brand&rsquo;s story meets design innovation.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Aurora Colorado logo design" src="https://galacticdigitalstudios.com/img/aurora-colorado-logo-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Our team thrives on creativity and innovation. We don&rsquo;t just follow design trends; we set them. Whether you&rsquo;re looking for a clean and minimalist logo or a bold and expressive one, our designers bring fresh perspectives to the table.</p>
+                            <p className="h6">Your input is invaluable in the design process. We believe in collaboration and keep you involved at every stage, from concept development to the final design. Your feedback is not just welcomed; it&rsquo;s crucial in shaping the direction of the project.</p>
+                            <p className="h6">We understand the importance of timelines in the business world. Our streamlined design process ensures that we deliver high-quality logos within the agreed-upon timeframe, allowing you to launch or rebrand your business on schedule.</p>
+                            <p className="h6">Quality logo design doesn&rsquo;t have to break the bank. At Galactic Digital Studios, our slogan is &ldquo;out of this world service at down to earth prices&rdquo; and we back this up by offering competitive and transparent pricing, making professional logo design accessible to businesses of all sizes.</p>
+                            <p className="h6">Embarking on the journey of creating your brand&rsquo;s visual identity is an exciting process at Galactic Digital Studios. Our logo design process is designed to be collaborative, transparent, and results-driven:</p>
+                            <p className="h6">We start by learning about your business - its history, values, target audience, and unique selling propositions. This phase sets the foundation for the design process.</p>
+                            <p className="h6">Our logo design professionals translate the insights gathered during the discovery phase into initial design concepts. These concepts are presented to you for feedback and discussion.</p>
+                            <p className="h6">Based on your feedback, we refine and fine-tune the selected concept, ensuring that it aligns perfectly with your vision and objectives.</p>
+                            <p className="h6">Once the design is approved, we finalize the logo, ensuring that it meets industry standards for scalability, versatility, and visual impact.</p>
+                            <p className="h6">The final logo files are delivered to you in various formats, making it easy for you to use them across different platforms - from digital to print.</p>
+                            <p className="h6">Take a glance at our diverse portfolio to see the range and quality of logos we&rsquo;ve crafted for businesses throughout the United States. Each logo tells a unique story, reflecting the individuality and aspirations of the businesses they represent.</p>
+                            <p className="h6">Are you ready to take your brand to new heights with a distinctive and impactful logo? Contact Galactic Digital Studios today to begin your logo design journey. Whether you&rsquo;re starting from scratch or looking to refresh your current logo, our team is here to bring your vision to life.</p>
+                            <h6>Invest in a logo that goes beyond aesthetics - invest in a logo that becomes synonymous with your brand&rsquo;s success. Galactic Digital Studios is your partner in creating logos that leave a lasting impression in Aurora, Colorado, and beyond. Use the contact form below or the contact information found on this site and let&rsquo;s embark on this creative journey together - where your brand&rsquo;s story meets design innovation.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Aurora Colorado logo design" src="https://galacticdigitalstudios.com/img/aurora-colorado-logo-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

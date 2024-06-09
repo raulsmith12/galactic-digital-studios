@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -38,28 +50,34 @@ const Page = () => {
                         <p className="h6">The team of logo design professionals at Galactic Digital Studios brings a wealth of experience and creativity to every project. They are experts at combining artistic skill with a deep understanding of branding principles and industry standards to create logos that not only look great but also communicate your brand&rsquo;s values effectively. Whether you are a small business in the Beaverton, Oregon area or a large corporation, we have the expertise and the wherewithal to design logos that cater to your specific needs. From minimalist and modern designs to bold and vibrant concepts, we can bring any idea to life.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Galactic Digital Studios&rsquo; team of logo design professionals prides themselves on delivering high-quality logo designs that exceed our clients&rsquo; expectations. Our commitment to excellence extends beyond the design phase. We provide unlimited revisions to ensure that you are completely satisfied with the final result.</p>
-                        <p className="h6">Our team of logo design professionals believes that great design should be accessible to businesses of all sizes. The credo at Galactic Digital Studios is that no job is too big or too small. That&rsquo;s why we offer competitive pricing packages tailored to fit your budget. We detail how much is owed and when throughout every step of the process. That&rsquo;s because we value your time and understand the importance of timely delivery. Our efficient design process allows us to deliver exceptional logo designs within the agreed-upon timeframe, so that you can start showcasing your new logo to the world as soon as possible.</p>
-                        <p className="h6">As for what happens after both parties are satisfied with the finished result, we make it a point of emphasis to deliver multiple copies of the finished logo to you for you to do with as you need or desire. We will deliver a &ldquo;white background&rdquo; jpg file, a transparent background png file, and a multi-use ai file that will be needed when dealing with print shops. We even coach you as the business owner on what file to use when, the do&rsquo;s and dont&rsquo;s of using specific files in certain instances, and more.</p>
-                        <h6>If you are ready to take your business and your brand&rsquo;s identity to the next level with a professionally designed logo, give Galactic Digital Studios a chance. Contact us today by using the form below or using the contact info that can be found on this site and schedule a consultation with one of our expert logo design professionals. We would be happy to discuss your Beaverton, Oregon business&rsquo;s logo design needs and provide you with a no-obligation free consultation. Galactic Digital Studios is passionate about helping businesses in Beaverton, Oregon make a lasting impression through exceptional logo design.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-logo-design.webp" alt="Beaverton Oregon logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Galactic Digital Studios&rsquo; team of logo design professionals prides themselves on delivering high-quality logo designs that exceed our clients&rsquo; expectations. Our commitment to excellence extends beyond the design phase. We provide unlimited revisions to ensure that you are completely satisfied with the final result.</p>
+                            <p className="h6">Our team of logo design professionals believes that great design should be accessible to businesses of all sizes. The credo at Galactic Digital Studios is that no job is too big or too small. That&rsquo;s why we offer competitive pricing packages tailored to fit your budget. We detail how much is owed and when throughout every step of the process. That&rsquo;s because we value your time and understand the importance of timely delivery. Our efficient design process allows us to deliver exceptional logo designs within the agreed-upon timeframe, so that you can start showcasing your new logo to the world as soon as possible.</p>
+                            <p className="h6">As for what happens after both parties are satisfied with the finished result, we make it a point of emphasis to deliver multiple copies of the finished logo to you for you to do with as you need or desire. We will deliver a &ldquo;white background&rdquo; jpg file, a transparent background png file, and a multi-use ai file that will be needed when dealing with print shops. We even coach you as the business owner on what file to use when, the do&rsquo;s and dont&rsquo;s of using specific files in certain instances, and more.</p>
+                            <h6>If you are ready to take your business and your brand&rsquo;s identity to the next level with a professionally designed logo, give Galactic Digital Studios a chance. Contact us today by using the form below or using the contact info that can be found on this site and schedule a consultation with one of our expert logo design professionals. We would be happy to discuss your Beaverton, Oregon business&rsquo;s logo design needs and provide you with a no-obligation free consultation. Galactic Digital Studios is passionate about helping businesses in Beaverton, Oregon make a lasting impression through exceptional logo design.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-logo-design.webp" alt="Beaverton Oregon logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

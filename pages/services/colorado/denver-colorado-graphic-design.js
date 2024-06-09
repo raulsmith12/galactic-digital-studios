@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,26 +53,32 @@ const Page = () => {
                         <p className="h6">When you choose Galactic Digital Studios for your graphic design needs in Denver, Colorado, you will get a team that is constantly pushing the boundaries of graphic design to create concepts that will set your brand apart, understands that every element of a design contributes to its overall impact, values your time, is committed to delivering products in a timely manner without sacrificing quality, will deliver exceptional results for a price that is both fair and competitive, and is dedicated to providing a seamless and enjoyable experience for you.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Galactic Digital Studios also offers clothing design services to all in the Denver, Colorado area. Whether you&rsquo;re looking for a great t-shirt design, a simple yet unique hat design, or even a coat design that will grab people&rsquo;s attention, our graphic design team is equipped to handle all of your business&rsquo;s clothing design needs. Plus, because we work closely with local print shops, you are guaranteed to have your designs printed by business in the same area as you.</p>
-                        <h6>If you are ready to take your Denver, Colorado brand to new heights, let Galactic Digital Studios be your partner in graphic design excellence. Whether you&rsquo;re looking for breathtaking brochures, impactful business cards, eye-catching banners, or clothing that makes people go &ldquo;hey, tell me more about your company&rdquo;, Galactic Digital Studios can bring your vision to life. Use the contact form below to schedule a free consultation with one of our graphic design specialists and let Galactic Digital Studios elevate your Denver, Colorado-based business.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Denver Colorado graphic design" src="https://galacticdigitalstudios.com/img/denver-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Galactic Digital Studios also offers clothing design services to all in the Denver, Colorado area. Whether you&rsquo;re looking for a great t-shirt design, a simple yet unique hat design, or even a coat design that will grab people&rsquo;s attention, our graphic design team is equipped to handle all of your business&rsquo;s clothing design needs. Plus, because we work closely with local print shops, you are guaranteed to have your designs printed by business in the same area as you.</p>
+                            <h6>If you are ready to take your Denver, Colorado brand to new heights, let Galactic Digital Studios be your partner in graphic design excellence. Whether you&rsquo;re looking for breathtaking brochures, impactful business cards, eye-catching banners, or clothing that makes people go &ldquo;hey, tell me more about your company&rdquo;, Galactic Digital Studios can bring your vision to life. Use the contact form below to schedule a free consultation with one of our graphic design specialists and let Galactic Digital Studios elevate your Denver, Colorado-based business.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Denver Colorado graphic design" src="https://galacticdigitalstudios.com/img/denver-colorado-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

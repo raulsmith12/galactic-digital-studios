@@ -1,9 +1,21 @@
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
-import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
+import Image from "next/image";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -43,33 +55,39 @@ const Page = () => {
                         <p className="h6">From eye-catching logos and striking branding materials to captivating digital assets and dynamic multimedia presentations, Galactic Digital Studios offers a comprehensive suite of graphic design services tailored to meet your diverse needs and objectives. Whether you&rsquo;re looking to elevate your brand, launch a new product, or make a lasting impression, we have the expertise, creativity, and passion to bring your vision to fruition.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">While we may not be located in Santa Fe, New Mexico, Galactic Digital Studios does draw inspiration from the city&rsquo;s rich cultural heritage, artistic vibrancy, and breathtaking natural surroundings. As a fellow small business, we are invested in the success and prosperity of our fellow businesses and organizations, and we are committed to contributing to the growth and vitality of Santa Fe&rsquo;s creative ecosystem.</p>
-                        <p className="h6">Whether you&rsquo;re a local entrepreneur looking to make your mark or a global brand seeking to tap into Santa Fe&rsquo;s unique allure, Galactic Digital Studios is your trusted partner for exceptional graphic design services that leave a lasting impression. Contact us today to learn more about how we can help you bring your vision to life and set your brand apart in the dynamic landscape of Santa Fe, New Mexico.</p>
-                        <p className="h6">Santa Fe, New Mexico, is a city unlike any other. Known for its rich history, vibrant arts scene, and stunning natural beauty, Santa Fe attracts visitors and residents alike with its unique blend of culture, tradition, and innovation. As the capital of New Mexico and the oldest state capital in the United States, Santa Fe holds a special place in the hearts of its inhabitants and continues to inspire creativity and imagination in all who encounter its charm.</p>
-                        <p className="h6">At Galactic Digital Studios, we draw inspiration from the city&rsquo;s rich tapestry of colors, textures, and stories. From the adobe architecture of the historic Plaza to the vibrant hues of the sunset over the Sangre de Cristo Mountains, Santa Fe provides the perfect backdrop for our creative endeavors.</p>
-                        <p className="h6">When you choose Galactic Digital Studios for your graphic design needs in Santa Fe, you&rsquo;re not just hiring a design agency - you&rsquo;re partnering with a team that is deeply rooted in the local community and committed to supporting the growth and success of businesses and organizations throughout the region. Whether you&rsquo;re a small startup looking to make a big impact or a well-established corporation seeking to reinvigorate your brand, we&rsquo;re here to help you stand out in the crowded marketplace and connect with your target audience on a deeper level.</p>
-                        <p className="h6">From the iconic symbols of Santa Fe&rsquo;s Native American and Spanish heritage to the contemporary art galleries and vibrant festivals that dot the city&rsquo;s landscape, Santa Fe is a melting pot of creativity and inspiration. At Galactic Digital Studios, we celebrate this diversity and draw upon it to create designs that resonate with audiences far and wide. Whether you&rsquo;re in need of a striking logo that captures the essence of your brand or a dynamic website that engages visitors and drives conversions, we have the skills, experience, and passion to bring your vision to life.</p>
-                        <p className="h6">In addition to our commitment to excellence in design, we also pride ourselves on our dedication to sustainability and social responsibility. As residents of Santa Fe, we understand the importance of preserving the natural beauty and cultural heritage of our city for future generations, and we strive to minimize our environmental impact through eco-friendly practices and responsible sourcing.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe that great design has the power to transform businesses, inspire change, and create lasting connections. Whether you&rsquo;re a local startup looking to make your mark or a global brand seeking to tap into the magic of Santa Fe, we&rsquo;re here to help you tell your story and share your vision with the world.</p>
-                        <h6>Use the form below and contact us today to learn more about our graphic design services and discover how we can help you stand out in Santa Fe, New Mexico, and beyond.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/santa-fe-new-mexico-graphic-design.webp" alt="Santa Fe New Mexico graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">While we may not be located in Santa Fe, New Mexico, Galactic Digital Studios does draw inspiration from the city&rsquo;s rich cultural heritage, artistic vibrancy, and breathtaking natural surroundings. As a fellow small business, we are invested in the success and prosperity of our fellow businesses and organizations, and we are committed to contributing to the growth and vitality of Santa Fe&rsquo;s creative ecosystem.</p>
+                            <p className="h6">Whether you&rsquo;re a local entrepreneur looking to make your mark or a global brand seeking to tap into Santa Fe&rsquo;s unique allure, Galactic Digital Studios is your trusted partner for exceptional graphic design services that leave a lasting impression. Contact us today to learn more about how we can help you bring your vision to life and set your brand apart in the dynamic landscape of Santa Fe, New Mexico.</p>
+                            <p className="h6">Santa Fe, New Mexico, is a city unlike any other. Known for its rich history, vibrant arts scene, and stunning natural beauty, Santa Fe attracts visitors and residents alike with its unique blend of culture, tradition, and innovation. As the capital of New Mexico and the oldest state capital in the United States, Santa Fe holds a special place in the hearts of its inhabitants and continues to inspire creativity and imagination in all who encounter its charm.</p>
+                            <p className="h6">At Galactic Digital Studios, we draw inspiration from the city&rsquo;s rich tapestry of colors, textures, and stories. From the adobe architecture of the historic Plaza to the vibrant hues of the sunset over the Sangre de Cristo Mountains, Santa Fe provides the perfect backdrop for our creative endeavors.</p>
+                            <p className="h6">When you choose Galactic Digital Studios for your graphic design needs in Santa Fe, you&rsquo;re not just hiring a design agency - you&rsquo;re partnering with a team that is deeply rooted in the local community and committed to supporting the growth and success of businesses and organizations throughout the region. Whether you&rsquo;re a small startup looking to make a big impact or a well-established corporation seeking to reinvigorate your brand, we&rsquo;re here to help you stand out in the crowded marketplace and connect with your target audience on a deeper level.</p>
+                            <p className="h6">From the iconic symbols of Santa Fe&rsquo;s Native American and Spanish heritage to the contemporary art galleries and vibrant festivals that dot the city&rsquo;s landscape, Santa Fe is a melting pot of creativity and inspiration. At Galactic Digital Studios, we celebrate this diversity and draw upon it to create designs that resonate with audiences far and wide. Whether you&rsquo;re in need of a striking logo that captures the essence of your brand or a dynamic website that engages visitors and drives conversions, we have the skills, experience, and passion to bring your vision to life.</p>
+                            <p className="h6">In addition to our commitment to excellence in design, we also pride ourselves on our dedication to sustainability and social responsibility. As residents of Santa Fe, we understand the importance of preserving the natural beauty and cultural heritage of our city for future generations, and we strive to minimize our environmental impact through eco-friendly practices and responsible sourcing.</p>
+                            <p className="h6">At Galactic Digital Studios, we believe that great design has the power to transform businesses, inspire change, and create lasting connections. Whether you&rsquo;re a local startup looking to make your mark or a global brand seeking to tap into the magic of Santa Fe, we&rsquo;re here to help you tell your story and share your vision with the world.</p>
+                            <h6>Use the form below and contact us today to learn more about our graphic design services and discover how we can help you stand out in Santa Fe, New Mexico, and beyond.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/santa-fe-new-mexico-graphic-design.webp" alt="Santa Fe New Mexico graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

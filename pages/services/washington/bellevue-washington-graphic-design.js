@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,31 +54,37 @@ const Page = () => {
                         <p className="h6">Every project begins with an immersive discovery phase. We dive deep into your brand&rsquo;s identity, understanding its core values, target audience, and competitive landscape. This strategic foundation becomes our guiding light throughout the graphic design journey.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Armed with insights, our team of graphic design professionals embarks on a journey of brainstorming. Here, creativity knows no bounds as we explore various design directions, ensuring that each concept aligns with your brand&rsquo;s essence.</p>
-                        <p className="h6">Once concepts are solidified, we breathe life into them through meticulous design work. Every detail is carefully crafted, every color choice intentional, and every element purposeful. We work closely with you to refine and perfect the design until it embodies your vision flawlessly.</p>
-                        <p className="h6">With your approval, we deliver the final design files, optimized for various applications. Whether it&rsquo;s for print, digital, or multi-platform usage, our designs are ready to make their mark.</p>
-                        <p className="h6">In a world where attention spans are fleeting, graphic design has the power to captivate and resonate. At Galactic Digital Studios, we believe in the transformative potential of design, and our graphic design services in Bellevue, Washington, are a testament to that belief. With a commitment to excellence, an unwavering passion for creativity, and a dedication to understanding your brand inside and out, we stand ready to transform your visions into visuals that inspire, engage, and leave a lasting impression.</p>
-                        <p className="h6">As you embark on this journey with us, remember that graphic design is more than just aesthetics - it&rsquo;s an experience. It&rsquo;s a journey of collaboration, a fusion of ideas, and a symphony of creativity. Together, we&rsquo;ll craft designs that not only meet your expectations but exceed them, redefining the way you and your audience perceive your brand.</p>
-                        <p className="h6">Join us in shaping a visual landscape that&rsquo;s as dynamic and diverse as Bellevue, Washington and the greater Pacific Northwest itself. Let&rsquo;s embark on a graphic design odyssey that takes your brand to new heights, igniting connections, and forging relationships through the power of creativity. Welcome to Galactic Digital Studios, where out-of-this-world graphic design knows no limits, and your brand&rsquo;s potential is our ultimate inspiration.</p>
-                        <h6>Use the contact form below or contact information found on this site to schedule a free consultation with one of our graphic design professionals today.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/bellevue-washington-graphic-design.webp" alt="Bellevue Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Armed with insights, our team of graphic design professionals embarks on a journey of brainstorming. Here, creativity knows no bounds as we explore various design directions, ensuring that each concept aligns with your brand&rsquo;s essence.</p>
+                            <p className="h6">Once concepts are solidified, we breathe life into them through meticulous design work. Every detail is carefully crafted, every color choice intentional, and every element purposeful. We work closely with you to refine and perfect the design until it embodies your vision flawlessly.</p>
+                            <p className="h6">With your approval, we deliver the final design files, optimized for various applications. Whether it&rsquo;s for print, digital, or multi-platform usage, our designs are ready to make their mark.</p>
+                            <p className="h6">In a world where attention spans are fleeting, graphic design has the power to captivate and resonate. At Galactic Digital Studios, we believe in the transformative potential of design, and our graphic design services in Bellevue, Washington, are a testament to that belief. With a commitment to excellence, an unwavering passion for creativity, and a dedication to understanding your brand inside and out, we stand ready to transform your visions into visuals that inspire, engage, and leave a lasting impression.</p>
+                            <p className="h6">As you embark on this journey with us, remember that graphic design is more than just aesthetics - it&rsquo;s an experience. It&rsquo;s a journey of collaboration, a fusion of ideas, and a symphony of creativity. Together, we&rsquo;ll craft designs that not only meet your expectations but exceed them, redefining the way you and your audience perceive your brand.</p>
+                            <p className="h6">Join us in shaping a visual landscape that&rsquo;s as dynamic and diverse as Bellevue, Washington and the greater Pacific Northwest itself. Let&rsquo;s embark on a graphic design odyssey that takes your brand to new heights, igniting connections, and forging relationships through the power of creativity. Welcome to Galactic Digital Studios, where out-of-this-world graphic design knows no limits, and your brand&rsquo;s potential is our ultimate inspiration.</p>
+                            <h6>Use the contact form below or contact information found on this site to schedule a free consultation with one of our graphic design professionals today.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/bellevue-washington-graphic-design.webp" alt="Bellevue Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,37 +54,43 @@ const Page = () => {
                         <p className="h6">In today&rsquo;s digital age, your website is often the first interaction a potential customer has with your business. A well-designed website not only looks appealing but also functions seamlessly across all devices. Our graphic design services include responsive web design to ensure that your website is visually stunning and user-friendly.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">We understand the unique challenges of web design, including the need for fast loading times, mobile responsiveness, and intuitive navigation. Our designers are well-versed in the latest web design trends and technologies, ensuring that your website not only looks great but also performs exceptionally well.</p>
-                        <p className="h6">Consistency is key when it comes to branding. In a competitive market like Vancouver, Washington, it&rsquo;s essential that your brand&rsquo;s message remains consistent across all platforms and touchpoints. Our graphic design services focus on creating brand guidelines that ensure a cohesive and unified brand image.</p>
-                        <p className="h6">From social media profiles to email marketing templates, we ensure that your branding elements are consistently applied, reinforcing your brand&rsquo;s identity and building trust among your audience. Consistent branding not only strengthens your presence but also makes your business more recognizable and memorable.</p>
-                        <p className="h6">Sometimes, stock images and generic graphics just won&rsquo;t cut it. To truly stand out in the Vancouver, Washington market, you need unique and eye-catching visuals that set your brand apart. Our graphic design team excels in creating custom illustrations and graphics that are tailored to your specific needs.</p>
-                        <p className="h6">Whether it&rsquo;s creating custom icons, infographics, or other visual elements, we have the expertise to bring your ideas to life. Custom graphics not only enhance your brand&rsquo;s uniqueness but also help convey complex information in a visually appealing manner.</p>
-                        <p className="h6">Our graphic design services extend to both print and digital mediums. Whether you&rsquo;re looking to create stunning printed materials for local events and promotions or need digital assets for online marketing campaigns, we have the knowledge and skills to deliver exceptional designs.</p>
-                        <p className="h6">We understand the nuances of designing for different mediums, including color profiles, resolution, and file formats. This ensures that your designs look impeccable whether they&rsquo;re on a billboard in Vancouver or on a website accessible to customers worldwide.</p>
-                        <p className="h6">We understand that businesses in Vancouver, Washington, come in all shapes and sizes, and budgets can vary. That&rsquo;s why we offer affordable and flexible graphic design solutions. We believe that every business, regardless of its size, should have access to top-quality graphic design services.</p>
-                        <p className="h6">We work closely with our clients to tailor our services to their specific needs and budget constraints. We believe in delivering exceptional value without compromising on quality.</p>
-                        <p className="h6">While we may not be physically based in Vancouver, Washington, our track record speaks for itself. We have successfully collaborated with numerous businesses throughout the US, helping them achieve their branding and design goals. Our portfolio showcases a diverse range of projects, from local startups to established enterprises.</p>
-                        <p className="h6">We take pride in our ability to understand the unique challenges and opportunities that businesses in Vancouver, Washington, face. Our design solutions are always rooted in local market insights, ensuring that your brand remains relevant and competitive.</p>
-                        <p className="h6">In the vibrant and competitive business landscape of Vancouver, Washington, having a strong visual identity is essential for success. Our graphic design services are designed to help businesses of all sizes elevate their brands and stand out in the local market. While we may not be physically located in Vancouver, Washington, our expertise knows no boundaries. We bring creativity, innovation, and a deep understanding of local market dynamics to every project.</p>
-                        <h6>Whether you need a captivating logo, eye-catching marketing materials, a responsive website, or custom graphics, we have the skills and experience to deliver exceptional results. Our commitment to consistency, affordability, and flexibility sets us apart as a trusted partner for businesses in Vancouver, Washington, and beyond. Let us help you create a visual identity that not only captures attention but also leaves a lasting impression in the hearts and minds of your target audience.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/vancouver-washington-graphic-design.webp" alt="Vancouver Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">We understand the unique challenges of web design, including the need for fast loading times, mobile responsiveness, and intuitive navigation. Our designers are well-versed in the latest web design trends and technologies, ensuring that your website not only looks great but also performs exceptionally well.</p>
+                            <p className="h6">Consistency is key when it comes to branding. In a competitive market like Vancouver, Washington, it&rsquo;s essential that your brand&rsquo;s message remains consistent across all platforms and touchpoints. Our graphic design services focus on creating brand guidelines that ensure a cohesive and unified brand image.</p>
+                            <p className="h6">From social media profiles to email marketing templates, we ensure that your branding elements are consistently applied, reinforcing your brand&rsquo;s identity and building trust among your audience. Consistent branding not only strengthens your presence but also makes your business more recognizable and memorable.</p>
+                            <p className="h6">Sometimes, stock images and generic graphics just won&rsquo;t cut it. To truly stand out in the Vancouver, Washington market, you need unique and eye-catching visuals that set your brand apart. Our graphic design team excels in creating custom illustrations and graphics that are tailored to your specific needs.</p>
+                            <p className="h6">Whether it&rsquo;s creating custom icons, infographics, or other visual elements, we have the expertise to bring your ideas to life. Custom graphics not only enhance your brand&rsquo;s uniqueness but also help convey complex information in a visually appealing manner.</p>
+                            <p className="h6">Our graphic design services extend to both print and digital mediums. Whether you&rsquo;re looking to create stunning printed materials for local events and promotions or need digital assets for online marketing campaigns, we have the knowledge and skills to deliver exceptional designs.</p>
+                            <p className="h6">We understand the nuances of designing for different mediums, including color profiles, resolution, and file formats. This ensures that your designs look impeccable whether they&rsquo;re on a billboard in Vancouver or on a website accessible to customers worldwide.</p>
+                            <p className="h6">We understand that businesses in Vancouver, Washington, come in all shapes and sizes, and budgets can vary. That&rsquo;s why we offer affordable and flexible graphic design solutions. We believe that every business, regardless of its size, should have access to top-quality graphic design services.</p>
+                            <p className="h6">We work closely with our clients to tailor our services to their specific needs and budget constraints. We believe in delivering exceptional value without compromising on quality.</p>
+                            <p className="h6">While we may not be physically based in Vancouver, Washington, our track record speaks for itself. We have successfully collaborated with numerous businesses throughout the US, helping them achieve their branding and design goals. Our portfolio showcases a diverse range of projects, from local startups to established enterprises.</p>
+                            <p className="h6">We take pride in our ability to understand the unique challenges and opportunities that businesses in Vancouver, Washington, face. Our design solutions are always rooted in local market insights, ensuring that your brand remains relevant and competitive.</p>
+                            <p className="h6">In the vibrant and competitive business landscape of Vancouver, Washington, having a strong visual identity is essential for success. Our graphic design services are designed to help businesses of all sizes elevate their brands and stand out in the local market. While we may not be physically located in Vancouver, Washington, our expertise knows no boundaries. We bring creativity, innovation, and a deep understanding of local market dynamics to every project.</p>
+                            <h6>Whether you need a captivating logo, eye-catching marketing materials, a responsive website, or custom graphics, we have the skills and experience to deliver exceptional results. Our commitment to consistency, affordability, and flexibility sets us apart as a trusted partner for businesses in Vancouver, Washington, and beyond. Let us help you create a visual identity that not only captures attention but also leaves a lasting impression in the hearts and minds of your target audience.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/vancouver-washington-graphic-design.webp" alt="Vancouver Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

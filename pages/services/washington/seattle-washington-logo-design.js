@@ -1,9 +1,21 @@
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
-import Image from "next/image";
+import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -38,27 +50,33 @@ const Page = () => {
                         <p className="h6">And just like any other of our graphic or digital design services, Seattle, Washington business owners can rest assured that Galactic Digital Studios will work with you to have your logo ready for you in any and every format possible, so that your company can put that logo to good use with embroidering, screen printing, even printing decals and stickers. Your logo should be yours to do with as you see fit. Let Galactic Digital Studios help get you the best logo design for your Seattle, Washington-based business.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Along with logo design services with Galactic Digital Studios, Seattle, Washington business owners will receive a plethora of other graphic design services to go with your new logo. For instance, if you are in need of a new business card design to go with that new logo, our design specialists will be sure to create a design that will make you stand out from the crowd. If you are in need of a banner for an upcoming event that will make people stop and take notice, we can do that as well. If your new logo needs to be showcased on a billboard along I-5 or even in nearby Kent, that&rsquo;s another service that we offer.</p>
-                        <p className="h6">The logo design process with Galactic Digital Studios typically consists of taking the concept and writing down key points about what the logo should convey. From there, we go through the font library online to see what appeals the most to you as the Seattle, Washington business owner. We narrow down the list of fonts and typefaces down to about three or four final candidates and create mockups of each individual font, until a decision has been reached on what font or typeface is to be used. This is when we will create a more refined mockup and make any adjustments that are needed from there. The process is not concluded until you, as the Seattle, Washington business owner, are satisfied with the end result.</p>
-                        <h6>Galactic Digital Studios wants to make sure that your logo reflects not only your business but your commitment to the delivery of quality service from your business. If you or anybody you know in the Seattle, Washington area is in need of logo design, contact Galactic Digital Studios today using the form below or the contact info found on this site.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/seattle-washington-logo-design.webp" alt="Seattle Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Along with logo design services with Galactic Digital Studios, Seattle, Washington business owners will receive a plethora of other graphic design services to go with your new logo. For instance, if you are in need of a new business card design to go with that new logo, our design specialists will be sure to create a design that will make you stand out from the crowd. If you are in need of a banner for an upcoming event that will make people stop and take notice, we can do that as well. If your new logo needs to be showcased on a billboard along I-5 or even in nearby Kent, that&rsquo;s another service that we offer.</p>
+                            <p className="h6">The logo design process with Galactic Digital Studios typically consists of taking the concept and writing down key points about what the logo should convey. From there, we go through the font library online to see what appeals the most to you as the Seattle, Washington business owner. We narrow down the list of fonts and typefaces down to about three or four final candidates and create mockups of each individual font, until a decision has been reached on what font or typeface is to be used. This is when we will create a more refined mockup and make any adjustments that are needed from there. The process is not concluded until you, as the Seattle, Washington business owner, are satisfied with the end result.</p>
+                            <h6>Galactic Digital Studios wants to make sure that your logo reflects not only your business but your commitment to the delivery of quality service from your business. If you or anybody you know in the Seattle, Washington area is in need of logo design, contact Galactic Digital Studios today using the form below or the contact info found on this site.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/seattle-washington-logo-design.webp" alt="Seattle Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

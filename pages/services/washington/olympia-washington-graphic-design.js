@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -43,29 +55,35 @@ const Page = () => {
                         <p className="h6">Olympia, Washington, isn&rsquo;t just a city; it&rsquo;s a vibrant hub of creativity and innovation. From its thriving arts scene to its eclectic mix of local businesses, Olympia is a melting pot of ideas and inspiration. At Galactic Digital Studios, we understand the unique and beautiful surroundings Olympia, Washington offers and we draw inspiration from the city&rsquo;s rich tapestry of culture and diversity.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Located at the southern tip of Puget Sound, Olympia is blessed with breathtaking natural beauty, including lush forests, sparkling waters, and majestic mountains. This stunning backdrop serves as the perfect muse for our design team, infusing our work with a sense of wonder and awe.</p>
-                        <p className="h6">But it&rsquo;s not just the natural beauty of Olympia that inspires us; it&rsquo;s also the people who call this city home. From entrepreneurs and artists to activists and visionaries, Olympia is filled with passionate individuals who are dedicated to making a difference in the world. We&rsquo;re honored to work alongside these changemakers, helping them amplify their voices and share their stories through the power of design.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe that great design has the power to transform businesses and change lives. That&rsquo;s why we&rsquo;re passionate about what we do, and we pour our hearts and souls into every project we undertake. Whether you&rsquo;re a small business owner looking to rebrand or a nonprofit organization seeking to raise awareness, we&rsquo;re here to help you achieve your goals and exceed your expectations.</p>
-                        <p className="h6">So why settle for ordinary when you can have extraordinary? Experience the magic of Olympia graphic design with Galactic Digital Studios, and let us take your brand to infinity and beyond. Get in touch with us today to learn more about our services and see how we can help you reach new heights of success. Together, we&rsquo;ll create something truly out of this world!</p>
-                        <h6>Use the contact form below and get in touch with us today to schedule a consultation; let&rsquo;s see how we can help transform your vision into reality. Together, we&rsquo;ll boldly go where no design has gone before!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/olympia-washington-graphic-design.webp" alt="Olympia Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Located at the southern tip of Puget Sound, Olympia is blessed with breathtaking natural beauty, including lush forests, sparkling waters, and majestic mountains. This stunning backdrop serves as the perfect muse for our design team, infusing our work with a sense of wonder and awe.</p>
+                            <p className="h6">But it&rsquo;s not just the natural beauty of Olympia that inspires us; it&rsquo;s also the people who call this city home. From entrepreneurs and artists to activists and visionaries, Olympia is filled with passionate individuals who are dedicated to making a difference in the world. We&rsquo;re honored to work alongside these changemakers, helping them amplify their voices and share their stories through the power of design.</p>
+                            <p className="h6">At Galactic Digital Studios, we believe that great design has the power to transform businesses and change lives. That&rsquo;s why we&rsquo;re passionate about what we do, and we pour our hearts and souls into every project we undertake. Whether you&rsquo;re a small business owner looking to rebrand or a nonprofit organization seeking to raise awareness, we&rsquo;re here to help you achieve your goals and exceed your expectations.</p>
+                            <p className="h6">So why settle for ordinary when you can have extraordinary? Experience the magic of Olympia graphic design with Galactic Digital Studios, and let us take your brand to infinity and beyond. Get in touch with us today to learn more about our services and see how we can help you reach new heights of success. Together, we&rsquo;ll create something truly out of this world!</p>
+                            <h6>Use the contact form below and get in touch with us today to schedule a consultation; let&rsquo;s see how we can help transform your vision into reality. Together, we&rsquo;ll boldly go where no design has gone before!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/olympia-washington-graphic-design.webp" alt="Olympia Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,26 +53,32 @@ const Page = () => {
                         <p className="h6">Whatever your needs for graphic design services in the Salt Lake City, Utah area, or anywhere in the United States, our team remains ready to assist you in whatever endeavor you are looking to accomplish.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Part of the graphic design process involves going over the details of the service requested. For instance, if you are looking for a business card design, we go over what the business card would say, if it&rsquo;s going to be embossed or not, what colors you want on the business card, and if it&rsquo;s single- or double-sided. Then we request assets from your end, starting with the logo and what colors are consistent with the brand identity. We may also ask for the font or typeface that is in the logo; another detail that keeps brand consistency up. Lastly, we discuss whether you want the business cards printed locally (which we prefer) or through one of the online big box companies. And while our team has their preferences, this is ultimately your project and your business, and therefore your decision. Whatever you as the client decide what to do is what our team of graphic designers will adhere to.</p>
-                        <h6>If you are interested in obtaining graphic design services in the Salt Lake City, Utah area, please fill out the form below and contact one of our highly experienced professionals today.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/salt-lake-city-utah-graphic-design.webp" alt="Salt Lake City Utah graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Part of the graphic design process involves going over the details of the service requested. For instance, if you are looking for a business card design, we go over what the business card would say, if it&rsquo;s going to be embossed or not, what colors you want on the business card, and if it&rsquo;s single- or double-sided. Then we request assets from your end, starting with the logo and what colors are consistent with the brand identity. We may also ask for the font or typeface that is in the logo; another detail that keeps brand consistency up. Lastly, we discuss whether you want the business cards printed locally (which we prefer) or through one of the online big box companies. And while our team has their preferences, this is ultimately your project and your business, and therefore your decision. Whatever you as the client decide what to do is what our team of graphic designers will adhere to.</p>
+                            <h6>If you are interested in obtaining graphic design services in the Salt Lake City, Utah area, please fill out the form below and contact one of our highly experienced professionals today.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/salt-lake-city-utah-graphic-design.webp" alt="Salt Lake City Utah graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

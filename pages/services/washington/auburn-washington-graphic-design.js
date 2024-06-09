@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,28 +52,34 @@ const Page = () => {
                         <p className="h6">While the digital realm offers vast opportunities, the significance of print collateral cannot be overlooked. Whether it&rsquo;s business cards, brochures, flyers, or posters, these tangible materials can leave a lasting impression on potential clients. Our graphic design services extend to creating print collateral that aligns seamlessly with your brand identity. Our designs not only stand out in a sea of paper but also effectively communicate your message, fostering a sense of trust and professionalism.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Sometimes, a picture is worth a thousand words, and illustrations have the power to tell stories in a way that words alone cannot. Whether you&rsquo;re aiming to explain complex processes, capture the essence of a product, or simply inject a dose of creativity into your materials, our skilled illustrators are at your service. They create bespoke illustrations that bring your ideas to life, making your content not only informative but also engaging and memorable.</p>
-                        <p className="h6">Creativity without strategy can often lead to beautiful designs that miss the mark when it comes to achieving business objectives. At Galactic Digital Studios, we believe in marrying creativity with strategy. Our graphic designs are not created in a vacuum; they are the result of careful research, understanding your industry landscape, and considering your target audience&rsquo;s preferences. This approach ensures that our designs not only captivate but also drive results, whether that&rsquo;s increased brand awareness, higher engagement, or enhanced conversions.</p>
-                        <p className="h6">As a small business that understands and works with the business community in Auburn, Washington, we understand the unique dynamics and demands of the local market. Our graphic design services are tailored to cater to the specific needs of businesses in Auburn, Washington, and its surrounding areas. We are not just a service provider; we are your partners in growth, working hand-in-hand to elevate your brand and leave a lasting impact in the minds of your customers.</p>
-                        <h6>In conclusion, in the ever-evolving world of business, visual communication is an essential tool for success. Our graphic design services in Auburn, Washington, offer a blend of creativity, strategy, and customization to help businesses thrive in a competitive landscape. From comprehensive branding solutions to impactful web design and engaging print collateral, we are committed to delivering designs that not only captivate but also drive real, measurable results. Experience the power of exceptional graphic design and unlock your brand&rsquo;s true potential with us.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/auburn-washington-graphic-design.webp" alt="Auburn Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Sometimes, a picture is worth a thousand words, and illustrations have the power to tell stories in a way that words alone cannot. Whether you&rsquo;re aiming to explain complex processes, capture the essence of a product, or simply inject a dose of creativity into your materials, our skilled illustrators are at your service. They create bespoke illustrations that bring your ideas to life, making your content not only informative but also engaging and memorable.</p>
+                            <p className="h6">Creativity without strategy can often lead to beautiful designs that miss the mark when it comes to achieving business objectives. At Galactic Digital Studios, we believe in marrying creativity with strategy. Our graphic designs are not created in a vacuum; they are the result of careful research, understanding your industry landscape, and considering your target audience&rsquo;s preferences. This approach ensures that our designs not only captivate but also drive results, whether that&rsquo;s increased brand awareness, higher engagement, or enhanced conversions.</p>
+                            <p className="h6">As a small business that understands and works with the business community in Auburn, Washington, we understand the unique dynamics and demands of the local market. Our graphic design services are tailored to cater to the specific needs of businesses in Auburn, Washington, and its surrounding areas. We are not just a service provider; we are your partners in growth, working hand-in-hand to elevate your brand and leave a lasting impact in the minds of your customers.</p>
+                            <h6>In conclusion, in the ever-evolving world of business, visual communication is an essential tool for success. Our graphic design services in Auburn, Washington, offer a blend of creativity, strategy, and customization to help businesses thrive in a competitive landscape. From comprehensive branding solutions to impactful web design and engaging print collateral, we are committed to delivering designs that not only captivate but also drive real, measurable results. Experience the power of exceptional graphic design and unlock your brand&rsquo;s true potential with us.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/auburn-washington-graphic-design.webp" alt="Auburn Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

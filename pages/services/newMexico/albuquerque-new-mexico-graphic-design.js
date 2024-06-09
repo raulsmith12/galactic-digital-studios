@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -43,35 +55,41 @@ const Page = () => {
                         <p className="h6">A logo is the visual cornerstone of your brand. Our logo design services are rooted in creativity, strategic thinking, and a deep understanding of your brand personality. We create logos that are not just symbols but powerful representations of your identity.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">From business cards and brochures to posters and banners, our print design services cover a wide range of collateral. We blend aesthetics with functionality to ensure that your print materials make a lasting impact on your audience.</p>
-                        <p className="h6">In the digital age, your online presence is crucial. Our digital design services encompass web graphics, social media assets, and other digital collateral. We create designs that not only look great on screens but also enhance user experience.</p>
-                        <p className="h6">Your product&rsquo;s packaging is often the first point of contact with your customers. Our packaging design services focus on creating visually appealing and functionally effective packaging that stands out on the shelves.</p>
-                        <p className="h6">Working with Galactic Digital Studios is more than just a service - it&rsquo;s an experience. From the moment you reach out to us, we embark on a journey together to bring your vision to life. Here&rsquo;s what you can expect when you choose us as your graphic design partner:</p>
-                        <p className="h6">We start by getting to know you, your brand, and your goals. Through in-depth discussions and a thorough understanding of your business, we lay the foundation for a design strategy that aligns with your vision.</p>
-                        <p className="h6">Creativity knows no bounds at Galactic Digital Studios. Our designers brainstorm ideas, explore concepts, and develop a range of design options that showcase different aspects of your brand. This phase is all about exploration and innovation.</p>
-                        <p className="h6">Your input is invaluable to us. We present our design concepts and collaborate with you to gather feedback. We believe in open communication and transparency, ensuring that your vision is at the forefront of the design process.</p>
-                        <p className="h6">Based on your feedback, we refine and fine-tune the chosen design concept. Our iterative approach allows us to make adjustments until we achieve a design that not only meets but exceeds your expectations.</p>
-                        <p className="h6">Once the design is perfected, we deliver the final assets in the formats you need. Whether it&rsquo;s print-ready files, digital graphics, or any other format, we ensure that you have everything you need to make a powerful impact.</p>
-                        <p className="h6">At Galactic Digital Studios, we are more than just graphic designers - we are storytellers, brand builders, and creative visionaries. If you&rsquo;re ready to take your brand to the next level through exceptional graphic design, we invite you to embark on a journey with us. Let&rsquo;s collaborate, innovate, and create something extraordinary together. Contact Galactic Digital Studios today, and let your brand&rsquo;s visual journey begin!</p>
-                        <h6>Use the contact form below or the contact information found on this website to get a free consultation for your next graphic design project today!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/albuquerque-new-mexico-graphic-design.webp" alt="Albuquerque New Mexico graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">From business cards and brochures to posters and banners, our print design services cover a wide range of collateral. We blend aesthetics with functionality to ensure that your print materials make a lasting impact on your audience.</p>
+                            <p className="h6">In the digital age, your online presence is crucial. Our digital design services encompass web graphics, social media assets, and other digital collateral. We create designs that not only look great on screens but also enhance user experience.</p>
+                            <p className="h6">Your product&rsquo;s packaging is often the first point of contact with your customers. Our packaging design services focus on creating visually appealing and functionally effective packaging that stands out on the shelves.</p>
+                            <p className="h6">Working with Galactic Digital Studios is more than just a service - it&rsquo;s an experience. From the moment you reach out to us, we embark on a journey together to bring your vision to life. Here&rsquo;s what you can expect when you choose us as your graphic design partner:</p>
+                            <p className="h6">We start by getting to know you, your brand, and your goals. Through in-depth discussions and a thorough understanding of your business, we lay the foundation for a design strategy that aligns with your vision.</p>
+                            <p className="h6">Creativity knows no bounds at Galactic Digital Studios. Our designers brainstorm ideas, explore concepts, and develop a range of design options that showcase different aspects of your brand. This phase is all about exploration and innovation.</p>
+                            <p className="h6">Your input is invaluable to us. We present our design concepts and collaborate with you to gather feedback. We believe in open communication and transparency, ensuring that your vision is at the forefront of the design process.</p>
+                            <p className="h6">Based on your feedback, we refine and fine-tune the chosen design concept. Our iterative approach allows us to make adjustments until we achieve a design that not only meets but exceeds your expectations.</p>
+                            <p className="h6">Once the design is perfected, we deliver the final assets in the formats you need. Whether it&rsquo;s print-ready files, digital graphics, or any other format, we ensure that you have everything you need to make a powerful impact.</p>
+                            <p className="h6">At Galactic Digital Studios, we are more than just graphic designers - we are storytellers, brand builders, and creative visionaries. If you&rsquo;re ready to take your brand to the next level through exceptional graphic design, we invite you to embark on a journey with us. Let&rsquo;s collaborate, innovate, and create something extraordinary together. Contact Galactic Digital Studios today, and let your brand&rsquo;s visual journey begin!</p>
+                            <h6>Use the contact form below or the contact information found on this website to get a free consultation for your next graphic design project today!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/albuquerque-new-mexico-graphic-design.webp" alt="Albuquerque New Mexico graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

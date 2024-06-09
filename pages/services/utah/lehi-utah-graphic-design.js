@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -41,28 +53,34 @@ const Page = () => {
                         <p className="h6">If business cards are more your brand&rsquo;s need, we&rsquo;ve got you covered there, too. Your business card is often the first thing potential clients or partners will see from your business. Make it count with our professionally crafted business card designs. We ensure that your business card leaves a memorable impression and represents your brand with professionalism and pride.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">At Galactic Digital Studios, we believe in supporting local businesses and the Lehi, Utah community. That&rsquo;s why we collaborate with trusted print shops in the Lehi, Utah area to bring your designs to life on tangible materials. We shop around and find the best deal for the best results in the local market, trusting only high quality print shops that share our values of quality, efficiency, and attention to detail. We go out of our way to ensure that your final product meets our high standards and exceeds your expectations.</p>
-                        <p className="h6">Lehi, Utah is at the heart of a region called the Silicon Slopes, known for its dynamic and innovative tech community and home to many local tech startups. As a local graphic design company, Galactic Digital Studios understands the fast-paced and competitive nature of businesses in the area. Our designs are influenced by this tech entrepreneurial spirit of innovation, ensuring that your brand reflects the forward-thinking ethos of Silicon Slopes.</p>
-                        <p className="h6">In today&rsquo;s digital age, where visual content dominates the online landscape, investing in professional graphic design is vital for businesses of all sizes in Lehi, Utah. Great graphic design helps to improve brand identity, increase engagement with your customers and clients, gain a competitive edge, and boost conversion rates.</p>
-                        <h6>Use the contact form below or the contact info found on this website to contact a member of our graphic design team to schedule a free consultation today and let Galactic Digital Studios provide quality graphic design services for your Lehi, Utah business.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/lehi-utah-graphic-design.webp" alt="Lehi Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">At Galactic Digital Studios, we believe in supporting local businesses and the Lehi, Utah community. That&rsquo;s why we collaborate with trusted print shops in the Lehi, Utah area to bring your designs to life on tangible materials. We shop around and find the best deal for the best results in the local market, trusting only high quality print shops that share our values of quality, efficiency, and attention to detail. We go out of our way to ensure that your final product meets our high standards and exceeds your expectations.</p>
+                            <p className="h6">Lehi, Utah is at the heart of a region called the Silicon Slopes, known for its dynamic and innovative tech community and home to many local tech startups. As a local graphic design company, Galactic Digital Studios understands the fast-paced and competitive nature of businesses in the area. Our designs are influenced by this tech entrepreneurial spirit of innovation, ensuring that your brand reflects the forward-thinking ethos of Silicon Slopes.</p>
+                            <p className="h6">In today&rsquo;s digital age, where visual content dominates the online landscape, investing in professional graphic design is vital for businesses of all sizes in Lehi, Utah. Great graphic design helps to improve brand identity, increase engagement with your customers and clients, gain a competitive edge, and boost conversion rates.</p>
+                            <h6>Use the contact form below or the contact info found on this website to contact a member of our graphic design team to schedule a free consultation today and let Galactic Digital Studios provide quality graphic design services for your Lehi, Utah business.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/lehi-utah-graphic-design.webp" alt="Lehi Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

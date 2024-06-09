@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -38,27 +50,33 @@ const Page = () => {
                         <p className="h6">And because we have a direct line with print shops in the Ogden, Utah area, Galactic Digital Studios can get you the best deal on that bookmark, that screen-printed hoodie, that banner for your booth at an upcoming convention, or even that sign for your window at your business. Our team of graphic design professionals remain standing by, ready and willing to help your company reach that next level.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Now what do we mean when we say we handle your graphic design needs? It's simple, really. We will walk you through the process of what it is that you are wanting done. Say, for instance, you want a screen printing for a new t-shirt to help promote an upcoming event or your business. Our graphic design team will go over every detail with you. What is the shirt color you're looking to have this printed on? What are your brand's colors? Will this be a front-and-back project? How many are you looking to have printed and when by? Then, we take all of that information and we come up with a design mockup that we believe is the best fit, and then make adjustments from there until you are satisfied with the end result. Then, and only then, do we submit it to the print shop for printing.</p>
-                        <p className="h6">Another example of our graphic design process is creating a lamp post banner design. We gather information such as what the side of the banner is going to be, what shape, and what the colors that will be used are going to be. We then create a mockup of what that lamp post banner will look like and make adjustments as we need to before handing it off to the print shop.</p>
-                        <h6>For more information about graphic design services in the Ogden, Utah area, please contact our graphic design team using the contact form and/or info below.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/ogden-utah-graphic-design.webp" alt="Ogden Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Now what do we mean when we say we handle your graphic design needs? It's simple, really. We will walk you through the process of what it is that you are wanting done. Say, for instance, you want a screen printing for a new t-shirt to help promote an upcoming event or your business. Our graphic design team will go over every detail with you. What is the shirt color you're looking to have this printed on? What are your brand's colors? Will this be a front-and-back project? How many are you looking to have printed and when by? Then, we take all of that information and we come up with a design mockup that we believe is the best fit, and then make adjustments from there until you are satisfied with the end result. Then, and only then, do we submit it to the print shop for printing.</p>
+                            <p className="h6">Another example of our graphic design process is creating a lamp post banner design. We gather information such as what the side of the banner is going to be, what shape, and what the colors that will be used are going to be. We then create a mockup of what that lamp post banner will look like and make adjustments as we need to before handing it off to the print shop.</p>
+                            <h6>For more information about graphic design services in the Ogden, Utah area, please contact our graphic design team using the contact form and/or info below.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/ogden-utah-graphic-design.webp" alt="Ogden Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,31 +54,37 @@ const Page = () => {
                         <p className="h6">Discovery and Research: We start by understanding your brand, your goals, and your target audience. This phase involves in-depth discussions and research to ensure we have a solid foundation to build upon.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Concept Development: Based on our research, we develop a range of initial concepts. These concepts explore different styles, color schemes, and design elements that align with your brand identity.</p>
-                        <p className="h6">Feedback and Refinement: Your feedback is crucial in this phase. We present the initial concepts and work closely with you to refine and perfect the design. This iterative process ensures that the final logo is a true reflection of your brand.</p>
-                        <p className="h6">Finalization and Delivery: Once the design is finalized, we prepare the logo in various formats suitable for both print and digital use. We also provide a style guide to ensure consistency across all your branding materials.</p>
-                        <p className="h6">Our portfolio showcases a diverse array of logo designs for businesses across different industries. From sleek and modern to classic and sophisticated, our designs capture the essence of each brand we work with. We&rsquo;ve worked with virtually every kind of business - big or small, local or international, technical and digital or physically-located - and are always looking for new and innovative ideas on how to create more visually-stunning logos.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe that a great logo is just the beginning. It&rsquo;s the first step in creating a powerful and cohesive brand identity that tells your story and connects with your audience. Let us help you embark on this exciting journey and elevate your brand to new heights.</p>
-                        <p className="h6">Ready to bring your brand to life with a stunning new logo? Contact us today to schedule a consultation and discover how Galactic Digital Studios can help you achieve your branding goals. Together, we&rsquo;ll create a logo that captures the essence of your brand and sets you apart from the competition. Embrace the Galactic experience and let your brand shine in Park City and beyond.</p>
-                        <h6>Use the contact form below or the contact information found on this website and together, let&rsquo;s explore the possibilities of logo design with Galactic Digital Studios - where creativity meets innovation in the heart of Park City, Utah.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/park-city-utah-logo-design.webp" alt="Park City Utah logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Concept Development: Based on our research, we develop a range of initial concepts. These concepts explore different styles, color schemes, and design elements that align with your brand identity.</p>
+                            <p className="h6">Feedback and Refinement: Your feedback is crucial in this phase. We present the initial concepts and work closely with you to refine and perfect the design. This iterative process ensures that the final logo is a true reflection of your brand.</p>
+                            <p className="h6">Finalization and Delivery: Once the design is finalized, we prepare the logo in various formats suitable for both print and digital use. We also provide a style guide to ensure consistency across all your branding materials.</p>
+                            <p className="h6">Our portfolio showcases a diverse array of logo designs for businesses across different industries. From sleek and modern to classic and sophisticated, our designs capture the essence of each brand we work with. We&rsquo;ve worked with virtually every kind of business - big or small, local or international, technical and digital or physically-located - and are always looking for new and innovative ideas on how to create more visually-stunning logos.</p>
+                            <p className="h6">At Galactic Digital Studios, we believe that a great logo is just the beginning. It&rsquo;s the first step in creating a powerful and cohesive brand identity that tells your story and connects with your audience. Let us help you embark on this exciting journey and elevate your brand to new heights.</p>
+                            <p className="h6">Ready to bring your brand to life with a stunning new logo? Contact us today to schedule a consultation and discover how Galactic Digital Studios can help you achieve your branding goals. Together, we&rsquo;ll create a logo that captures the essence of your brand and sets you apart from the competition. Embrace the Galactic experience and let your brand shine in Park City and beyond.</p>
+                            <h6>Use the contact form below or the contact information found on this website and together, let&rsquo;s explore the possibilities of logo design with Galactic Digital Studios - where creativity meets innovation in the heart of Park City, Utah.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/park-city-utah-logo-design.webp" alt="Park City Utah logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

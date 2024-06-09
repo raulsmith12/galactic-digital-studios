@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,33 +52,39 @@ const Page = () => {
                         <p className="h6">Our commitment to innovation doesn&rsquo;t end with aesthetics. We understand the importance of a logo in the digital age, ensuring that every design is versatile and scalable for various applications - from business cards to billboards to social media.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">We believe in the power of collaboration. When you choose Galactic Digital Studios, you&rsquo;re not just getting a logo; you&rsquo;re gaining a creative partner invested in your success. Our collaborative approach involves constant communication, feedback loops, and a commitment to refining the design until it aligns perfectly with your vision.</p>
-                        <p className="h6">Chicago, Illinois is a city of diverse industries, and we firmly believe that every business - from startups to established enterprises - is unique in their own way. Our portfolio reflects this diversity, showcasing our ability to adapt our design language to suit the unique needs of each client.</p>
-                        <p className="h6">A logo is not just a visual element; it&rsquo;s a timeless symbol that should endure the test of time. A timeless, classic symbol that has endured the test of time that Chicago, Illinois natives should be familiar with is the Chicago Cubs. While the team has undergone changes over the years, its logo design and brand identity have remained constant over the course of over 40 years.</p>
-                        <p className="h6">Galactic Digital Studios is dedicated to creating logos that transcend trends, ensuring that your brand remains relevant and iconic for years to come. Our designs are rooted in the principles of timelessness, ensuring they withstand the ever-evolving landscape of business and design.</p>
-                        <p className="h6">Every business is unique, and so should be its logo. Our custom logo design services are tailored to encapsulate the essence of your brand, creating a visual identity that resonates with your target audience.</p>
-                        <p className="h6">Beyond designing logos, we offer comprehensive branding consultations. Our experts provide insights into building a cohesive brand identity that extends beyond the logo, ensuring a consistent and impactful presence across all touchpoints.</p>
-                        <p className="h6">Is your current logo feeling outdated or no longer aligned with your brand&rsquo;s evolution? Our logo redesign services breathe new life into your visual identity, preserving the elements that resonate while injecting a fresh, contemporary feel.</p>
-                        <p className="h6">Your brand&rsquo;s journey to visual excellence begins with Galactic Digital Studios. Explore the possibilities of exceptional logo design in the heart of Chicago, Illinois. Let&rsquo;s embark on a cosmic design odyssey that propels your brand to new heights and ensures it stands out in the bustling landscape of the Windy City.</p>
-                        <h6>Use the form below or the contact information found on this website and contact us today. Let the stars align with Galactic Digital Studios for your brand&rsquo;s visual success!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/chicago-illinois-logo-design.webp" alt="Chicago Illinois logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">We believe in the power of collaboration. When you choose Galactic Digital Studios, you&rsquo;re not just getting a logo; you&rsquo;re gaining a creative partner invested in your success. Our collaborative approach involves constant communication, feedback loops, and a commitment to refining the design until it aligns perfectly with your vision.</p>
+                            <p className="h6">Chicago, Illinois is a city of diverse industries, and we firmly believe that every business - from startups to established enterprises - is unique in their own way. Our portfolio reflects this diversity, showcasing our ability to adapt our design language to suit the unique needs of each client.</p>
+                            <p className="h6">A logo is not just a visual element; it&rsquo;s a timeless symbol that should endure the test of time. A timeless, classic symbol that has endured the test of time that Chicago, Illinois natives should be familiar with is the Chicago Cubs. While the team has undergone changes over the years, its logo design and brand identity have remained constant over the course of over 40 years.</p>
+                            <p className="h6">Galactic Digital Studios is dedicated to creating logos that transcend trends, ensuring that your brand remains relevant and iconic for years to come. Our designs are rooted in the principles of timelessness, ensuring they withstand the ever-evolving landscape of business and design.</p>
+                            <p className="h6">Every business is unique, and so should be its logo. Our custom logo design services are tailored to encapsulate the essence of your brand, creating a visual identity that resonates with your target audience.</p>
+                            <p className="h6">Beyond designing logos, we offer comprehensive branding consultations. Our experts provide insights into building a cohesive brand identity that extends beyond the logo, ensuring a consistent and impactful presence across all touchpoints.</p>
+                            <p className="h6">Is your current logo feeling outdated or no longer aligned with your brand&rsquo;s evolution? Our logo redesign services breathe new life into your visual identity, preserving the elements that resonate while injecting a fresh, contemporary feel.</p>
+                            <p className="h6">Your brand&rsquo;s journey to visual excellence begins with Galactic Digital Studios. Explore the possibilities of exceptional logo design in the heart of Chicago, Illinois. Let&rsquo;s embark on a cosmic design odyssey that propels your brand to new heights and ensures it stands out in the bustling landscape of the Windy City.</p>
+                            <h6>Use the form below or the contact information found on this website and contact us today. Let the stars align with Galactic Digital Studios for your brand&rsquo;s visual success!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/chicago-illinois-logo-design.webp" alt="Chicago Illinois logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

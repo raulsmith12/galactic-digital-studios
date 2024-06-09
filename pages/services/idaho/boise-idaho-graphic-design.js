@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -39,26 +51,32 @@ const Page = () => {
                         <p className="h6">By partnering with Galactic Digital Studios for your Boise, Idaho graphic design needs, you will get the benefits of a small business and medium-sized business all in one. Not only will you be getting local expertise from somebody that is familiar with the Boise, Idaho area, helping you connect with the local market and your target audience more effectively, but you also get customized solutions that are tailored to your specific requirements and brand identity. After all, one of the biggest mistakes a small business can make is not following through on brand consistency.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">You also get professional and timely delivery that better reflects the professionalism and dedication you put into your business. And because Galactic Digital Studios is a big believer in working with local businesses first, we will shop around to find the best local print shops in Boise, Idaho and get you the best product for the best price. As a small business ourselves, we understand budget restraints, so we do our best - even in this insane economic time we live in - to work with you on prices and services that are fair and competitive.</p>
-                        <h6>Your Boise, Idaho small business deserves exceptional graphic design that captures people&rsquo;s attention, builds brand credibility, and drives success. At Galactic Digital Studios, we have the expertise, creativity, and local understanding to deliver designs that exceed your expectations. Whether you need striking business cards, attention-grabbing banners, or a range of other graphic design services, we are here to help. Use the form below or the contact info found on this site to discuss your requirements and let Galactic Digital Studios make your Boise, Idaho business shine.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/boise-idaho-graphic-design.webp" alt="Boise Idaho graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">You also get professional and timely delivery that better reflects the professionalism and dedication you put into your business. And because Galactic Digital Studios is a big believer in working with local businesses first, we will shop around to find the best local print shops in Boise, Idaho and get you the best product for the best price. As a small business ourselves, we understand budget restraints, so we do our best - even in this insane economic time we live in - to work with you on prices and services that are fair and competitive.</p>
+                            <h6>Your Boise, Idaho small business deserves exceptional graphic design that captures people&rsquo;s attention, builds brand credibility, and drives success. At Galactic Digital Studios, we have the expertise, creativity, and local understanding to deliver designs that exceed your expectations. Whether you need striking business cards, attention-grabbing banners, or a range of other graphic design services, we are here to help. Use the form below or the contact info found on this site to discuss your requirements and let Galactic Digital Studios make your Boise, Idaho business shine.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/boise-idaho-graphic-design.webp" alt="Boise Idaho graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

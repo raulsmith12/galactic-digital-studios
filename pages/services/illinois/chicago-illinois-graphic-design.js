@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,31 +54,37 @@ const Page = () => {
                         <p className="h6">We understand the pulse of Chicago&rsquo;s dynamic market and tailor our designs to not just meet but exceed the expectations of its discerning audience. Whether you&rsquo;re targeting the trendsetting denizens of the Loop or the vibrant communities of Wicker Park, our designs are finely tuned to strike a chord with your target demographic.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">In a digital age where trends evolve at the speed of light, Galactic Digital Studios stays ahead of the curve. Our designers leverage cutting-edge technology to bring your vision to life, ensuring that your brand remains contemporary and relevant. From intricate animations that breathe life into your website to immersive virtual experiences that engage your audience, we harness the power of technology to amplify your brand&rsquo;s impact.</p>
-                        <p className="h6">Yet, amidst the whirlwind of technological advancements, we hold steadfast to the timeless principles of craftsmanship. Each design is a testament to our commitment to quality, precision, and attention to detail. We believe that a well-crafted design stands the test of time, transcending trends to become a timeless piece of art.</p>
-                        <p className="h6">At Galactic Digital Studios, our commitment to excellence extends beyond the final deliverable. We measure our success by the success of your brand. Our collaborative approach means that we consider ourselves an extension of your team, working tirelessly to bring your vision to fruition.</p>
-                        <p className="h6">Transparency, communication, and a dedication to deadlines are the cornerstones of our client relationships. From the initial consultation to the delivery of the final design, we keep you in the loop, ensuring that your feedback shapes the evolution of the project. Our goal is not just to meet your expectations but to exceed them, leaving you with a design that not only meets your needs but elevates your brand to new heights.</p>
-                        <p className="h6">In the dynamic landscape of Chicago, Illinois, where innovation meets tradition, Galactic Digital Studios stands as a beacon of creativity. If you&rsquo;re ready to embark on a design journey that transcends the ordinary, we invite you to explore the possibilities with us. From concept to execution, from the sketch to the screen, let Galactic Digital Studios be your partner in crafting a visual identity that not only captures attention but also leaves a lasting impression.</p>
-                        <p className="h6">Chicago, Illinois, with its iconic skyline and diverse neighborhoods, is a canvas waiting to be painted. Let Galactic Digital Studios be the brush that brings your brand to life. Contact us today, and let&rsquo;s create something extraordinary together. Your brand&rsquo;s journey begins here, with Galactic Digital Studios - where imagination knows no bounds, and design has no limits.</p>
-                        <h6>Use the contact form below or the contact information found on this website to reach out to one of our graphic design professionals today!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/chicago-illinois-graphic-design.webp" alt="Chicago Illinois graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">In a digital age where trends evolve at the speed of light, Galactic Digital Studios stays ahead of the curve. Our designers leverage cutting-edge technology to bring your vision to life, ensuring that your brand remains contemporary and relevant. From intricate animations that breathe life into your website to immersive virtual experiences that engage your audience, we harness the power of technology to amplify your brand&rsquo;s impact.</p>
+                            <p className="h6">Yet, amidst the whirlwind of technological advancements, we hold steadfast to the timeless principles of craftsmanship. Each design is a testament to our commitment to quality, precision, and attention to detail. We believe that a well-crafted design stands the test of time, transcending trends to become a timeless piece of art.</p>
+                            <p className="h6">At Galactic Digital Studios, our commitment to excellence extends beyond the final deliverable. We measure our success by the success of your brand. Our collaborative approach means that we consider ourselves an extension of your team, working tirelessly to bring your vision to fruition.</p>
+                            <p className="h6">Transparency, communication, and a dedication to deadlines are the cornerstones of our client relationships. From the initial consultation to the delivery of the final design, we keep you in the loop, ensuring that your feedback shapes the evolution of the project. Our goal is not just to meet your expectations but to exceed them, leaving you with a design that not only meets your needs but elevates your brand to new heights.</p>
+                            <p className="h6">In the dynamic landscape of Chicago, Illinois, where innovation meets tradition, Galactic Digital Studios stands as a beacon of creativity. If you&rsquo;re ready to embark on a design journey that transcends the ordinary, we invite you to explore the possibilities with us. From concept to execution, from the sketch to the screen, let Galactic Digital Studios be your partner in crafting a visual identity that not only captures attention but also leaves a lasting impression.</p>
+                            <p className="h6">Chicago, Illinois, with its iconic skyline and diverse neighborhoods, is a canvas waiting to be painted. Let Galactic Digital Studios be the brush that brings your brand to life. Contact us today, and let&rsquo;s create something extraordinary together. Your brand&rsquo;s journey begins here, with Galactic Digital Studios - where imagination knows no bounds, and design has no limits.</p>
+                            <h6>Use the contact form below or the contact information found on this website to reach out to one of our graphic design professionals today!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/chicago-illinois-graphic-design.webp" alt="Chicago Illinois graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

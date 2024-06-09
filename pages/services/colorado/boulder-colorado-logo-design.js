@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -39,31 +51,37 @@ const Page = () => {
                         <p className="h6">However, our commitment to excellence extends beyond local boundaries. We take inspiration from global design trends and incorporate them into our work, ensuring that your logo not only resonates with the community in Boulder, Colorado but also stands out on a broader scale. Our fusion of local insight and global creativity positions Galactic Digital Studios as your ideal partner in creating logos that transcend geographical boundaries.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">At Galactic Digital Studios, we believe that the best logos are born out of collaboration. We work closely with you throughout the logo design process, ensuring that your vision and ideas are not just heard but are integral to the final product. Our transparent communication ensures that you are involved at every stage, from concept development to the final design, resulting in a logo that truly represents your brand.</p>
-                        <p className="h6">We understand that every business is unique, and a one-size-fits-all approach doesn&rsquo;t work when it comes to logo design. Whether you&rsquo;re a tech startup, a local boutique, or a service-oriented business, our team tailors solutions to meet your specific needs. We take pride in our ability to adapt our creativity to diverse industries, ensuring that your logo speaks directly to your target audience.</p>
-                        <p className="h6">A great logo is not just a current trend - it&rsquo;s a timeless representation of your brand. Our designers at Galactic Digital Studios strike the perfect balance between classic design principles and contemporary aesthetics. We create logos that feel fresh and relevant today while withstanding the test of time. Your logo is an investment in the longevity of your brand, and we take that responsibility seriously.</p>
-                        <p className="h6">Your logo should be as versatile as your brand. Whether it&rsquo;s displayed on a business card, a website, or a billboard, we ensure that your logo maintains its impact across various platforms. Our designs are scalable and adaptable, allowing for seamless integration into different marketing materials and environments.</p>
-                        <p className="h6">Your brand deserves a logo that not only reflects its essence but also captivates your audience. Galactic Digital Studios is your trusted partner in bringing your vision to life. Whether you&rsquo;re starting from scratch or looking to revamp your existing logo, our team is ready to embark on a creative journey with you.</p>
-                        <p className="h6">Explore our portfolio to witness the diverse range of logos we&rsquo;ve crafted for businesses across Boulder and beyond. Our commitment to excellence, creativity, and client satisfaction sets us apart as the go-to logo design agency in Boulder, Colorado.</p>
-                        <h6>Ready to elevate your brand with a captivating logo? Use the contact form below or the contact information on our site and contact Galactic Digital Studios, where innovation meets identity, and let&rsquo;s create something extraordinary together.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Boulder Colorado logo design" src="https://galacticdigitalstudios.com/img/boulder-colorado-logo-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">At Galactic Digital Studios, we believe that the best logos are born out of collaboration. We work closely with you throughout the logo design process, ensuring that your vision and ideas are not just heard but are integral to the final product. Our transparent communication ensures that you are involved at every stage, from concept development to the final design, resulting in a logo that truly represents your brand.</p>
+                            <p className="h6">We understand that every business is unique, and a one-size-fits-all approach doesn&rsquo;t work when it comes to logo design. Whether you&rsquo;re a tech startup, a local boutique, or a service-oriented business, our team tailors solutions to meet your specific needs. We take pride in our ability to adapt our creativity to diverse industries, ensuring that your logo speaks directly to your target audience.</p>
+                            <p className="h6">A great logo is not just a current trend - it&rsquo;s a timeless representation of your brand. Our designers at Galactic Digital Studios strike the perfect balance between classic design principles and contemporary aesthetics. We create logos that feel fresh and relevant today while withstanding the test of time. Your logo is an investment in the longevity of your brand, and we take that responsibility seriously.</p>
+                            <p className="h6">Your logo should be as versatile as your brand. Whether it&rsquo;s displayed on a business card, a website, or a billboard, we ensure that your logo maintains its impact across various platforms. Our designs are scalable and adaptable, allowing for seamless integration into different marketing materials and environments.</p>
+                            <p className="h6">Your brand deserves a logo that not only reflects its essence but also captivates your audience. Galactic Digital Studios is your trusted partner in bringing your vision to life. Whether you&rsquo;re starting from scratch or looking to revamp your existing logo, our team is ready to embark on a creative journey with you.</p>
+                            <p className="h6">Explore our portfolio to witness the diverse range of logos we&rsquo;ve crafted for businesses across Boulder and beyond. Our commitment to excellence, creativity, and client satisfaction sets us apart as the go-to logo design agency in Boulder, Colorado.</p>
+                            <h6>Ready to elevate your brand with a captivating logo? Use the contact form below or the contact information on our site and contact Galactic Digital Studios, where innovation meets identity, and let&rsquo;s create something extraordinary together.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Boulder Colorado logo design" src="https://galacticdigitalstudios.com/img/boulder-colorado-logo-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

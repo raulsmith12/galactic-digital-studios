@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,34 +52,40 @@ const Page = () => {
                         <p className="h6">Despite the digital boom, print materials remain relevant and impactful. Our designers are skilled in creating captivating print collateral, including business cards, brochures, posters, and more. These materials serve as tangible extensions of your brand, leaving a lasting impression on your audience. What&rsquo;s more, because we believe in shopping local first and believe in supporting fellow small businesses, we will shop around various small print shops in the Lakewood, Washington area to ensure you not only get the best print results but also the best price.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">In a world dominated by social media, eye-catching graphics are essential to capturing attention and fostering engagement. Our team crafts social media visuals that are not only visually appealing but also aligned with your brand&rsquo;s messaging, resulting in a consistent and powerful online presence.</p>
-                        <p className="h6">For businesses dealing in physical products, packaging is a unique opportunity to tell your brand&rsquo;s story. Our packaging design services focus on creating designs that resonate with your target audience, leaving a memorable impression both on the shelf and in the minds of consumers.</p>
-                        <p className="h6">Sometimes, a touch of bespoke creativity is what sets your brand apart. Our talented illustrators create custom graphics and illustrations that add a unique flair to your marketing materials, helping you stand out in a crowded market.</p>
-                        <p className="h6">At Galactic Digital Studios, we believe that the best designs are born from collaboration. We consider ourselves an extension of your team, working closely with you to understand your brand&rsquo;s vision, goals, and target audience. Your input is invaluable, and we ensure that every design aligns with your preferences and objectives. We don&rsquo;t just create designs; we create partnerships that drive success.</p>
-                        <p className="h6">With years of experience in the graphic design industry, our team brings a wealth of knowledge and expertise to the table. We&rsquo;ve worked with a diverse range of clients, allowing us to adapt to various industries and design challenges.</p>
-                        <p className="h6">Our graphic design professionals are driven by a passion for creativity and innovation. We&rsquo;re not afraid to push boundaries and explore new design trends, ensuring that your brand&rsquo;s visuals remain fresh and engaging.</p>
-                        <p className="h6">From the smallest elements of typography to the grandest concepts, we pay meticulous attention to detail in every aspect of graphic design. This commitment to precision guarantees a polished and professional outcome.</p>
-                        <p className="h6">Your satisfaction is our priority. We take the time to listen to your needs, address your concerns, and keep you informed at every stage of the design process. Your feedback shapes the final result.</p>
-                        <p className="h6">As a small graphic design business dealing with companies in the Lakewood, Washington area, we have an intimate understanding of the local market and its unique dynamics. This insight allows us to create designs that resonate with the community.</p>
-                        <h6>In the vibrant city of Lakewood, Washington, where businesses are vying for attention, the right graphic design can set you apart from the competition. Galactic Digital Studios is dedicated to helping you transform your brand&rsquo;s vision into captivating visual stories that leave a lasting impression. Our team of skilled graphic design professionals is ready to collaborate with you and embark on a design journey that will elevate your brand to new heights. Use the contact form below or contact information found on this site to get in touch with us today and explore the possibilities of remarkable graphic design.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/lakewood-washington-graphic-design.webp" alt="Lakewood Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">In a world dominated by social media, eye-catching graphics are essential to capturing attention and fostering engagement. Our team crafts social media visuals that are not only visually appealing but also aligned with your brand&rsquo;s messaging, resulting in a consistent and powerful online presence.</p>
+                            <p className="h6">For businesses dealing in physical products, packaging is a unique opportunity to tell your brand&rsquo;s story. Our packaging design services focus on creating designs that resonate with your target audience, leaving a memorable impression both on the shelf and in the minds of consumers.</p>
+                            <p className="h6">Sometimes, a touch of bespoke creativity is what sets your brand apart. Our talented illustrators create custom graphics and illustrations that add a unique flair to your marketing materials, helping you stand out in a crowded market.</p>
+                            <p className="h6">At Galactic Digital Studios, we believe that the best designs are born from collaboration. We consider ourselves an extension of your team, working closely with you to understand your brand&rsquo;s vision, goals, and target audience. Your input is invaluable, and we ensure that every design aligns with your preferences and objectives. We don&rsquo;t just create designs; we create partnerships that drive success.</p>
+                            <p className="h6">With years of experience in the graphic design industry, our team brings a wealth of knowledge and expertise to the table. We&rsquo;ve worked with a diverse range of clients, allowing us to adapt to various industries and design challenges.</p>
+                            <p className="h6">Our graphic design professionals are driven by a passion for creativity and innovation. We&rsquo;re not afraid to push boundaries and explore new design trends, ensuring that your brand&rsquo;s visuals remain fresh and engaging.</p>
+                            <p className="h6">From the smallest elements of typography to the grandest concepts, we pay meticulous attention to detail in every aspect of graphic design. This commitment to precision guarantees a polished and professional outcome.</p>
+                            <p className="h6">Your satisfaction is our priority. We take the time to listen to your needs, address your concerns, and keep you informed at every stage of the design process. Your feedback shapes the final result.</p>
+                            <p className="h6">As a small graphic design business dealing with companies in the Lakewood, Washington area, we have an intimate understanding of the local market and its unique dynamics. This insight allows us to create designs that resonate with the community.</p>
+                            <h6>In the vibrant city of Lakewood, Washington, where businesses are vying for attention, the right graphic design can set you apart from the competition. Galactic Digital Studios is dedicated to helping you transform your brand&rsquo;s vision into captivating visual stories that leave a lasting impression. Our team of skilled graphic design professionals is ready to collaborate with you and embark on a design journey that will elevate your brand to new heights. Use the contact form below or contact information found on this site to get in touch with us today and explore the possibilities of remarkable graphic design.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/lakewood-washington-graphic-design.webp" alt="Lakewood Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

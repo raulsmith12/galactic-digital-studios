@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -42,28 +54,34 @@ const Page = () => {
                         <p className="h6">Galactic Digital Studios offers a litany of other graphic design services to businesses in the Beaverton, Oregon area, including logo design. A well-crafted logo is the foundation of your brand identity. Our graphic design team will create a unique and memorable logo that represents your business values and captures the essence of your brand.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Our graphic design team also offers packaging design services to businesses in the Beaverton, Oregon area. Packaging plays a crucial role in attracting customers and enhancing the perceived value of your products. As a wise man once said, "customers shop with their eyes first". We will create packaging designs that are not only visually appealing but also functional and aligned with your brand identity.</p>
-                        <p className="h6">Social media graphics help your Beaverton, Oregon business make a lasting impact on potential customers as well. From social media posts to cover images, Galactic Digital Studios will help you create a consistent and visually appealing presence across all social media platforms.</p>
-                        <p className="h6">Whether you need posters, flyers, or other print material, Galactic Digital Studios will also help create amazing designs that make an impact. Our print designs are tailored to your specific requirements and optimized for high-quality pricing. And plus, since we believe in shopping local first, we work with print shops in the Beaverton, Oregon area to help find you the best price and quickest turnaround, while not compromising the quality of your business&rsquo;s graphic designs.</p>
-                        <h6>For more information or to schedule a free consultation, use the contact form below or the contact info found on this site and let Galactic Digital Studios level up your Beaverton, Oregon business&rsquo;s graphic designs.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-graphic-design.webp" alt="Beaverton Oregon graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Our graphic design team also offers packaging design services to businesses in the Beaverton, Oregon area. Packaging plays a crucial role in attracting customers and enhancing the perceived value of your products. As a wise man once said, "customers shop with their eyes first". We will create packaging designs that are not only visually appealing but also functional and aligned with your brand identity.</p>
+                            <p className="h6">Social media graphics help your Beaverton, Oregon business make a lasting impact on potential customers as well. From social media posts to cover images, Galactic Digital Studios will help you create a consistent and visually appealing presence across all social media platforms.</p>
+                            <p className="h6">Whether you need posters, flyers, or other print material, Galactic Digital Studios will also help create amazing designs that make an impact. Our print designs are tailored to your specific requirements and optimized for high-quality pricing. And plus, since we believe in shopping local first, we work with print shops in the Beaverton, Oregon area to help find you the best price and quickest turnaround, while not compromising the quality of your business&rsquo;s graphic designs.</p>
+                            <h6>For more information or to schedule a free consultation, use the contact form below or the contact info found on this site and let Galactic Digital Studios level up your Beaverton, Oregon business&rsquo;s graphic designs.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/beaverton-oregon-graphic-design.webp" alt="Beaverton Oregon graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

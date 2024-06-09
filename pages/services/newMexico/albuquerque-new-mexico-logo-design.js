@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -40,34 +52,40 @@ const Page = () => {
                         <p className="h6">Our design process is a cosmic journey, blending inspiration, research, and creativity. We start by immersing ourselves in your brand story, exploring the essence of your business. Armed with insights, our designers embark on the creation of sketches, concepts, and drafts, refining them until we sculpt the perfect logo that encapsulates your brand&rsquo;s identity.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">A great logo should be flexible enough to adapt to various mediums and scalable to suit different sizes without losing its impact. Whether it&rsquo;s on a business card, a billboard, or the digital realm, Galactic Digital Studios ensures that your logo maintains its integrity and makes a stellar impact across all platforms.</p>
-                        <p className="h6">We understand the importance of time in the business world. Our streamlined processes and dedicated team ensure that your logo is delivered promptly without compromising on quality. We value your time as much as you do.</p>
-                        <p className="h6">Before we put pen to paper (or cursor to screen), we embark on a journey to discover the core of your brand. Through in-depth discussions and research, we uncover the unique qualities that set your business apart.</p>
-                        <p className="h6">Armed with insights, our design team dives into the creative process, generating a multitude of concepts and sketches. This phase is a crucible of ideas, where we mold raw creativity into potential visual identities for your brand.</p>
-                        <p className="h6">We believe in refinement, not just revision. Each design undergoes a meticulous process of refinement, ensuring that every element serves a purpose and contributes to the overall narrative of your brand.</p>
-                        <p className="h6">Your feedback is our guiding star. We present you with refined design options, and your input is invaluable in shaping the final product. Through a collaborative exchange, we ensure that the end result is not just a logo but a symbol that you&rsquo;re proud to call your own.</p>
-                        <p className="h6">Once we&rsquo;ve achieved the perfect alignment of creativity and purpose, we finalize your logo and deliver it to you in various formats, ready to make its mark across all your branding collateral.</p>
-                        <p className="h6">Our portfolio is a testament to the diverse range of businesses we&rsquo;ve had the privilege to work with. From startups to established enterprises, Galactic Digital Studios has left its mark on business landscapes throughout the United States with logos that are not just designs but visual stories waiting to be told.</p>
-                        <p className="h6">Embark on a visual journey with Galactic Digital Studios and watch as your brand takes flight with a logo that captures the essence of who you are. Our commitment to excellence, creativity, and client satisfaction sets us apart in the competitive realm of logo design. Whether you&rsquo;re a local business looking to make waves in Albuquerque, New Mexico or an enterprise with global aspirations, we have the expertise to create a logo that speaks volumes.</p>
-                        <h6>Use the contact form below or the contact information on our home page and contact Galactic Digital Studios today, and let&rsquo;s embark on a design odyssey that will redefine the visual landscape of your brand!</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/albuquerque-new-mexico-logo-design.webp" alt="Albuquerque New Mexico logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">A great logo should be flexible enough to adapt to various mediums and scalable to suit different sizes without losing its impact. Whether it&rsquo;s on a business card, a billboard, or the digital realm, Galactic Digital Studios ensures that your logo maintains its integrity and makes a stellar impact across all platforms.</p>
+                            <p className="h6">We understand the importance of time in the business world. Our streamlined processes and dedicated team ensure that your logo is delivered promptly without compromising on quality. We value your time as much as you do.</p>
+                            <p className="h6">Before we put pen to paper (or cursor to screen), we embark on a journey to discover the core of your brand. Through in-depth discussions and research, we uncover the unique qualities that set your business apart.</p>
+                            <p className="h6">Armed with insights, our design team dives into the creative process, generating a multitude of concepts and sketches. This phase is a crucible of ideas, where we mold raw creativity into potential visual identities for your brand.</p>
+                            <p className="h6">We believe in refinement, not just revision. Each design undergoes a meticulous process of refinement, ensuring that every element serves a purpose and contributes to the overall narrative of your brand.</p>
+                            <p className="h6">Your feedback is our guiding star. We present you with refined design options, and your input is invaluable in shaping the final product. Through a collaborative exchange, we ensure that the end result is not just a logo but a symbol that you&rsquo;re proud to call your own.</p>
+                            <p className="h6">Once we&rsquo;ve achieved the perfect alignment of creativity and purpose, we finalize your logo and deliver it to you in various formats, ready to make its mark across all your branding collateral.</p>
+                            <p className="h6">Our portfolio is a testament to the diverse range of businesses we&rsquo;ve had the privilege to work with. From startups to established enterprises, Galactic Digital Studios has left its mark on business landscapes throughout the United States with logos that are not just designs but visual stories waiting to be told.</p>
+                            <p className="h6">Embark on a visual journey with Galactic Digital Studios and watch as your brand takes flight with a logo that captures the essence of who you are. Our commitment to excellence, creativity, and client satisfaction sets us apart in the competitive realm of logo design. Whether you&rsquo;re a local business looking to make waves in Albuquerque, New Mexico or an enterprise with global aspirations, we have the expertise to create a logo that speaks volumes.</p>
+                            <h6>Use the contact form below or the contact information on our home page and contact Galactic Digital Studios today, and let&rsquo;s embark on a design odyssey that will redefine the visual landscape of your brand!</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/albuquerque-new-mexico-logo-design.webp" alt="Albuquerque New Mexico logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

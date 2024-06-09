@@ -1,9 +1,21 @@
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
-import Image from "next/image";
+import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -39,31 +51,37 @@ const Page = () => {
                         <p className="h6">With a deep understanding of your business, we embark on the design journey. Our team blends artistic creativity with strategic thinking to craft a logo that encapsulates your unique identity. We believe that every element of a logo should have a purpose. From color choices that evoke emotions to typography that reflects your brand&rsquo;s tone, every detail is meticulously crafted to leave a lasting impression.</p>
                     </div>
                 </div>
-                <div className="row pt-2">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Our logo design experts are well-versed in the art of balancing aesthetics and functionality. Your logo will not only be visually appealing but also versatile enough to work across various platforms, from business cards to websites, billboards to social media profiles. We ensure that your logo maintains its integrity and impact across all mediums.</p>
-                        <p className="h6">Galactic Digital Studios is a small business that works with other small businesses in the Lakewood, Washington and surrounding areas, and as such, we understand the unique essence of the local business landscape and can infuse that understanding into our logo design process. Your logo will reflect not only your company&rsquo;s values but also the spirit of the Lakewood, Washington community.</p>
-                        <p className="h6">In today&rsquo;s interconnected world, a well-designed logo can transcend geographical boundaries and resonate with audiences far and wide. Whether you&rsquo;re catering primarily to the Lakewood, Washington area or aiming to expand your reach, our logo design services position you for success on a broader scale.</p>
-                        <p className="h6">We believe in the power of collaboration. Throughout the logo design process, your input is not only valued but actively sought after. Your feedback guides our designers, ensuring that the final product is aligned with your vision. We understand that logo design is an iterative process, and we are committed to refining the logo until it perfectly encapsulates your brand identity.</p>
-                        <p className="h6">At Galactic Digital Studios, your success is our ultimate goal. We measure our success by the impact our logo design has on your business. When your customers recognize your brand instantly and resonate with its message, we know we&rsquo;ve achieved our mission. Our team takes immense pride in contributing to the growth and success of businesses in Lakewood, Washington, and beyond.</p>
-                        <p className="h6">In an era where attention spans are fleeting, a compelling logo is your secret weapon to captivate your audience. It&rsquo;s an investment that pays dividends for years to come, building brand loyalty and recognition. Whether you&rsquo;re launching a new business or looking to revamp your existing brand, our logo design services in Lakewood, Washington, are designed to empower your brand&rsquo;s future.</p>
-                        <h6>Ready to take the first step towards a distinctive and impactful brand identity? Reach out to us today by using the form below or the contact information found on this site to schedule a consultation. Let&rsquo;s work together to design a logo that tells your story, captivates your audience, and propels your Lakewood, Washington based business toward success.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/lakewood-washington-logo-design.webp" alt="Lakewood Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row pt-2">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Our logo design experts are well-versed in the art of balancing aesthetics and functionality. Your logo will not only be visually appealing but also versatile enough to work across various platforms, from business cards to websites, billboards to social media profiles. We ensure that your logo maintains its integrity and impact across all mediums.</p>
+                            <p className="h6">Galactic Digital Studios is a small business that works with other small businesses in the Lakewood, Washington and surrounding areas, and as such, we understand the unique essence of the local business landscape and can infuse that understanding into our logo design process. Your logo will reflect not only your company&rsquo;s values but also the spirit of the Lakewood, Washington community.</p>
+                            <p className="h6">In today&rsquo;s interconnected world, a well-designed logo can transcend geographical boundaries and resonate with audiences far and wide. Whether you&rsquo;re catering primarily to the Lakewood, Washington area or aiming to expand your reach, our logo design services position you for success on a broader scale.</p>
+                            <p className="h6">We believe in the power of collaboration. Throughout the logo design process, your input is not only valued but actively sought after. Your feedback guides our designers, ensuring that the final product is aligned with your vision. We understand that logo design is an iterative process, and we are committed to refining the logo until it perfectly encapsulates your brand identity.</p>
+                            <p className="h6">At Galactic Digital Studios, your success is our ultimate goal. We measure our success by the impact our logo design has on your business. When your customers recognize your brand instantly and resonate with its message, we know we&rsquo;ve achieved our mission. Our team takes immense pride in contributing to the growth and success of businesses in Lakewood, Washington, and beyond.</p>
+                            <p className="h6">In an era where attention spans are fleeting, a compelling logo is your secret weapon to captivate your audience. It&rsquo;s an investment that pays dividends for years to come, building brand loyalty and recognition. Whether you&rsquo;re launching a new business or looking to revamp your existing brand, our logo design services in Lakewood, Washington, are designed to empower your brand&rsquo;s future.</p>
+                            <h6>Ready to take the first step towards a distinctive and impactful brand identity? Reach out to us today by using the form below or the contact information found on this site to schedule a consultation. Let&rsquo;s work together to design a logo that tells your story, captivates your audience, and propels your Lakewood, Washington based business toward success.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/lakewood-washington-logo-design.webp" alt="Lakewood Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="logo" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="logo" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

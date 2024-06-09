@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader";
 import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -43,28 +55,34 @@ const Page = () => {
                         <p className="h6">Effective marketing collateral is instrumental in driving brand awareness and customer engagement. We create compelling marketing materials that communicate your brand&rsquo;s message concisely and persuasively. Whether it&rsquo;s digital or print-based collateral, we ensure that your marketing efforts leave a lasting impression.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Visual storytelling is a powerful tool in capturing the attention of your audience. Our talented illustrators and graphic designers can create custom illustrations and infographics that simplify complex information and make it easily digestible for your target audience.</p>
-                        <p className="h6">Galactic Digital Studios offers a wide range of graphic design services to all businesses in the Tacoma, Washington area, including banner design. Whether you need eye-catching digital banners for your website or social media pages or striking banners for an upcoming event, our design experts have the creativity and expertise to make your brand shine on any stage. We combine compelling visuals with persuasive copy to deliver banners that not only attract attention but also drive results.</p>
-                        <p className="h6">The motto at Galactic Digital Studios is &ldquo;support local businesses first&rdquo;. This is especially true when dealing with who to trust with printing physical graphic designs for Tacoma, Washington businesses. We shop around, find the best deal for you from Tacoma&rsquo;s local print shops, and coordinate our efforts to get the results your business deserves. We also supply the print shop with all the files they need to masterfully print and cut your printed graphic design so that you can focus on building your business.</p>
-                        <h6>Use the contact form below or find our contact information on this site and let Galactic Digital Studios handle all of your graphic design needs, both in Tacoma, Washington and in surrounding areas.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/tacoma-washington-graphic-design.webp" loading="lazy" alt="Tacoma Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">Visual storytelling is a powerful tool in capturing the attention of your audience. Our talented illustrators and graphic designers can create custom illustrations and infographics that simplify complex information and make it easily digestible for your target audience.</p>
+                            <p className="h6">Galactic Digital Studios offers a wide range of graphic design services to all businesses in the Tacoma, Washington area, including banner design. Whether you need eye-catching digital banners for your website or social media pages or striking banners for an upcoming event, our design experts have the creativity and expertise to make your brand shine on any stage. We combine compelling visuals with persuasive copy to deliver banners that not only attract attention but also drive results.</p>
+                            <p className="h6">The motto at Galactic Digital Studios is &ldquo;support local businesses first&rdquo;. This is especially true when dealing with who to trust with printing physical graphic designs for Tacoma, Washington businesses. We shop around, find the best deal for you from Tacoma&rsquo;s local print shops, and coordinate our efforts to get the results your business deserves. We also supply the print shop with all the files they need to masterfully print and cut your printed graphic design so that you can focus on building your business.</p>
+                            <h6>Use the contact form below or find our contact information on this site and let Galactic Digital Studios handle all of your graphic design needs, both in Tacoma, Washington and in surrounding areas.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image src="https://galacticdigitalstudios.com/img/tacoma-washington-graphic-design.webp" loading="lazy" alt="Tacoma Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )

@@ -2,8 +2,20 @@ import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
 import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
+import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      const desktopDevice = window.innerWidth;
+      if (desktopDevice > 767) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <>
             <MetaHeader
@@ -39,28 +51,34 @@ const Page = () => {
                         <p className="h6">We believe that the best designs are born from collaboration - a meeting of minds, ideas, and perspectives. That&rsquo;s why collaboration lies at the heart of everything we do at Galactic Digital Studios. From the initial brainstorming session to the final touches, we work closely with you every step of the way to ensure that your vision is brought to life with precision and care. Your input is invaluable to us, and we welcome your feedback with open arms, knowing that together, we can achieve greatness.</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">We may not be centrally located in the Phoenix, Arizona area, but thanks to the power of technology, we&rsquo;ve had the privilege of working with clients from across the globe, bringing our unique blend of local expertise and global perspective to every project. Whether you&rsquo;re a local business looking to make waves in your community or a multinational corporation seeking a fresh perspective, Galactic Digital Studios has the creativity, the talent, and the passion to help you succeed.</p>
-                        <p className="h6">In a world where attention spans are fleeting and competition is fierce, the importance of impactful design cannot be overstated. That&rsquo;s why at Galactic Digital Studios, we&rsquo;re constantly pushing the boundaries of creativity, embracing new technologies, and staying ahead of the curve. Whether it&rsquo;s the latest trends in typography, the cutting-edge techniques in digital illustration, or the innovative approaches to user experience design, we&rsquo;re always on the forefront of the industry, ensuring that your brand remains relevant, engaging, and unforgettable.</p>
-                        <p className="h6">Are you ready to embark on a creative journey like no other? Join forces with Galactic Digital Studios and experience the Galactic difference for yourself. From the moment you step through our doors, you&rsquo;ll be greeted with enthusiasm, professionalism, and a passion for design that knows no bounds. Whether you&rsquo;re a seasoned entrepreneur or a first-time business owner, we&rsquo;ll treat your project with the care and attention it deserves, guiding you every step of the way towards graphic design excellence.</p>
-                        <h6>Ready to elevate your brand to new heights? Use the form below or the contact information located on this website and contact Galactic Digital Studios today to schedule a consultation with one of our experienced graphic design professionals. Together, we&rsquo;ll unlock the full potential of your brand and create designs that are as bold, as unique, and as unforgettable as the city of Phoenix, Arizona itself. Join us on a journey of creativity, collaboration, and boundless possibility - together, the sky&rsquo;s the limit.</h6>
-                    </div>
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image alt="Phoenix Arizona graphic design" src="https://galacticdigitalstudios.com/img/phoenix-arizona-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-12">
+                            <p className="h6">We may not be centrally located in the Phoenix, Arizona area, but thanks to the power of technology, we&rsquo;ve had the privilege of working with clients from across the globe, bringing our unique blend of local expertise and global perspective to every project. Whether you&rsquo;re a local business looking to make waves in your community or a multinational corporation seeking a fresh perspective, Galactic Digital Studios has the creativity, the talent, and the passion to help you succeed.</p>
+                            <p className="h6">In a world where attention spans are fleeting and competition is fierce, the importance of impactful design cannot be overstated. That&rsquo;s why at Galactic Digital Studios, we&rsquo;re constantly pushing the boundaries of creativity, embracing new technologies, and staying ahead of the curve. Whether it&rsquo;s the latest trends in typography, the cutting-edge techniques in digital illustration, or the innovative approaches to user experience design, we&rsquo;re always on the forefront of the industry, ensuring that your brand remains relevant, engaging, and unforgettable.</p>
+                            <p className="h6">Are you ready to embark on a creative journey like no other? Join forces with Galactic Digital Studios and experience the Galactic difference for yourself. From the moment you step through our doors, you&rsquo;ll be greeted with enthusiasm, professionalism, and a passion for design that knows no bounds. Whether you&rsquo;re a seasoned entrepreneur or a first-time business owner, we&rsquo;ll treat your project with the care and attention it deserves, guiding you every step of the way towards graphic design excellence.</p>
+                            <h6>Ready to elevate your brand to new heights? Use the form below or the contact information located on this website and contact Galactic Digital Studios today to schedule a consultation with one of our experienced graphic design professionals. Together, we&rsquo;ll unlock the full potential of your brand and create designs that are as bold, as unique, and as unforgettable as the city of Phoenix, Arizona itself. Join us on a journey of creativity, collaboration, and boundless possibility - together, the sky&rsquo;s the limit.</h6>
+                        </div>
+                        <div className="col-md-3 d-none d-md-block">
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="col">
+                                        <Image alt="Phoenix Arizona graphic design" src="https://galacticdigitalstudios.com/img/phoenix-arizona-graphic-design.webp" width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <RequestForm selectedService="graphic" />
-                    </div>
-                </div>
+                </Suspense>
+                <Suspense fallback={<p>Loading...</p>}>
+                    {isDesktop && (
+                        <div className="row">
+                            <div className="col">
+                                <RequestForm selectedService="graphic" />
+                            </div>
+                        </div>
+                    )}
+                </Suspense>
             </div>
         </>
     )
