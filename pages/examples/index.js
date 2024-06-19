@@ -1,13 +1,20 @@
 import InsidePageHeader from "../../components/InsidePageHeader";
-import Graphics from "../../components/Graphics";
-import Logos from "../../components/Logos";
-import Websites from "../../components/Websites";
 import MetaHeader from '../../components/MetaHeader';
 import { FaStarAndCrescent } from "react-icons/fa";
 import { Suspense, useEffect, useState } from "react";
+import Image from "next/image";
+import axios from "axios";
 
 const Examples = () => {
     const [isDesktop, setIsDesktop] = useState(false);
+    const [hideModal, setHideModal] = useState(true);
+    const [modalTitle, setModalTitle] = useState("");
+    const [modalImage, setModalImage] = useState();
+    const [modalDescription, setModalDescription] = useState("");
+    const [modalUrl, setModalUrl] = useState();
+    const [graphics, setGraphics] = useState([]);
+    const [logos, setLogos] = useState([]);
+    const [websites, setWebsites] = useState([]);
   
     useEffect(() => {
       const desktopDevice = window.innerWidth;
@@ -17,6 +24,46 @@ const Examples = () => {
         setIsDesktop(false);
       }
     }, []);
+
+    useEffect(() => {
+        async function fetchData() {
+            const graphicList = await axios(
+                'https://galacticdigitalstudios.com/backend/public/api/graphics'
+            );
+
+            const logoList = await axios(
+                'https://galacticdigitalstudios.com/backend/public/api/logos'
+            );
+
+            const websiteList = await axios(
+                'https://galacticdigitalstudios.com/backend/public/api/websites'
+            );
+
+            setGraphics(graphicList.data.data.reverse());
+            setLogos(logoList.data.data.reverse());
+            setWebsites(websiteList.data.data.reverse());
+        }
+
+        fetchData();
+    }, [graphics, logos, websites]);
+
+    const openModal = (name, image, description, url) => {
+        setModalTitle(name);
+        setModalImage(image);
+        setModalDescription(description);
+        if (url !== null) {
+            setModalUrl(url);
+        }
+        setHideModal(false);
+    }
+
+    const closeModal = () => {
+        setHideModal(true);
+        setModalTitle("");
+        setModalImage();
+        setModalDescription("");
+        setModalUrl();
+    }
 
     return (
         <>
@@ -45,7 +92,17 @@ const Examples = () => {
                                 <h3>
                                     <FaStarAndCrescent className="g-star" /> &nbsp; Websites
                                 </h3>
-                                    <Websites />
+                                <div className="container-fluid">
+                                    <div className="row justify-content-center">
+                                        {websites.map(i => (
+                                            <div className="col-md-2 col-sm-4 mb-2" key={i.id}>
+                                                <a className="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => openModal(i.name, i.image_url, i.description, i.site_url)} style={{ cursor: "pointer" }}>
+                                                    <Image alt={i.name} src={i.thumb_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                             <hr />
                         </Suspense>
@@ -54,7 +111,17 @@ const Examples = () => {
                                 <h3>
                                     <FaStarAndCrescent className="g-star" /> &nbsp; Logos
                                 </h3>
-                                <Logos />
+                                <div className="container-fluid">
+                                    <div className="row justify-content-center">
+                                        {logos.map(i => (
+                                            <div className="col-md-2 col-sm-4 mb-2" key={i.id}>
+                                                <a className="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => openModal(i.name, i.image_url, i.description, null)} style={{ cursor: "pointer" }}>
+                                                    <Image alt={i.name} src={i.thumb_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                             <hr />
                         </Suspense>
@@ -63,7 +130,17 @@ const Examples = () => {
                                 <h3>
                                     <FaStarAndCrescent className="g-star" /> &nbsp; Graphics
                                 </h3>
-                                <Graphics />
+                                <div className="container-fluid">
+                                    <div className="row justify-content-center">
+                                        {graphics.map(i => (
+                                            <div className="col-md-2 col-sm-4 mb-2" key={i.id}>
+                                                <a className="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => openModal(i.name, i.image_url, i.description, null)} style={{ cursor: "pointer" }}>
+                                                    <Image alt={i.name} src={i.thumb_url} width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </Suspense>
                         <hr />
@@ -78,6 +155,32 @@ const Examples = () => {
                                 </div>
                             </div>
                         </Suspense>
+                    </div>
+                </div>
+            </div>
+            <div className="modal fade" tabIndex="-1" id="exampleModal" style={{ display: hideModal ? 'none' : 'block' }}>
+                <div className="modal-dialog modal-fullscreen">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h2 className="display-4">{modalTitle}</h2>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => closeModal()}></button>
+                        </div>
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-md-9 col-sm-6">
+                                    <Image alt={modalTitle} src={modalImage} width={0} height={0} style={{ width: "100%", height: "auto" }} />
+                                </div>
+                                <div className="col-md-3 col-sm-6">
+                                    <h5>{modalDescription}</h5>
+                                    {modalUrl && (
+                                        <h5>
+                                            <a href={modalUrl} target="_blank" className="h5">Visit the site!</a>
+                                        </h5>
+                                    )}
+                                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => closeModal()}>Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
