@@ -188,6 +188,14 @@ const ServiceMenu = ({ stateMenu, service, serviceName, closeMenu, countyMenu, s
                         </ul>
                     </li>
                     <li className="nav-item">
+                        <a className="nav-link" onClick={() => showCityMenu('washington-county-utah')} style={{ cursor: "pointer" }}>Washington County +</a>
+                        <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'washington-county-utah' ? 'show' : 'hidden')}>
+                            <li className="nav-item">
+                                <Link href={`/services/utah/st-george-utah-${serviceName}`} className="nav-link" onClick={() => closeMenu()}>St. George</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link" onClick={() => showCityMenu('weber-county-utah')} style={{ cursor: "pointer" }}>Weber County +</a>
                         <ul className={"bg-alpha text-bg-dark border border-0 ps-2 dropdown-menu " + (cityMenu === 'weber-county-utah' ? 'show' : 'hidden')}>
                             <li className="nav-item">
