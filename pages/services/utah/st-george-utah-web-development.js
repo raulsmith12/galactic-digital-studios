@@ -25,7 +25,7 @@ const Page = () => {
                 metaurl = "https://galacticdigitalstudios.com/services/utah/st-george-utah-web-development"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="St. George Utah Web Development" />
                 </div>
                 <div className="row">

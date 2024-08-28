@@ -5,12 +5,12 @@ body {
 }
 
 .bg-alpha, .btn-alpha, .btn-outline-alpha:hover, .btn-beta:hover {
-    background-color: #483475 !important;
+    background-color: #62045a !important;
     color: #ffffff !important;
 }
 
 .bg-beta, .btn-beta, .btn-outline-beta:hover, .btn-alpha:hover {
-    background-color: #141852 !important;
+    background-color: #740101 !important;
     color: #ffffff !important;
 }
 
@@ -20,19 +20,19 @@ body {
 }
 
 .btn-white:hover {
-    background-color: #483475 !important;
+    background-color: #62045a !important;
     color: white;
     box-shadow: 0px 0px 22px 8px rgba(13,102,219,1);
 }
 
 .btn-outline-alpha {
-    color: #483475 !important;
-    border-color: #483475 !important;
+    color: #62045a !important;
+    border-color: #62045a !important;
 }
 
 .btn-outline-beta {
-    color: #141852 !important;
-    border-color: #141852 !important;
+    color: #740101 !important;
+    border-color: #740101 !important;
 }
 
 .nav-item {
@@ -44,7 +44,7 @@ body {
 }
 
 .text-shadow-2 {
-    text-shadow: 0 0 3px #483475;
+    text-shadow: 0 0 3px #62045a;
 }
 
 .bg-jumbo {
@@ -102,6 +102,10 @@ body {
     z-index: 99;
 }
 
+.home-subtitle:hover .h2 {
+    color: white;
+}
+
 .g-star {
     display: inline-block;
     transform: rotate(150deg);
@@ -136,7 +140,21 @@ body {
 .bg-animation {
     width: 100%;
     height: auto;
+    padding-top: 125px !important;
     overflow: hidden;
+}
+
+.home-bg-hero {
+    height: 100vh;
+    padding-top: 0 !important;
+    animation: animateBg 30s linear infinite;
+    background-image: linear-gradient(0deg,#000000,#000000,#000000,#62045a,#000000,#272626,#740101,#000000,#000000);
+    background-size: 100% 600%;
+}
+
+@keyframes animateBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
 }
 
 #stars {

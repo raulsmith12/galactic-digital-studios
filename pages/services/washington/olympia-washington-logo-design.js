@@ -25,7 +25,7 @@ const Page = () => {
                 metaurl = "https://galacticdigitalstudios.com/services/washington/olympia-washington-logo-design"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Olympia Washington Logo Design" />
                 </div>
                 <div className="row">

@@ -25,7 +25,7 @@ const Page = () => {
                 metaurl = "https://galacticdigitalstudios.com/services/oregon/beaverton-oregon-web-development"
             />
             <div className="container-fluid">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Beaverton Oregon Web Development" />
                 </div>
                 <div className="row">

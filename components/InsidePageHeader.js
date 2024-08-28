@@ -1,3 +1,4 @@
+import { FaStarAndCrescent } from "react-icons/fa";
 
 const InsidePageHeader = ({ title }) => {
     return (
@@ -6,7 +7,9 @@ const InsidePageHeader = ({ title }) => {
             <div id="stars2"></div>
             <div id="stars3"></div>
             <div id="stars4"></div>
-            <h1 className="home-title display-1 text-shadow-1">{title}</h1>
+            <h1 className="home-title display-1 text-shadow-1">
+                <FaStarAndCrescent className="g-star" />&nbsp;{title}
+            </h1>
         </div>
     )
 }

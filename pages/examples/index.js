@@ -74,7 +74,7 @@ const Examples = () => {
                 metaurl = "https://galacticdigitalstudios.com/examples"
             />
             <div className="container-fluid pb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Examples" />
                 </div>
                 {isDesktop === false && (

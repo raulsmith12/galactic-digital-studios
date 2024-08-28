@@ -28,7 +28,7 @@ const Team = () => {
                 metaurl = "https://galacticdigitalstudios.com/team"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Meet the Team" />
                 </div>
                 <div className="row">

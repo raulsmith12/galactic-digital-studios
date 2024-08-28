@@ -25,7 +25,7 @@ const Page = () => {
                 metaurl = "https://galacticdigitalstudios.com/services/nevada/las-vegas-nevada-graphic-design"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Las Vegas Nevada Graphic Design" />
                 </div>
                 <div className="row">

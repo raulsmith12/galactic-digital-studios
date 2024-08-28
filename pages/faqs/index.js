@@ -14,13 +14,13 @@ const Faqs = () => {
                 metaurl = "https://galacticdigitalstudios.com/faqs"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Frequently Asked Questions" />
                 </div>
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
                         <div className="mx-1">
-                            <p className="display-7">We get asked a lot of questions, particularly as our team and services continue to grow. Here is a list of the questions we hear the most often:</p>
+                            <p className="h4">We get asked a lot of questions, particularly as our team and services continue to grow. Here is a list of the questions we hear the most often:</p>
                             <Suspense fallback={<p>Loading FAQs...</p>}>
                                 <ol>
                                     <li>
@@ -37,11 +37,19 @@ const Faqs = () => {
                                     </li>
                                     <li>
                                         What services do you administer?
-                                        <p><em>We offer a wide variety of digital design and development services, which include web development, graphic design, and logo design services.</em></p>
+                                        <p><em>We offer a wide variety of digital design and development services, which include web development, graphic design, and logo design services. A more extended listing of the services we offer can be found on our about page.</em></p>
                                     </li>
                                     <li>
                                         Where are you located?
                                         <p><em>Currently we operate out of our respective homes remotely and are available to work with anybody anywhere in the continental United States.</em></p>
+                                    </li>
+                                    <li>
+                                        Are you able to handle clients and businesses of any size?
+                                        <p><em>Primarily we deal with small businesses but have been known to work with businesses that have multiple locations from time to time.</em></p>
+                                    </li>
+                                    <li>
+                                        How many businesses have you worked with in the past?
+                                        <p><em>We don&rsquo;t have a lot of clients listed on our examples page, but over the course of a 14-year career I have worked with approximately 500 different businesses across web, graphic, and logo design services of varying sizes.</em></p>
                                     </li>
                                 </ol>
                             </Suspense>

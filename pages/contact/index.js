@@ -14,7 +14,7 @@ const Contact = () => {
                 metaurl = "https://galacticdigitalstudios.com/contact"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Contact Galactic Digital Studios" />
                 </div>
                 <div className="row mx-0">

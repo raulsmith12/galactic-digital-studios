@@ -19,9 +19,9 @@ const Header = () => {
     }
 
     return (
-        <div className="row mx-0">
+        <div className="row mx-0 fixed-top">
             <div className="col px-0">
-                <nav className="navbar navbar-dark bg-alpha sticky-top border-bottom border-secondary main-menu">
+                <nav className="navbar navbar-dark bg-alpha border-bottom border-secondary main-menu">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
                             <Image alt="Galactic Digital Studios" src="https://galacticdigitalstudios.com/img/gds-logo-white.png" width={0} height={75} style={{ width: "auto" }} />
@@ -68,18 +68,6 @@ const Header = () => {
                                             <li className="nav-item">
                                                 <a className="nav-link" onClick={() => (showStateMenu('logo'), showCountyMenu(''), showCityMenu(''))} style={{ cursor: "pointer" }}>Logo Design +</a>
                                                 <ServiceMenu service="logo" stateMenu={stateMenu} serviceName="logo-design" closeMenu={closeMenu} showServicesMenu={showServicesMenu} countyMenu={countyMenu} cityMenu={cityMenu} showCountyMenu={showCountyMenu} showCityMenu={showCityMenu} />
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link href="/services/businessCard" className="nav-link" onClick={() => closeMenu()}>Business Card Design</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link href="/services/brochure" className="nav-link" onClick={() => closeMenu()}>Brochure Design</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link href="/services/database" className="nav-link" onClick={() => closeMenu()}>Database Management</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link href="/services/cms" className="nav-link" onClick={() => closeMenu()}>Content Management</Link>
                                             </li>
                                         </ul>
                                     </li>

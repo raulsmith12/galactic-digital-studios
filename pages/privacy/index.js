@@ -11,7 +11,7 @@ const Privacy = () => {
                 metaurl = "https://galacticdigitalstudios.com/privacy"
             />
             <div className="container-fluid pb-5 mb-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <InsidePageHeader title="Privacy Policy" />
                 </div>
                 <div className="row">
