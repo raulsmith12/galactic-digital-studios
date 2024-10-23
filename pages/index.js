@@ -39,7 +39,7 @@ const Home = () => {
               <div style={{ width: '100%' }}>
                 <h1 className="home-title display-1 pb-3">Out of This World Service<br />Down to Earth Prices</h1>
                 <div className="text-center">
-                  <Link href="https://galacticdigitalstudios.com/contact/" className="home-subtitle btn btn-white">
+                  <Link href="/contact/" className="home-subtitle btn btn-white">
                     <span className="h2">Contact Us Today!</span>
                   </Link>
                 </div>

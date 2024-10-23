@@ -40,19 +40,19 @@ const Header = () => {
                                         <Link href="/" className="nav-link" onClick={() => closeMenu()}>Home</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/about" className="nav-link" onClick={() => closeMenu()}>About</Link>
+                                        <Link href="/about/" className="nav-link" onClick={() => closeMenu()}>About</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/faqs" className="nav-link" onClick={() => closeMenu()}>FAQs</Link>
+                                        <Link href="/faqs/" className="nav-link" onClick={() => closeMenu()}>FAQs</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/team" className="nav-link" onClick={() => closeMenu()}>Team</Link>
+                                        <Link href="/team/" className="nav-link" onClick={() => closeMenu()}>Team</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/examples" className="nav-link" onClick={() => closeMenu()}>Examples</Link>
+                                        <Link href="/examples/" className="nav-link" onClick={() => closeMenu()}>Examples</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/contact" className="nav-link" onClick={() => closeMenu()}>Contact</Link>
+                                        <Link href="/contact/" className="nav-link" onClick={() => closeMenu()}>Contact</Link>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" onClick={() => showServicesMenu(true)} style={{ cursor: "pointer" }}>Services</a>

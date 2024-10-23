@@ -1,4 +1,3 @@
-import Link from "next/link";
 import InsidePageHeader from "../../components/InsidePageHeader";
 import MetaHeader from '../../components/MetaHeader';
 import Image from "next/image";
