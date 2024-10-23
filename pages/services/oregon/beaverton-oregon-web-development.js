@@ -22,7 +22,7 @@ const Page = () => {
                 metatitle = "Beaverton Oregon Web Development - Galactic Digital Studios"
                 metadesc = "Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all."
                 metakeys = "website design, website development, web development, web design, Beaverton, Oregon"
-                metaurl = "https://galacticdigitalstudios.com/services/oregon/beaverton-oregon-web-development"
+                metaurl = "https://galacticdigitalstudios.com/services/oregon/beaverton-oregon-web-development/"
             />
             <div className="container-fluid">
                 <div className="row pt-5 mt-5">

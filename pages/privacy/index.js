@@ -8,7 +8,7 @@ const Privacy = () => {
                 metatitle = "Privacy Policy - Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
                 metadesc = "Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies."
                 metakeys = "privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
-                metaurl = "https://galacticdigitalstudios.com/privacy"
+                metaurl = "https://galacticdigitalstudios.com/privacy/"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row pt-5 mt-5">

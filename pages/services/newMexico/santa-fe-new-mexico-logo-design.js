@@ -22,7 +22,7 @@ const Page = () => {
                 metatitle = "Santa Fe New Mexico Logo Design - Galactic Digital Studios"
                 metadesc = "Logo design is a critical part of any company&rsquo;s brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
                 metakeys = "logo design, Santa Fe, New Mexico"
-                metaurl = "https://galacticdigitalstudios.com/services/newMexico/santa-fe-new-mexico-logo-design"
+                metaurl = "https://galacticdigitalstudios.com/services/newMexico/santa-fe-new-mexico-logo-design/"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row pt-5 mt-5">

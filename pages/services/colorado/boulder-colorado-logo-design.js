@@ -22,7 +22,7 @@ const Page = () => {
                 metatitle = "Boulder Colorado Logo Design - Galactic Digital Studios"
                 metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
                 metakeys = "logo design, Boulder, Colorado"
-                metaurl = "https://galacticdigitalstudios.com/services/colorado/boulder-colorado-logo-design"
+                metaurl = "https://galacticdigitalstudios.com/services/colorado/boulder-colorado-logo-design/"
             />
             <div className="container-fluid pb-5 mb-5">
                 <div className="row pt-5 mt-5">

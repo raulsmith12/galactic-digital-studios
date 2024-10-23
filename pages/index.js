@@ -22,7 +22,7 @@ const Home = () => {
         metatitle = "Galactic Digital Studios - Small Business Web Development Services"
         metadesc = "Galactic Digital Studios is your one-stop shop for web development, search engine optimization, content management, graphic and logo design, and much more!"
         metakeys = "Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
-        metaurl = "https://galacticdigitalstudios.com"
+        metaurl = "https://galacticdigitalstudios.com/"
       />
       <div className="container-fluid px-0">
         <div className="row">
