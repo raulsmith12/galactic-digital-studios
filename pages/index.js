@@ -37,7 +37,7 @@ const Home = () => {
             )}
             <div className="align-items-center" style={{ minHeight: '100vh', display: 'flex' }}>
               <div style={{ width: '100%' }}>
-                <h1 className="home-title display-1 pb-3">Out of This World Service<br />Down to Earth Prices</h1>
+                <h1 className="home-title display-1 pb-3 neon-text">Out of This World Service<br />Down to Earth Prices</h1>
                 <div className="text-center">
                   <Link href="/contact/" className="home-subtitle btn btn-white">
                     <span className="h2">Contact Us Today!</span>
