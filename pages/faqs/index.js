@@ -8,8 +8,8 @@ const Faqs = () => {
         <>
             <MetaHeader
                 metatitle = "Frequently Asked Questions - Galactic Digital Studios"
-                metadesc = "While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently. Here is a page with our most frequently asked questions."
-                metakeys = "faqs, frequently asked questions, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metadesc = "While we enjoy answering questions directly with clients, we understand that there are some questions that get asked frequently."
+                metakeys = "faqs, frequently asked questions, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS"
                 metaurl = "https://galacticdigitalstudios.com/faqs/"
             />
             <div className="container-fluid pb-5 mb-5">

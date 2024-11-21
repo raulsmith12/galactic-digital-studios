@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Phoenix Arizona Logo Design - Galactic Digital Studios"
-                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metadesc = "Galactic Digital Studios can handle logo design needs for your Phoenix, Arizona business, making your brand stand out."
                 metakeys = "logo design, Phoenix, Arizona"
                 metaurl = "https://galacticdigitalstudios.com/services/arizona/phoenix-arizona-logo-design/"
             />

@@ -19,8 +19,8 @@ const Page = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Charlotte North Carolina Web Development - Galactic Digital Studios"
-                metadesc = "Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all."
+                metatitle = "Charlotte North Carolina Web Development"
+                metadesc = "Don't let web development woes turn your Charlotte, North Carolina business into a court jester. Let Galactic Digital Studios give it the royal treatment."
                 metakeys = "website design, website development, web development, web design, Charlotte, North Carolina"
                 metaurl = "https://galacticdigitalstudios.com/services/northCarolina/charlotte-north-carolina-web-development/"
             />

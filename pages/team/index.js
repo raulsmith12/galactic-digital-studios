@@ -22,9 +22,9 @@ const Team = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Meet the Galactic Digital Studios Team - Trusted Small Business Web Development and Graphic Design Services"
-                metadesc = "The Galactic Digital Studios team is a diverse group of professionals with one common goal in mind: to provide the best possible service to clients no matter what the service is."
-                metakeys = "website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metatitle = "Meet the Galactic Digital Studios Team"
+                metadesc = "The Galactic Digital Studios team is a diverse group of web professionals dedicated to provide the best possible service."
+                metakeys = "website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Seattle, Portland, Tacoma"
                 metaurl = "https://galacticdigitalstudios.com/team/"
             />
             <div className="container-fluid pb-5 mb-5">

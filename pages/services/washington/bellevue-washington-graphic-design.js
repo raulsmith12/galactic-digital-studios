@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Bellevue Washington Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Galactic Digital Studios offers professional graphic design services in Bellevue, Washington, creating stunning visuals to elevate your brand and business."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Bellevue, Washington"
                 metaurl = "https://galacticdigitalstudios.com/services/washington/bellevue-washington-graphic-design/"
             />

@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Denver Colorado Web Development - Galactic Digital Studios"
-                metadesc = "Simple 3 page websites advertising a local business. Multi-page websites that go a little deeper with content. Dynamic websites that grow with your business. Galactic Digital Studios has done and can do them all."
+                metadesc = "Galactic Digital Studios offers top-notch web development services in Denver, Colorado. Elevate your online presence with custom, responsive websites."
                 metakeys = "website design, website development, web development, web design, Denver, Colorado"
                 metaurl = "https://galacticdigitalstudios.com/services/colorado/denver-colorado-web-development/"
             />

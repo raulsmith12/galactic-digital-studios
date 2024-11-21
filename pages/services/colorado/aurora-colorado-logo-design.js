@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Aurora Colorado Logo Design - Galactic Digital Studios"
-                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metadesc = "With Galactic Digital Studios' out-of-this-world logo design services in Aurora, Colorado, your brand, too, can stand out."
                 metakeys = "logo design, Aurora, Colorado"
                 metaurl = "https://galacticdigitalstudios.com/services/colorado/aurora-colorado-logo-design/"
             />

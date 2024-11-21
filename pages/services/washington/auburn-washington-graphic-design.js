@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Auburn Washington Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Elevate your brand with professional graphic design from Galactic Digital Studios in Auburn, Washington. Creative solutions tailored to your business needs."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Auburn, Washington"
                 metaurl = "https://galacticdigitalstudios.com/services/washington/auburn-washington-graphic-design/"
             />

@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Phoenix Arizona Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Let Galactic Digital Studios handle all of your graphic design needs for your Phoenix, Arizona business."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Phoenix, Arizona"
                 metaurl = "https://galacticdigitalstudios.com/services/arizona/phoenix-arizona-graphic-design/"
             />

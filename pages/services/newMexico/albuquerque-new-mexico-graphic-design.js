@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Albuquerque New Mexico Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Elevate your brand with graphic design from Galactic Digital Studios in Albuquerque, New Mexico. Creative visuals that make your business stand out."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Albuquerque, New Mexico"
                 metaurl = "https://galacticdigitalstudios.com/services/newMexico/albuquerque-new-mexico-graphic-design/"
             />

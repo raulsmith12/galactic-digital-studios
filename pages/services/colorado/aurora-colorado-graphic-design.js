@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Aurora Colorado Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Make your graphic designs stand out with Galactic Digital Studios services now available in Aurora, Colorado."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Aurora, Colorado"
                 metaurl = "https://galacticdigitalstudios.com/services/colorado/aurora-colorado-graphic-design/"
             />

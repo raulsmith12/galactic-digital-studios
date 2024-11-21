@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Ogden Utah Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Boost your brand with expert graphic design in Ogden, Utah! Galactic Digital Studios offers creative solutions to make your business stand out."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Ogden, Utah"
                 metaurl = "https://galacticdigitalstudios.com/services/utah/ogden-utah-graphic-design/"
             />

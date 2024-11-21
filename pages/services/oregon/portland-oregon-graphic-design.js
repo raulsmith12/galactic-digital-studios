@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Portland Oregon Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metadesc = "Elevate your brand with stunning graphic design by Galactic Digital Studios in Portland, Oregon. Creative visuals that captivate and communicate effectively."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Portland, Oregon"
                 metaurl = "https://galacticdigitalstudios.com/services/oregon/portland-oregon-graphic-design/"
             />

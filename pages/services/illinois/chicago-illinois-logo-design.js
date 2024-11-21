@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "Chicago Illinois Logo Design - Galactic Digital Studios"
-                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metadesc = "Boost your brand with custom logo design services in Chicago, Illinois from Galactic Digital Studios. Creative designs to make your business stand out!"
                 metakeys = "logo design, Chicago, Illinois"
                 metaurl = "https://galacticdigitalstudios.com/services/illinois/chicago-illinois-logo-design/"
             />

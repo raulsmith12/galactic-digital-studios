@@ -19,9 +19,9 @@ const About = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "About Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
-                metadesc = "Started in 2015, Galactic Digital Studios has evolved past simply a web solutions company and has now become a trusted graphic and logo design company on top of web development, mobile app development, and content management service."
-                metakeys = "about us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metatitle = "About Galactic Digital Studios"
+                metadesc = "Started in 2015, Galactic Digital Studios has evolved past simply a web solutions company and has now become a trusted web, graphic, and logo design company."
+                metakeys = "about us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Seattle, Portland, Tacoma"
                 metaurl = "https://galacticdigitalstudios.com/about/"
             />
             <div className="container-fluid pb-5 mb-5">

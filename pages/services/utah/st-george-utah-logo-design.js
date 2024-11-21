@@ -20,7 +20,7 @@ const Page = () => {
         <>
             <MetaHeader
                 metatitle = "St. George Utah Logo Design - Galactic Digital Studios"
-                metadesc = "Logo design is a critical part of any company's brand identity, online or otherwise. Galactic Digital Studios brings logo design services to companies of all sizes and shapes."
+                metadesc = "Galactic Digital Studios offers expert logo design services in St. George, Utah. Create a unique, memorable brand identity with our creative solutions."
                 metakeys = "logo design, St. George, Utah"
                 metaurl = "https://galacticdigitalstudios.com/services/utah/st-george-utah-logo-design/"
             />

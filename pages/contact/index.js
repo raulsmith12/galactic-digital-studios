@@ -8,9 +8,9 @@ const Contact = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Contact Galactic Digital Studios - Trusted Small Business Web Development and Graphic Design Services"
-                metadesc = "There are many ways to contact the team at Galactic Digital Studios. You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page."
-                metakeys = "contact us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metatitle = "Contact Galactic Digital Studios Today!"
+                metadesc = "You can contact any team member directly by email or phone number or you can contact the team directly using our contact form on this page."
+                metakeys = "contact us, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Seattle, Portland, Tacoma"
                 metaurl = "https://galacticdigitalstudios.com/contact/"
             />
             <div className="container-fluid pb-5 mb-5">

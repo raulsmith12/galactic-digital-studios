@@ -19,8 +19,8 @@ const Page = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Charlotte North Carolina Graphic Design - Galactic Digital Studios"
-                metadesc = "Business cards. Brochures. Banners. Social media graphics. Flyers. Bookmarks. Galactic Digital Studios can do all of these and more. Ask a professional member of our team about how we can help your business grow."
+                metatitle = "Charlotte North Carolina Graphic Design"
+                metadesc = "Galactic Digital Studios is offering businesses in the Charlotte, North Carolina area graphic design services fit for the Queen City."
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Charlotte, North Carolina"
                 metaurl = "https://galacticdigitalstudios.com/services/northCarolina/charlotte-north-carolina-graphic-design/"
             />
