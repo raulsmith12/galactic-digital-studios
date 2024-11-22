@@ -7,8 +7,9 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://galacticdigitalstudios.com/
+Host: https://galacticdigitalstudios.com
 
 # Sitemaps
 Sitemap: https://galacticdigitalstudios.com/sitemap.xml
-Sitemap: https://galacticdigitalstudios.com/server-sitemap.xml
+Sitemap: https://galacticdigitalstudios.comsitemap.xml
+Sitemap: https://galacticdigitalstudios.comserver-sitemap.xml

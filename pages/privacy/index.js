@@ -6,8 +6,8 @@ const Privacy = () => {
         <>
             <MetaHeader
                 metatitle = "Privacy Policy - Galactic Digital Studios"
-                metadesc = "Being a web development and other services company in the 2020s, we understand how important the privacy and the data of our clients are. This is why we have a privacy policy in place that expressly prohibits the sale of user data to third-party companies."
-                metakeys = "privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
+                metadesc = "We have a privacy policy in place that expressly prohibits the sale of user data to third-party companies."
+                metakeys = "privacy policy, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO"
                 metaurl = "https://galacticdigitalstudios.com/privacy/"
             />
             <div className="container-fluid pb-5 mb-5">
@@ -16,7 +16,7 @@ const Privacy = () => {
                 </div>
                 <div className="row">
                     <div className="col mx-1">
-                        <p>This privacy notice discloses the privacy practices for Galactic Digital Studios, our partner websites and any businesses we are associated with. This privacy notice applies solely to information collected by this website. It will notify you of the following:</p>
+                        <p>This privacy notice discloses the privacy practices for Galactic Digital Studios LLC, our partner websites and any businesses we are associated with. This privacy notice applies solely to information collected by this website. It will notify you of the following:</p>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.</li>
                             <li className="list-group-item">What choices are available to you regarding the use of your data.</li>

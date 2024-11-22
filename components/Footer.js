@@ -10,7 +10,7 @@ const Footer = () => {
                     <Link href="/contact/" className="text-white">Contact</Link>&nbsp;&nbsp;
                     <Link href="/privacy/" className="text-white">Privacy</Link>&nbsp;&nbsp;
                     <Link href="/request/" className="text-white">Request Services</Link><br />
-                    &copy; {(new Date().getFullYear())} Galactic Digital Studios. All Rights Reserved.
+                    &copy; {(new Date().getFullYear())} Galactic Digital Studios LLC. All Rights Reserved.
                 </p>
             </div>
         </div>

@@ -1,4 +1,4 @@
-const siteUrl = 'https://galacticdigitalstudios.com/';
+const siteUrl = 'https://galacticdigitalstudios.com';
 module.exports = {
     siteUrl,
     exclude: ["/404"],
