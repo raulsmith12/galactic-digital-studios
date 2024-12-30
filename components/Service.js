@@ -10,7 +10,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/arizona/phoenix-arizona-" + serviceSlug}>Phoenix</Link>
+                            <Link href={"/services/arizona/phoenix-arizona-" + serviceSlug + "/"}>Phoenix</Link>
                         </div>
                     </div>
                 </div>
@@ -18,9 +18,9 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/colorado/aurora-colorado-" + serviceSlug}>Aurora</Link> &nbsp;
-                            <Link href={"/services/colorado/boulder-colorado-" + serviceSlug}>Boulder</Link> &nbsp;
-                            <Link href={"/services/colorado/denver-colorado-" + serviceSlug}>Denver</Link>
+                            <Link href={"/services/colorado/aurora-colorado-" + serviceSlug + "/"}>Aurora</Link> &nbsp;
+                            <Link href={"/services/colorado/boulder-colorado-" + serviceSlug + "/"}>Boulder</Link> &nbsp;
+                            <Link href={"/services/colorado/denver-colorado-" + serviceSlug + "/"}>Denver</Link>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/idaho/boise-idaho-" + serviceSlug}>Boise</Link>
+                            <Link href={"/services/idaho/boise-idaho-" + serviceSlug + "/"}>Boise</Link>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/illinois/chicago-illinois-" + serviceSlug}>Chicago</Link>
+                            <Link href={"/services/illinois/chicago-illinois-" + serviceSlug + "/"}>Chicago</Link>
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/missouri/kansas-city-missouri-" + serviceSlug}>Kansas City</Link> &nbsp;
-                            <Link href={"/services/missouri/st-louis-missouri-" + serviceSlug}>St. Louis</Link>
+                            <Link href={"/services/missouri/kansas-city-missouri-" + serviceSlug + "/"}>Kansas City</Link> &nbsp;
+                            <Link href={"/services/missouri/st-louis-missouri-" + serviceSlug + "/"}>St. Louis</Link>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/nevada/las-vegas-nevada-" + serviceSlug}>Las Vegas</Link>
+                            <Link href={"/services/nevada/las-vegas-nevada-" + serviceSlug + "/"}>Las Vegas</Link>
                         </div>
                     </div>
                 </div>
@@ -61,8 +61,8 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/newMexico/albuquerque-new-mexico-" + serviceSlug}>Albuquerque</Link> &nbsp;
-                            <Link href={"/services/newMexico/santa-fe-new-mexico-" + serviceSlug}>Santa Fe</Link>
+                            <Link href={"/services/newMexico/albuquerque-new-mexico-" + serviceSlug + "/"}>Albuquerque</Link> &nbsp;
+                            <Link href={"/services/newMexico/santa-fe-new-mexico-" + serviceSlug + "/"}>Santa Fe</Link>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/northCarolina/charlotte-north-carolina-" + serviceSlug}>Charlotte</Link>
+                            <Link href={"/services/northCarolina/charlotte-north-carolina-" + serviceSlug + "/"}>Charlotte</Link>
                         </div>
                     </div>
                 </div>
@@ -78,8 +78,8 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/oregon/beaverton-oregon-" + serviceSlug}>Beaverton</Link> &nbsp;
-                            <Link href={"/services/oregon/portland-oregon-" + serviceSlug}>Portland</Link>
+                            <Link href={"/services/oregon/beaverton-oregon-" + serviceSlug + "/"}>Beaverton</Link> &nbsp;
+                            <Link href={"/services/oregon/portland-oregon-" + serviceSlug + "/"}>Portland</Link>
                         </div>
                     </div>
                 </div>
@@ -87,11 +87,12 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/utah/lehi-utah-" + serviceSlug}>Lehi</Link> &nbsp;
-                            <Link href={"/services/utah/ogden-utah-" + serviceSlug}>Ogden</Link> &nbsp;
-                            <Link href={"/services/utah/park-city-utah-" + serviceSlug}>Park City</Link> &nbsp;
-                            <Link href={"/services/utah/salt-lake-city-utah-" + serviceSlug}>Salt Lake City</Link> &nbsp;
-                            <Link href={"/services/utah/st-george-utah-" + serviceSlug}>St. George</Link>
+                            <Link href={"/services/utah/lehi-utah-" + serviceSlug + "/"}>Lehi</Link> &nbsp;
+                            <Link href={"/services/utah/ogden-utah-" + serviceSlug + "/"}>Ogden</Link> &nbsp;
+                            <Link href={"/services/utah/park-city-utah-" + serviceSlug + "/"}>Park City</Link> &nbsp;
+                            <Link href={"/services/utah/salt-lake-city-utah-" + serviceSlug + "/"}>Salt Lake City</Link> &nbsp;
+                            <Link href={"/services/utah/st-george-utah-" + serviceSlug + "/"}>St. George</Link> &nbsp;
+                            <Link href={"/services/utah/syracuse-utah-" + serviceSlug + "/"}>Syracuse</Link>
                         </div>
                     </div>
                 </div>
@@ -99,13 +100,13 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Link href={"/services/washington/auburn-washington-" + serviceSlug}>Auburn</Link> &nbsp;
-                            <Link href={"/services/washington/bellevue-washington-" + serviceSlug}>Bellevue</Link> &nbsp;
-                            <Link href={"/services/washington/lakewood-washington-" + serviceSlug}>Lakewood</Link> &nbsp;
-                            <Link href={"/services/washington/olympia-washington-" + serviceSlug}>Olympia</Link> &nbsp;
-                            <Link href={"/services/washington/seattle-washington-" + serviceSlug}>Seattle</Link> &nbsp;
-                            <Link href={"/services/washington/tacoma-washington-" + serviceSlug}>Tacoma</Link> &nbsp;
-                            <Link href={"/services/washington/vancouver-washington-" + serviceSlug}>Vancouver</Link>
+                            <Link href={"/services/washington/auburn-washington-" + serviceSlug + "/"}>Auburn</Link> &nbsp;
+                            <Link href={"/services/washington/bellevue-washington-" + serviceSlug + "/"}>Bellevue</Link> &nbsp;
+                            <Link href={"/services/washington/lakewood-washington-" + serviceSlug + "/"}>Lakewood</Link> &nbsp;
+                            <Link href={"/services/washington/olympia-washington-" + serviceSlug + "/"}>Olympia</Link> &nbsp;
+                            <Link href={"/services/washington/seattle-washington-" + serviceSlug + "/"}>Seattle</Link> &nbsp;
+                            <Link href={"/services/washington/tacoma-washington-" + serviceSlug + "/"}>Tacoma</Link> &nbsp;
+                            <Link href={"/services/washington/vancouver-washington-" + serviceSlug + "/"}>Vancouver</Link>
                         </div>
                     </div>
                 </div>

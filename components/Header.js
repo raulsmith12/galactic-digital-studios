@@ -2,11 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Header = () => {
-    function closeMenu() {
-        const closeButton = document.getElementById('button-close');
-        closeButton.click();
-    }
-
     return (
         <div className="row mx-0 fixed-top">
             <div className="col px-0">
@@ -21,25 +16,25 @@ const Header = () => {
                         <div className="collapse navbar-collapse" tabIndex="-1" id="gdsNavbar" aria-labelledby="gdsNavbarLabel">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item h4">
-                                    <Link href="/" className="nav-link" onClick={() => closeMenu()}>Home</Link>
+                                    <Link href="/" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/about" className="nav-link" onClick={() => closeMenu()}>About</Link>
+                                    <Link href="/about" className="nav-link">About</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/faqs" className="nav-link" onClick={() => closeMenu()}>FAQs</Link>
+                                    <Link href="/faqs" className="nav-link">FAQs</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/team" className="nav-link" onClick={() => closeMenu()}>Team</Link>
+                                    <Link href="/team" className="nav-link">Team</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/examples" className="nav-link" onClick={() => closeMenu()}>Examples</Link>
+                                    <Link href="/examples" className="nav-link">Examples</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/contact" className="nav-link" onClick={() => closeMenu()}>Contact</Link>
+                                    <Link href="/contact" className="nav-link">Contact</Link>
                                 </li>
                                 <li className="nav-item h4">
-                                    <Link href="/services" className="nav-link" onClick={() => closeMenu()}>Services</Link>
+                                    <Link href="/services" className="nav-link">Services</Link>
                                 </li>
                             </ul>
                         </div>
