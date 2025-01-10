@@ -75,7 +75,7 @@ const Page = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Syracyse Utah Web Development - Galactic Digital Studios"
+                metatitle = "Syracuse Utah Web Development - Galactic Digital Studios"
                 metadesc = "Boost your online presence with Galactic Digital Studios! Expert web development services tailored for businesses in Syracuse, Utah. Get started today!"
                 metakeys = "website design, website development, web development, web design, Syracuse, Utah"
                 metaurl = "https://galacticdigitalstudios.com/services/utah/syracuse-utah-web-development/"

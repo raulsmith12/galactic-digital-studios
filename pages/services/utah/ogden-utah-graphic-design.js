@@ -1,20 +1,59 @@
+import PageLayout from "../../../components/PageLayout";
+import MetaHeader from "../../../components/MetaHeader";
+
+
 import InsidePageHeader from "../../../components/InsidePageHeader"
 import RequestForm from "../../../components/RequestForm"
-import MetaHeader from "../../../components/MetaHeader"
 import Image from "next/image"
 import { Suspense, useEffect, useState } from "react";
 
 const Page = () => {
-    const [isDesktop, setIsDesktop] = useState(false);
-  
-    useEffect(() => {
-      const desktopDevice = window.innerWidth;
-      if (desktopDevice > 767) {
-        setIsDesktop(true);
-      } else {
-        setIsDesktop(false);
-      }
-    }, []);
+    const images = [
+        { src: "https://galacticdigitalstudios.com/img/ogden-utah-graphic-design.webp", alt: "Ogden Utah graphic design" },
+        { src: "https://galacticdigitalstudios.com/img/graphic-design-l.webp", alt: "Laptop with trendy graphic design poster behind it" },
+        { src: "https://galacticdigitalstudios.com/img/ogden-utah-valley.jpg", alt: "A view of the Ogden Utah valley from a nearby mountain" },
+        { src: "https://galacticdigitalstudios.com/img/ogden-utah-40th-street-view.jpg", alt: "A view of the iconic Ben Lomond Peak from 40th Street and Washington Boulevard in Ogden, Utah" },
+        { src: "https://galacticdigitalstudios.com/img/ogden-utah-union-station", alt: "A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" }
+    ];
+
+    const content = `
+        <h2>Elevate Your Brand with Professional Graphic Design Services in Ogden, Utah</h2>
+        <p className="h6">Welcome to Galactic Digital Studios, where creativity meets strategy to deliver exceptional graphic design services tailored specifically for businesses and organizations in Ogden, Utah. Nestled against the breathtaking Wasatch Mountains, Ogden, Utah is a hub of innovation, culture, and entrepreneurial spirit. At Galactic Digital Studios, we are proud to support this vibrant community by offering cutting-edge graphic design solutions that help local businesses thrive in today&rsquo;s competitive landscape.</p>
+        <h3>Why Graphic Design Matters</h3>
+        <p className="h6">In an era dominated by visual communication, graphic design is not just an aesthetic choice&mdash;it is a powerful tool for storytelling, brand recognition, and audience engagement. From logos to marketing materials, the visual elements of your brand are often the first impression customers have of your business. Effective graphic design ensures that impression is a lasting and positive one.</p>
+        <p className="h6">Our team understands that Ogden&rsquo;s unique blend of outdoor adventure, historical charm, and modern innovation requires a personalized approach to design. Whether you&rsquo;re a local startup, a thriving retail shop on Historic 25th Street, or a nonprofit dedicated to preserving the natural beauty of Ogden, Utah, Galactic Digital Studios is here to bring your vision to life.</p>
+        <h3>Our Graphic Design Services for Businesses in Ogden, Utah</h3>
+        <p className="h6">At Galactic Digital Studios, we offer a comprehensive suite of graphic design services to meet the diverse needs of businesses in Ogden, Utah:</p>
+        <ol>
+            <li className="h6"><strong className="h6">Logo Design</strong><br />Your logo is the cornerstone of your brand identity. Our designers craft custom logos that capture the essence of your business, making a memorable impact. Whether you&rsquo;re looking for something modern and sleek or traditional and timeless, we&rsquo;ve got you covered.</li>
+            <li className="h6"><strong className="h6">Branding and Identity</strong><br />Branding goes beyond a logo. It&rsquo;s about creating a cohesive and compelling narrative for your business. From color palettes and typography to brand guidelines, we&rsquo;ll help you develop a visual identity that resonates with your target audience.</li>
+            <li className="h6"><strong className="h6">Print Design</strong><br />In a world of digital media, print materials still hold immense value. Whether it&rsquo;s business cards, brochures, flyers, or posters, we design eye-catching print assets that leave a tangible impression.</li>
+            <li className="h6"><strong className="h6">Digital Graphics</strong><br />The digital realm is vast, and standing out requires designs that are both innovative and adaptable. We create graphics for websites, social media, email marketing, and more, ensuring your online presence is as compelling as your offline one.</li>
+            <li className="h6"><strong className="h6">Packaging Design</strong><br />If you&rsquo;re in the retail or food industry in Ogden, the right packaging can make all the difference. We design packaging that&rsquo;s not only functional but also visually appealing, helping your products shine on the shelf.</li>
+            <li className="h6"><strong className="h6">Event Graphics</strong><br />Hosting an event in Ogden? We design banners, signage, and promotional materials to elevate your event&rsquo;s branding and create a memorable experience for attendees.</li>
+        </ol>
+        <h3>Why Choose Galactic Digital Studios?</h3>
+        <p className="h6">Choosing the right graphic design partner can make or break your brand&rsquo;s visual identity. Here&rsquo;s why Galactic Digital Studios is the premier choice for businesses in Ogden, Utah:</p>
+        <p className="h6"><strong className="h6">Local Expertise</strong><br />We understand Ogden&rsquo;s unique culture, demographics, and business environment. Our designs reflect the local flavor while ensuring your brand stands out.</p>
+        <p className="h6"><strong className="h6">Customized Solutions</strong><br />Every business is different, and so are its design needs. We take the time to understand your goals, values, and audience to create bespoke solutions tailored to your vision.</p>
+        <p className="h6"><strong className="h6">Creative Excellence</strong><br />Our team of talented designers is passionate about their craft. We stay up-to-date with the latest design trends and tools to deliver innovative and high-quality work.</p>
+        <p className="h6"><strong className="h6">Collaborative Approach</strong><br />We believe in the power of collaboration. Throughout the design process, we work closely with you to ensure the final product exceeds your expectations.</p>
+        <h3>The Ogden Utah Advantage</h3>
+        <p className="h6">Ogden, Utah is more than just a city; it&rsquo;s a community rich in history, outdoor recreation, and entrepreneurial energy. Located at the crossroads of urban convenience and natural beauty, Ogden offers a unique environment that inspires creativity and innovation.</p>
+        <p className="h6">At Galactic Digital Studios, we draw inspiration from Ogden&rsquo;s vibrant surroundings&mdash;from the rugged peaks of the Wasatch Mountains to the historic charm of Union Station. We understand what makes Ogden businesses special, and we incorporate that spirit into our designs.</p>
+        <p className="h6">Whether you&rsquo;re targeting the adventurous crowd visiting Snowbasin Resort, the arts and culture enthusiasts frequenting Ogden&rsquo;s numerous galleries and theaters, or the local community dedicated to sustainable living, we design with your audience in mind.</p>
+        <h3>Our Graphic Design Process</h3>
+        <p className="h6">At Galactic Digital Studios, we&rsquo;ve developed a streamlined process to ensure your graphic design project is smooth, efficient, and enjoyable:</p>
+        <ol>
+            <li className="h6"><strong className="h6">Discovery and Consultation</strong><br />We start by getting to know you and your business. What are your goals? Who is your audience? What sets you apart from the competition? This discovery phase lays the foundation for a successful project.</li>
+            <li className="h6"><strong className="h6">Concept Development</strong><br />Our team brainstorms and creates initial design concepts based on your input and our research. We present these concepts to you for feedback and refinement.</li>
+            <li className="h6"><strong className="h6">Design Execution</strong><br />Once a concept is approved, we dive into the details, refining and finalizing the design. We ensure every element aligns with your brand and communicates your message effectively.</li>
+            <li className="h6"><strong className="h6">Delivery and Support</strong><br />We provide you with all the files and formats you need for both print and digital use. Our team is also available for ongoing support and future design needs.</li>
+        </ol>
+        <h3>Join the Galactic Digital Studios Family</h3>
+        <p className="h6">Ogden, Utah is a city on the rise, and we&rsquo;re here to help its businesses shine. Whether you&rsquo;re launching a new venture, rebranding an established business, or simply looking to refresh your marketing materials, Galactic Digital Studios is your trusted partner in graphic design.</p>
+        <p className="h6">Let us help you tell your story, captivate your audience, and elevate your brand. With Galactic Digital Studios, your business in Ogden, Utah will not only look good&mdash;it will thrive.</p>
+    `;
 
     return (
         <>
@@ -24,60 +63,12 @@ const Page = () => {
                 metakeys = "graphic design, flyer design, banner design, bookmark design, Ogden, Utah"
                 metaurl = "https://galacticdigitalstudios.com/services/utah/ogden-utah-graphic-design/"
             />
-            <div className="container-fluid pb-5 mb-5">
-                <div className="row pt-5 mt-5">
-                    <InsidePageHeader title="Ogden Utah Graphic Design" />
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <h2>Graphic Design Including Banners, Bookmarks, and More for Weber County</h2>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col text-center">
-                                    <Image src="https://galacticdigitalstudios.com/img/graphic-design-l.webp" alt="Laptop with trendy graphic design poster behind it" width={0} height={0} style={{ width: "100%", height: "auto" }} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">If you have been on the fence lately about hiring a professional graphic designer and you are unsure how to go about hiring one, Galactic Digital Studios may be the graphic design team that you need. Our team of highly experienced graphic design professionals has been working in the field for over ten years, with projects ranging from announcement flyers to business cards to social media banners. Whatever your needs may be, however big or small your project is, Galactic Digital Studios has you covered.</p>
-                        <p className="h6">Many people refer to Ogden, Utah as the little brother to Salt Lake City, but in the hearts of the graphic design team at Galactic Digital Studios, it is not just home in many ways, but it is also a city rich in its history and natural beauty. Where else can you find a street with as much historical and scenic beauty as Historic 25th Street? Where else can you find a mountainscape as majestic and breathtaking as the Wasatch Mountains, including the mountain that inspired the Paramount logo? Where else can you find two historical landmarks within miles of each other like the Union Station and Ogden High School?</p>
-                        <p className="h6">With so much architectural and natural beauty to inspire even the most novice of graphic designers, Ogden, Utah almost feels like the perfect muse for a professional graphic design team to handle the small business needs of the area. In addition to finding any number of muses for the latest lamp post or bookmark project, Galactic Digital Studios can also get in touch with many local print shops in the area. In fact, we will refer to these print shops before we suggest going with any of the big box online shops for your printing needs. Galactic Digital Studios firmly believes in keeping with the Ogden mantra of &ldquo;local first&rdquo;.</p>
-                        <p className="h6">And because we have a direct line with print shops in the Ogden, Utah area, Galactic Digital Studios can get you the best deal on that bookmark, that screen-printed hoodie, that banner for your booth at an upcoming convention, or even that sign for your window at your business. Our team of graphic design professionals remain standing by, ready and willing to help your company reach that next level.</p>
-                    </div>
-                </div>
-                <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col-md-9 col-sm-12">
-                            <p className="h6">Now what do we mean when we say we handle your graphic design needs? It's simple, really. We will walk you through the process of what it is that you are wanting done. Say, for instance, you want a screen printing for a new t-shirt to help promote an upcoming event or your business. Our graphic design team will go over every detail with you. What is the shirt color you're looking to have this printed on? What are your brand's colors? Will this be a front-and-back project? How many are you looking to have printed and when by? Then, we take all of that information and we come up with a design mockup that we believe is the best fit, and then make adjustments from there until you are satisfied with the end result. Then, and only then, do we submit it to the print shop for printing.</p>
-                            <p className="h6">Another example of our graphic design process is creating a lamp post banner design. We gather information such as what the side of the banner is going to be, what shape, and what the colors that will be used are going to be. We then create a mockup of what that lamp post banner will look like and make adjustments as we need to before handing it off to the print shop.</p>
-                            <h6>For more information about graphic design services in the Ogden, Utah area, please contact our graphic design team using the contact form and/or info below.</h6>
-                        </div>
-                        <div className="col-md-3 d-none d-md-block">
-                            <div className="container-fluid">
-                                <div className="row">
-                                    <div className="col">
-                                        <Image src="https://galacticdigitalstudios.com/img/ogden-utah-graphic-design.webp" alt="Ogden Utah Graphic Design" width={0} height={0} style={{ width: "100%", height: "auto" }} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Suspense>
-                <Suspense fallback={<p>Loading...</p>}>
-                    {isDesktop && (
-                        <div className="row">
-                            <div className="col">
-                                <RequestForm selectedService="graphic" />
-                            </div>
-                        </div>
-                    )}
-                </Suspense>
-            </div>
+            <PageLayout
+                title="Ogden Utah Graphic Design"
+                images={images}
+                content={content}
+                service="graphic"
+            />
         </>
     )
 }

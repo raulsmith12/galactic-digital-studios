@@ -106,6 +106,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                             <Link href={"/services/washington/olympia-washington-" + serviceSlug + "/"}>Olympia</Link> &nbsp;
                             <Link href={"/services/washington/seattle-washington-" + serviceSlug + "/"}>Seattle</Link> &nbsp;
                             <Link href={"/services/washington/tacoma-washington-" + serviceSlug + "/"}>Tacoma</Link> &nbsp;
+                            <Link href={"/services/washington/tukwila-washington-" + serviceSlug + "/"}>Tukwila</Link> &nbsp;
                             <Link href={"/services/washington/vancouver-washington-" + serviceSlug + "/"}>Vancouver</Link>
                         </div>
                     </div>

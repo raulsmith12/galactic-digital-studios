@@ -53,7 +53,7 @@ const Page = () => {
     return (
         <>
             <MetaHeader
-                metatitle = "Syracyse Utah Logo Design - Galactic Digital Studios"
+                metatitle = "Syracuse Utah Logo Design - Galactic Digital Studios"
                 metadesc = "Get professional logo design services in Syracuse, Utah with Galactic Digital Studios. Stand out with unique, creative, and custom logos for your brand!"
                 metakeys = "logo design, Syracuse, Utah"
                 metaurl = "https://galacticdigitalstudios.com/services/utah/syracuse-utah-logo-design/"
