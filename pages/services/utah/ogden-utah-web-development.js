@@ -8,7 +8,7 @@ const Page = () => {
         { src: "https://galacticdigitalstudios.com/img/web-development-l.webp", alt: "Two monitors with web development code on them" },
         { src: "https://galacticdigitalstudios.com/img/ogden-utah-valley.jpg", alt: "A view of the Ogden Utah valley from a nearby mountain" },
         { src: "https://galacticdigitalstudios.com/img/ogden-utah-40th-street-view.jpg", alt: "A view of the iconic Ben Lomond Peak from 40th Street and Washington Boulevard in Ogden, Utah" },
-        { src: "https://galacticdigitalstudios.com/img/ogden-utah-union-station", alt: "A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" }
+        { src: "https://galacticdigitalstudios.com/img/ogden-utah-union-station.jpg", alt: "A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" }
     ];
 
     const content = `
