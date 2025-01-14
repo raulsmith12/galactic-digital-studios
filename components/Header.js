@@ -8,7 +8,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-alpha border-bottom border-secondary main-menu">
                     <div className="container">
                         <Link href="/" className="navbar-brand">
-                            <Image alt="Galactic Digital Studios" src="https://galacticdigitalstudios.com/img/gds-logo-white.png" width={0} height={75} style={{ width: "auto" }} />
+                            <Image alt="Galactic Digital Studios" src="https://galacticdigitalstudios.com/img/gds-logo-white-sm.png" width={0} height={75} style={{ width: "auto" }} />
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gdsNavbar" aria-controls="gdsNavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
