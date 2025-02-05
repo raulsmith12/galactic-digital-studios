@@ -1,7 +1,7 @@
 import MetaHeader from "../../../components/MetaHeader";
 import Image from 'next/image';
-import InsidePageHeader from './InsidePageHeader';
-import RequestForm from './RequestForm';
+import InsidePageHeader from "../../../components/InsidePageHeader"
+import RequestForm from "../../../components/RequestForm"
 import { Suspense, useEffect, useState } from 'react';
 
 const Page = () => {
