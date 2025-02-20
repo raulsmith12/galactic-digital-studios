@@ -76,7 +76,7 @@ const Page = () => {
                             <p className="h6">Galactic Digital Studios invites you to take the next step in your digital journey. With our unparalleled expertise in web development and our deep understanding of Tukwila&rsquo;s business landscape, we&rsquo;re ready to help you achieve your goals. Let us turn your ideas into reality and make your business shine online.</p>
                         </div>
                         <div className="col-md-3 col-sm-2">
-                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-web-development.jpg" alt="Tukwila Washington web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-web-development.webp" alt="Tukwila Washington web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>

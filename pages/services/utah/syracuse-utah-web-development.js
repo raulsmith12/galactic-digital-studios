@@ -94,7 +94,7 @@ const Page = () => {
                             <p className="h6">Syracuse, Utah, is a city full of potential, and your business deserves to shine as brightly as the stars over the Wasatch Front. Galactic Digital Studios is here to make that happen with top-tier web development services tailored specifically for your needs. Let's take your online presence to the next level and position your business for lasting success.</p>
                         </div>
                         <div className="col-md-3 col-sm-2">
-                            <Image src="https://galacticdigitalstudios.com/img/syracuse-utah-web-development.jpg" alt="Syracuse Utah web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/syracuse-utah-web-development.webp" alt="Syracuse Utah web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>

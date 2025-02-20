@@ -72,7 +72,7 @@ const Page = () => {
                             <p className="h6">If you're ready to take your brand to the next level, get in touch with us today to start your logo design journey. We look forward to helping your business shine with a logo that truly reflects your brand&rsquo;s identity and resonates with the local community of Syracuse and beyond.</p>
                         </div>
                         <div className="col-md-3 col-sm-2">
-                            <Image src="https://galacticdigitalstudios.com/img/syracuse-utah-logo-design.jpg" alt="Syracuse Utah logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/syracuse-utah-logo-design.webp" alt="Syracuse Utah logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/logo-design-l.webp" alt="Monitor with laptop with logo design on both" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>

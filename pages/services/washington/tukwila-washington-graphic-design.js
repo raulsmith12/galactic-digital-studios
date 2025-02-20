@@ -76,7 +76,7 @@ const Page = () => {
                             <p className="h6">When it comes to graphic design in Tukwila, Washington, Galactic Digital Studios is the partner you can trust to deliver exceptional results. Let us help you stand out in this vibrant and competitive market with designs that captivate and inspire. From concept to creation, we&rsquo;re here to bring your ideas to life and take your brand to new heights.</p>
                         </div>
                         <div className="col-md-3 col-sm-2">
-                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-graphic-design.jpg" alt="Tukwila Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-graphic-design.webp" alt="Tukwila Washington graphic design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/graphic-design-l.webp" alt="Laptop with trendy graphic design poster behind it" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>

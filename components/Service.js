@@ -87,6 +87,7 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
+                            <Link href={"/services/utah/kearns-utah-" + serviceSlug + "/"}>Kearns</Link> &nbsp;
                             <Link href={"/services/utah/lehi-utah-" + serviceSlug + "/"}>Lehi</Link> &nbsp;
                             <Link href={"/services/utah/ogden-utah-" + serviceSlug + "/"}>Ogden</Link> &nbsp;
                             <Link href={"/services/utah/park-city-utah-" + serviceSlug + "/"}>Park City</Link> &nbsp;

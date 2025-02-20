@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 
 const MetaHeader = ({ metatitle, metadesc, metaurl, metakeys }) => {
     return (
@@ -28,21 +27,6 @@ const MetaHeader = ({ metatitle, metadesc, metaurl, metakeys }) => {
                 <link rel="icon" href="favicon.ico" />
                 <link rel="manifest" href="manifest.json" />
             </Head>
-            <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-L19G18BTF9"/>
-            <Script
-                id='google-analytics'
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-L19G18BTF9', {
-                        page_path: window.location.pathname,
-                    });
-                    `,
-                }}
-            />
         </>
     )
 }

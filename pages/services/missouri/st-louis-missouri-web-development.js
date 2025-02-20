@@ -1,19 +1,19 @@
-import { Suspense, useEffect, useState } from "react";
+import Image from 'next/image';
 import InsidePageHeader from "../../../components/InsidePageHeader"
-import MetaHeader from "../../../components/MetaHeader";
 import RequestForm from "../../../components/RequestForm"
-import Image from "next/image"
+import { Suspense, useEffect, useState } from 'react';
+import MetaHeader from "../../../components/MetaHeader";
 
 const Page = () => {
     const [isDesktop, setIsDesktop] = useState(false);
-  
+
     useEffect(() => {
-      const desktopDevice = window.innerWidth;
-      if (desktopDevice > 767) {
-        setIsDesktop(true);
-      } else {
-        setIsDesktop(false);
-      }
+        const desktopDevice = window.innerWidth;
+        if (desktopDevice > 767) {
+            setIsDesktop(true);
+        } else {
+            setIsDesktop(false);
+        }
     }, []);
 
     return (
@@ -28,55 +28,172 @@ const Page = () => {
                 <div className="row pt-5 mt-5">
                     <InsidePageHeader title="St. Louis Missouri Web Development" />
                 </div>
-                <div className="row">
-                    <div className="col">
-                        <h2>Web Development and Design For The Greater Midwest</h2>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-3 d-none d-md-block">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col">
-                                    <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-9 col-sm-12">
-                        <p className="h6">Are you ready to elevate your online presence and make a lasting impact in the digital sphere? Look no further than Galactic Digital Studios, your premier destination for cutting-edge web development services right here in St. Louis, Missouri. As a dynamic and forward-thinking company, we pride ourselves on transforming ideas into powerful online experiences that captivate, engage, and drive results.</p>
-                        <p className="h6">In the bustling digital landscape, a well-crafted website serves as the cornerstone of your brand identity. Galactic Digital Studios is here to ensure that your online presence not only meets industry standards but sets a new benchmark for excellence. Our team of seasoned web developers combines technical prowess with artistic flair, crafting bespoke solutions that seamlessly blend form and function.</p>
-                        <p className="h6">At Galactic Digital Studios, we understand that each business is unique, and we approach web development with a personalized touch. Whether you are a startup looking to make a splash or an established enterprise aiming to revamp your online strategy, our experts work closely with you to understand your goals, challenges, and aspirations.</p>
-                        <p className="h6">Our commitment to tailor-made solutions means that your website won&lsquo;t be just another template; it will be a digital representation of your brand&lsquo;s personality and values. From intuitive user interfaces to robust backend systems, we have the expertise to bring your vision to life.</p>
-                        <p className="h6">In the fast-paced world of web development, staying ahead of the curve is non-negotiable. Galactic Digital Studios prides itself on being at the forefront of technological advancements. Our developers are adept at leveraging the latest tools and frameworks to ensure that your website is not only aesthetically pleasing but also performs seamlessly across devices and platforms.</p>
-                        <p className="h6">Whether it&lsquo;s responsive design, progressive web apps, or the integration of emerging technologies like AI and machine learning, we are well-equipped to infuse your website with the innovation it deserves. Galactic Digital Studios doesn&lsquo;t just build websites; we create digital experiences that leave a lasting impression.</p>
-                    </div>
-                </div>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <div className="row">
-                        <div className="col-md-9 col-sm-12">
-                            <p className="h6">Embarking on the journey of web development with Galactic Digital Studios is a collaborative and transparent experience. We believe in keeping our clients informed and involved throughout the process. Here&lsquo;s a glimpse into our comprehensive web development process:</p>
-                            <p className="h6">The journey begins with a thorough understanding of your business, goals, and target audience. Our team conducts in-depth consultations to gather insights that will shape the foundation of your digital presence.</p>
-                            <p className="h6">Armed with the information gathered, we formulate a strategic plan that outlines the architecture, features, and design elements of your website. This blueprint serves as a roadmap for the development phase.</p>
-                            <p className="h6">Our creative team takes the lead in crafting visually stunning designs that align with your brand identity. Simultaneously, our UX/UI experts ensure that the design is not only eye-catching but also intuitive and user-friendly.</p>
-                            <p className="h6">The coding magic begins! Our developers bring the designs to life, employing the latest technologies to ensure a seamless and robust website. We prioritize scalability and performance to future-proof your online presence.</p>
-                            <p className="h6">Before your website goes live, it undergoes rigorous testing to identify and rectify any potential issues. Our quality assurance process goes beyond &ldquo;happy path&rdquo; testing and ensures that your website is not only visually appealing but also functions flawlessly.</p>
-                            <p className="h6">With thorough testing complete, your website is ready for launch. Our team handles the deployment process, ensuring a smooth transition from development to the live environment.</p>
-                            <p className="h6">Our commitment to your success doesn&lsquo;t end with the launch. Galactic Digital Studios provides ongoing support and maintenance to keep your website running smoothly. Whether it&lsquo;s updates, troubleshooting, or scaling, we&lsquo;ve got you covered.</p>
-                            <p className="h6">Galactic Digital Studios has a track record of delivering exceptional web development solutions to businesses across diverse industries. Our portfolio speaks for itself, showcasing the success stories of clients who have witnessed tangible results through our services.</p>
-                            <p className="h6">We believe in the power of collaboration. When you choose Galactic Digital Studios, you are not just hiring a service; you are partnering with a team that is invested in the success of your business. We value open communication and work hand-in-hand with our clients to achieve shared goals.</p>
-                            <p className="h6">The digital landscape is ever-evolving, and so are we. Galactic Digital Studios doesn&lsquo;t just build websites for today; we create future-proof solutions that adapt and evolve with the changing technological landscape. Your online presence should be an asset that stands the test of time.</p>
-                            <p className="h6">Are you ready to embark on a journey that will redefine your online identity and propel your business to new heights? Galactic Digital Studios is your trusted partner in web development, combining creativity, technology, and strategy to craft digital experiences that resonate.</p>
-                            <h6>Use the form below and contact us today to schedule a consultation and take the first step toward a digital transformation that sets you apart in the competitive online landscape, be it in St. Louis, Missouri, or beyond. Your success is our mission, and at Galactic Digital Studios, we&lsquo;re ready to make it a reality.</h6>
+                    <div className="row pt-4">
+                        <div className="col-md-9 col-sm-10 ps-4 pe-2">
+                            <h3>Stellar Web Development Services in St. Louis, Missouri</h3>
+                            <p className="h6">At Galactic Digital Studios, we understand that your website is the digital heartbeat of your business. Based in St. Louis, Missouri, we specialize in crafting exceptional websites that not only captivate visitors but also deliver results. Whether you&rsquo;re a local startup in the Central West End or an established business in Chesterfield, our web development solutions are tailored to meet the unique needs of your enterprise and the vibrant community you serve.</p>
+                            <h4>Why St. Louis Businesses Need Cutting-Edge Websites</h4>
+                            <p className="h6">St. Louis is a city rich in history, culture, and innovation. Known as the Gateway to the West, St. Louis has a thriving economy driven by industries such as technology, healthcare, manufacturing, and retail. With landmarks like the Gateway Arch, Forest Park, and a bustling downtown, the city attracts millions of tourists annually. Beyond its iconic attractions, St. Louis is home to a growing population of savvy consumers who rely on the internet to find local businesses, services, and events.</p>
+                            <p className="h6">In today&rsquo;s competitive marketplace, a strong online presence is essential. Whether you run a trendy restaurant on Washington Avenue, a boutique in Clayton, or a tech firm in Cortex Innovation Community, having a well-designed and functional website can set you apart from competitors. Galactic Digital Studios is here to ensure your website becomes a key asset in your business&rsquo;s success.</p>
+                            <h4>Our Web Development Services</h4>
+                            <p className="h6">At Galactic Digital Studios, we offer a comprehensive suite of web development services designed to meet the needs of St. Louis businesses:</p>
+                            <ol>
+                                <li className="h6">
+                                    <strong className="h6">Custom Website Design and Development</strong>
+                                    <ul>
+                                        <li className="h6">We create visually stunning websites tailored to your brand&rsquo;s identity. Our designs are user-focused, ensuring that your customers enjoy a seamless and intuitive experience.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">E-Commerce Solutions</strong>
+                                    <ul>
+                                        <li className="h6">Transform your business into an online powerhouse with robust e-commerce platforms. From inventory management to secure payment gateways, we build solutions that drive sales.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Mobile-Responsive Design</strong>
+                                    <ul>
+                                        <li className="h6">With mobile users accounting for a significant portion of web traffic, we design websites that look and function flawlessly on all devices, from desktops to smartphones.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Search Engine Optimization (SEO)</strong>
+                                    <ul>
+                                        <li className="h6">Our web development goes hand-in-hand with SEO strategies to improve your site&rsquo;s visibility on search engines, helping you attract more local customers in St. Louis.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Web Application Development</strong>
+                                    <ul>
+                                        <li className="h6">For businesses needing advanced functionality, we build custom web applications tailored to streamline operations and enhance user engagement.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Maintenance and Support</strong>
+                                    <ul>
+                                        <li className="h6">Your website is a living entity that requires updates and maintenance. We provide ongoing support to ensure your site remains secure, fast, and up to date.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h4>Why Choose Galactic Digital Studios?</h4>
+                            <p className="h6">As a company rooted in St. Louis, we understand the city&rsquo;s dynamic business landscape. Here are some reasons why Galactic Digital Studios is the right partner for your web development needs:</p>
+                            <ul>
+                                <li className="h6">
+                                    <strong className="h6">Local Expertise</strong>
+                                    <ul>
+                                        <li className="h6">We&rsquo;re familiar with the St. Louis market and its unique consumer behaviors. Whether it&rsquo;s designing a site that resonates with local customers or implementing features specific to regional industries, our local insights are invaluable.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Client-Centric Approach</strong>
+                                    <ul>
+                                        <li className="h6">We take the time to understand your goals, industry, and audience. Our collaborative process ensures your website reflects your brand and meets your business objectives.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Innovative Solutions</strong>
+                                    <ul>
+                                        <li className="h6">Staying ahead of technology trends is our passion. From integrating AI-powered chatbots to implementing advanced analytics, we deliver modern solutions that give your business an edge.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Affordable Pricing</strong>
+                                    <ul>
+                                        <li className="h6">We offer competitive pricing without compromising on quality, making professional web development accessible to businesses of all sizes in St. Louis.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Empowering St. Louis Businesses Across Industries</h4>
+                            <p className="h6">Galactic Digital Studios has experience working with a diverse range of industries in St. Louis. Our solutions are tailored to the unique needs of each sector:</p>
+                            <ul>
+                                <li className="h6">
+                                    <strong className="h6">Retail</strong>
+                                    <ul>
+                                        <li className="h6">Whether you&rsquo;re running a boutique on Delmar Loop or a family-owned shop in South County, we create e-commerce platforms that make online shopping a breeze for your customers.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Healthcare</strong>
+                                    <ul>
+                                        <li className="h6">From hospitals to private practices, we design secure and user-friendly websites that help healthcare providers connect with patients and manage appointments.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Hospitality</strong>
+                                    <ul>
+                                        <li className="h6">Showcase your restaurant, hotel, or event space with stunning visuals, online booking systems, and engaging content.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Technology</strong>
+                                    <ul>
+                                        <li className="h6">St. Louis is a growing tech hub, and we&rsquo;re proud to support startups and established firms with cutting-edge web solutions.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Nonprofits</strong>
+                                    <ul>
+                                        <li className="h6">We help local nonprofits amplify their missions with impactful websites that drive donations and community engagement.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4><strong>Web Development Tailored to St. Louis</strong></h4>
+                            <p className="h6">St. Louis&rsquo; unique neighborhoods and communities inspire us to create websites that resonate with local audiences. Here&rsquo;s how we incorporate the city&rsquo;s essence into our web development:</p>
+                            <ul>
+                                <li className="h6">
+                                    <strong className="h6">Local Imagery and Themes</strong>
+                                    <ul>
+                                        <li className="h6">We integrate St. Louis&rsquo; iconic landmarks, such as the Gateway Arch and Busch Stadium, into your website&rsquo;s design to foster a connection with local visitors.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Community Focus</strong>
+                                    <ul>
+                                        <li className="h6">Our websites often feature community-centric elements, such as event calendars, blogs, or social media feeds, to engage St. Louis residents.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Scalability for Growth</strong>
+                                    <ul>
+                                        <li className="h6">As St. Louis businesses grow, so do their online needs. We design websites that can scale seamlessly, supporting your expansion in the city and beyond.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>The Galactic Digital Studios Process</h4>
+                            <p className="h6">Our web development process is designed to ensure success at every stage:</p>
+                            <ol>
+                                <li className="h6">
+                                    <strong className="h6">Discovery and Planning</strong>
+                                    <ul>
+                                        <li className="h6">We begin with a thorough consultation to understand your business, goals, and audience. This stage involves competitor analysis, industry research, and a roadmap for development.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Design and Development</strong>
+                                    <ul>
+                                        <li className="h6">Our team creates wireframes and prototypes before moving into full-scale development. Using the latest technologies, we ensure your site is visually appealing, functional, and optimized for performance.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Testing and Launch</strong>
+                                    <ul>
+                                        <li className="h6">Before your site goes live, it undergoes rigorous testing to ensure it&rsquo;s free of errors, fast, and responsive. Once approved, we handle the launch with precision.</li>
+                                    </ul>
+                                </li>
+                                <li className="h6">
+                                    <strong className="h6">Ongoing Support</strong>
+                                    <ul>
+                                        <li className="h6">Post-launch, we offer maintenance packages to keep your website running smoothly and securely.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h4>Partner With Galactic Digital Studios Today</h4>
+                            <p className="h6">St. Louis is a city of opportunity, and your business deserves a website that captures its essence while driving success. At Galactic Digital Studios, we combine local expertise with world-class web development skills to create websites that make an impact. From the cobblestone streets of Laclede&rsquo;s Landing to the innovation hubs in Midtown, we&rsquo;re here to support your digital journey.</p>
                         </div>
-                        <div className="col-md-3 d-none d-md-block">
-                            <div className="container-fluid">
-                                <div className="row">
-                                    <div className="col">
-                                        <Image src="https://galacticdigitalstudios.com/img/st-louis-missouri-web-development.webp" alt="St. Louis Missouri web development" width={0} height={0} style={{ width: "100%", height: "auto" }} />
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="col-md-3 col-sm-2">
+                            <Image src="https://galacticdigitalstudios.com/img/web-development-l.webp" alt="Two monitors with web development code on them" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/st-louis-missouri-web-development.webp" alt="St. Louis Missouri web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>
                 </Suspense>

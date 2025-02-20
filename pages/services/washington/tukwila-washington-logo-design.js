@@ -83,7 +83,7 @@ const Page = () => {
                             <p className="h6">Invest in your brand&rsquo;s future with Galactic Digital Studios. Together, we&rsquo;ll create a logo that leaves a lasting impression in Tukwila and beyond.</p>
                         </div>
                         <div className="col-md-3 col-sm-2">
-                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-logo-design.jpg" alt="Tukwila Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/tukwila-washington-logo-design.webp" alt="Tukwila Washington logo design" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/logo-design-l.webp" alt="Monitor with laptop with logo design on both" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>
