@@ -73,7 +73,6 @@ const Page = () => {
                             <h3>Let&rsquo;s Build the Digital Future in Ogden, Utah Together</h3>
                             <p className="h6">At Galactic Digital Studios, we&rsquo;re passionate about helping businesses in Ogden, Utah succeed in the digital age. Whether you&rsquo;re looking to establish your online presence, revamp an outdated site, or create a cutting-edge platform, we have the expertise to bring your vision to life. Together, we can shape the future of your business and contribute to the continued growth of Ogden&rsquo;s vibrant community.</p>
                             <p className="h6">Let Galactic Digital Studios be your partner in building a website that doesn&rsquo;t just exist but thrives. Explore the possibilities with us today and discover how we can elevate your business to new heights in the digital realm.</p>
-
                         </div>
                         <div className="col-md-3 col-sm-2">
                             <Image src="https://galacticdigitalstudios.com/img/ogden-utah-web-development.webp" alt="Ogden Utah web development" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
@@ -83,8 +82,6 @@ const Page = () => {
                             <Image src="https://galacticdigitalstudios.com/img/ogden-utah-union-station.jpg" alt="A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>
-                </Suspense>
-                <Suspense fallback={<p>Loading...</p>}>
                     {isDesktop && (
                         <div className="row">
                             <div className="col">

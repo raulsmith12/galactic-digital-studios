@@ -41,21 +41,17 @@ function MyApp({ Component, pageProps }) {
           </CookieConsent>
         </main>
       </div>
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-L19G18BTF9"/>
-      <Script
-          id='google-analytics'
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L19G18BTF9', {
-                  page_path: window.location.pathname,
-              });
-              `,
-          }}
-      />
+      <Script strategy="lazyOnLoad" src="https://www.googletagmanager.com/gtag/js?id=G-L19G18BTF9"/>
+      <Script id="google-analytics" strategy="lazyOnLoad">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L19G18BTF9', {
+              page_path: window.location.pathname,
+          });
+        `}
+      </Script>
     </>
   )
 }
