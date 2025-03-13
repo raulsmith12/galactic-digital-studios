@@ -93,7 +93,8 @@ const Service = ({ serviceTitle, serviceSlug }) => {
                             <Link href={"/services/utah/park-city-utah-" + serviceSlug + "/"}>Park City</Link> &nbsp;
                             <Link href={"/services/utah/salt-lake-city-utah-" + serviceSlug + "/"}>Salt Lake City</Link> &nbsp;
                             <Link href={"/services/utah/st-george-utah-" + serviceSlug + "/"}>St. George</Link> &nbsp;
-                            <Link href={"/services/utah/syracuse-utah-" + serviceSlug + "/"}>Syracuse</Link>
+                            <Link href={"/services/utah/syracuse-utah-" + serviceSlug + "/"}>Syracuse</Link> &nbsp;
+                            <Link href={"/services/utah/tooele-utah-" + serviceSlug + "/"}>Tooele</Link>
                         </div>
                     </div>
                 </div>

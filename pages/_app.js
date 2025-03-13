@@ -5,7 +5,6 @@ import Transition from '../components/Transition';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/owl.css';
 import CookieConsent from "react-cookie-consent";
-import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
 
@@ -41,17 +40,6 @@ function MyApp({ Component, pageProps }) {
           </CookieConsent>
         </main>
       </div>
-      <Script strategy="lazyOnLoad" src="https://www.googletagmanager.com/gtag/js?id=G-L19G18BTF9"/>
-      <Script id="google-analytics" strategy="lazyOnLoad">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-L19G18BTF9', {
-              page_path: window.location.pathname,
-          });
-        `}
-      </Script>
     </>
   )
 }
