@@ -8,7 +8,7 @@ const Request = () => {
         <>
             <MetaHeader
                 metatitle = "Request Services - Galactic Digital Studios"
-                metadesc = "We get that after the pandemic that face-to-face interaction isn't always accessible or easy. That's why Galactic Digital Studios is able to take service requests by phone, email, or contact form."
+                metadesc = "We get that face-to-face interaction isn't always accessible or easy. That's why we are able to take service requests by phone, email, or contact form."
                 metakeys = "request service, Galactic Digital Studios, website design, website development, web development, web design, mobile app design, mobile app development, graphic design, logo design, content management, database management, search engine optimization, SEO, CMS, Salt Lake City, Ogden, Provo, Denver, Seattle, Portland, Tacoma, Beaverton, Boise"
                 metaurl = "https://galacticdigitalstudios.com/request/"
             />

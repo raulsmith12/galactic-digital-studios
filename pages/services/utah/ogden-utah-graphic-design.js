@@ -74,7 +74,7 @@ const Page = () => {
                             <Image src="https://galacticdigitalstudios.com/img/graphic-design-l.webp" alt="Laptop with trendy graphic design poster behind it" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/ogden-utah-valley.jpg" alt="A view of the Ogden Utah valley from a nearby mountain" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                             <Image src="https://galacticdigitalstudios.com/img/ogden-utah-40th-street-view.jpg" alt="A view of the iconic Ben Lomond Peak from 40th Street and Washington Boulevard in Ogden, Utah" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
-                            <Image src="https://galacticdigitalstudios.com/img/ogden-utah-union-station" alt="A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
+                            <Image src="https://galacticdigitalstudios.com/img/ogden-utah-union-station.jpg" alt="A view of an incoming Frontrunner train coming into Union Station in Ogden, Utah" width={0} height={0} style={{ width: "100%", height: "auto" }} className="pb-3" />
                         </div>
                     </div>
                 </Suspense>
